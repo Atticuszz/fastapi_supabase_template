@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "fastapi-supabase-template"
+version = "0.1.0"
+description = ""
+authors = ["Atticuszz <1831768457@qq.com>"]
+readme = "README.md"
+packages = [{include = "fastapi_supabase_template", from = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+fastapi = "^0.104.0"
+supabase-py-async = "^0.1.0"
+python-dotenv = "^1.0.0"
+uvicorn = "^0.23.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
