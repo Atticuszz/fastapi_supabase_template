@@ -1,37 +1,36 @@
 from typing import Optional
 
+from gotrue import User
 from pydantic import BaseModel, EmailStr
 
 
 # Shared properties
-class UserBase(BaseModel):
-    email: Optional[EmailStr] = None
-    is_active: Optional[bool] = True
-    is_superuser: bool = False
-    full_name: Optional[str] = None
 
 
+## request
 # Properties to receive via API on creation
-class UserCreate(UserBase):
+class UserCreate(BaseModel):
     email: EmailStr
     password: str
 
 
 # Properties to receive via API on update
-class UserUpdate(UserBase):
+class UserUpdate(BaseModel):
     password: Optional[str] = None
 
 
-class UserInDBBase(UserBase):
-    id: Optional[int] = None
+## response
+class UserOut(User):
+    access_token: str
 
+
+## db
+class UserInDBBase(User):
+    pass
 
 
 # Additional properties to return via API
 class User(UserInDBBase):
     pass
 
-
 # Additional properties stored in DB
-class UserInDB(UserInDBBase):
-    hashed_password: str

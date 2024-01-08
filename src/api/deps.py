@@ -5,35 +5,70 @@
 @Date Created : 05/01/2024
 @Description  :
 """
-from fastapi import Header, HTTPException
-from gotrue import AuthResponse
-from gotrue.errors import AuthSessionMissingError
+import logging
 
-from ..core.config import logger
+from gotrue import User
+from supabase_py_async import create_client, AsyncClient
+from supabase_py_async.lib.client_options import ClientOptions
+
+from typing import Annotated
+
+from fastapi import Depends, HTTPException, status
+from fastapi.security import OAuth2PasswordBearer
 
 
-async def validate_user(authorization: str | None = Header(None), refresh_token: str | None = Header(None)):
-    """
-    Validate user session with access and refresh tokens
-    :param authorization: Authorization header containing the access token
-    :param refresh_token: Header containing the refresh token
-    """
-    from app.core.supabase_client import supabase_client
-    if not authorization or not refresh_token:
-        raise HTTPException(status_code=401, detail="Unauthorized")
+from app.core.config import settings
+from ..core.events import super_client
 
-    tokens = authorization.split(" ")
-    if len(tokens) != 2 or tokens[0].lower() != "bearer":
-        raise HTTPException(status_code=401,
-                            detail="Invalid authorization header format")
+reusable_oauth2 = OAuth2PasswordBearer(
+    tokenUrl=f"{settings.API_V1_STR}/login/access-token"
+)
+TokenDep = Annotated[str, Depends(reusable_oauth2)]
 
-    access_token = tokens[1]
 
+async def validate_user(token: str = Depends(reusable_oauth2)) -> str:
+    prefix = "Bearer "
+    if not token.startswith(prefix):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid authentication credentials",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    access_token = token[len(prefix):]
     try:
-        # Assuming set_session requires both access and refresh tokens
-        response: AuthResponse = await supabase_client.set_session(access_token=access_token,
-                                                                   refresh_token=refresh_token)
-        logger.info(f"User {response.user.email} request validated")
-        return response.session
-    except AuthSessionMissingError as e:
-        raise HTTPException(status_code=401, detail=e.message)
+        await super_client.auth.get_user(access_token)
+    except Exception as e:
+        logging.error(e)
+        raise HTTPException(status_code=401, detail=e)
+    return access_token
+
+
+AccessTokenDep = Annotated[str, Depends(validate_user)]
+
+
+async def get_db(access_token: AccessTokenDep) -> AsyncClient:
+    client: AsyncClient | None = None
+    try:
+        client = await create_client(settings.SUPABASE_URL, access_token, options=ClientOptions(
+            postgrest_client_timeout=10, storage_client_timeout=10))
+        yield client
+    except Exception as e:
+        logging.error(e)
+        raise HTTPException(status_code=401, detail=e)
+    finally:
+        if client:
+            await client.auth.sign_out()
+
+
+SessionDep = Annotated[AsyncClient, Depends(get_db)]
+
+
+async def get_current_user(session: SessionDep) -> User:
+    user = await session.auth.get_user()
+    if not user:
+        logging.error("User not found")
+        raise HTTPException(status_code=404, detail="User not found")
+    return user
+
+
+CurrentUser = Annotated[User, Depends(get_current_user)]

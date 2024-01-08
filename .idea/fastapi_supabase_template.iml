@@ -6,5 +6,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="full-stack-fastapi-postgresql" />
     <orderEntry type="module" module-name="fastapi-supabase" />
+    <orderEntry type="module" module-name="fastapi-supabase-auth" />
+    <orderEntry type="module" module-name="supabasedb-fastapi-tutorial" />
   </component>
 </module>

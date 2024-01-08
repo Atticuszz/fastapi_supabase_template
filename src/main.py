@@ -8,7 +8,10 @@
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
+from src.api.api_v1.api import api_router
 from src.core import lifespan
+from src.core.config import settings
 
 
 def create_app() -> FastAPI:
@@ -24,9 +27,7 @@ def create_app() -> FastAPI:
     )
 
     # Include the routers
-    from app.api import auth_router, identify_router
-    app.include_router(auth_router)
-    app.include_router(identify_router)
+    app.include_router(api_router, prefix=settings.API_V1_STR)
 
     return app
 
