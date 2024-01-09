@@ -12,6 +12,9 @@ fastapi = "^0.108.0"
 supabase-py-async = "*"
 python-dotenv = "^1.0.0"
 uvicorn = "^0.25.0"
+pydantic = {extras = ["email"], version = "^2.5.3"}
+pydantic-settings = "^2.1.0"
+python-multipart = "^0.0.6"
 
 [build-system]
 requires = ["poetry-core"]

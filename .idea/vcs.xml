@@ -4,6 +4,7 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../fastapi-supabase" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../fastapi-supabase-auth" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../full-stack-fastapi-postgresql" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../supabasedb-fastapi-tutorial" vcs="Git" />
   </component>
 </project>

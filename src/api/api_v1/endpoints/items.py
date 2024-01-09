@@ -1,93 +1,26 @@
-from typing import Any
-
-from fastapi import APIRouter, HTTPException
-from sqlmodel import select
-
-from app.api.deps import CurrentUser, SessionDep
-from app.models import Item, ItemCreate, ItemOut, ItemUpdate
+from fastapi import APIRouter
+from src.api.deps import SessionDep
+from src.schemas import ItemCreate, ItemUpdate, Item
+from src.crud import item
 
 router = APIRouter()
 
 
-@router.get("/", response_model=list[ItemOut])
-def read_items(
-    session: SessionDep, current_user: CurrentUser, skip: int = 0, limit: int = 100
-) -> Any:
-    """
-    Retrieve items.
-    """
-
-    if current_user.is_superuser:
-        statement = select(Item).offset(skip).limit(limit)
-        return session.exec(statement).all()
-    else:
-        statement = (
-            select(Item)
-            .where(Item.owner_id == current_user.id)
-            .offset(skip)
-            .limit(limit)
-        )
-        return session.exec(statement).all()
+@router.post("/create-item", response_model=Item)
+async def create_item(item_in: ItemCreate, db: SessionDep):
+    return await item.create(db=db, obj_in=item_in)
 
 
-@router.get("/{id}", response_model=ItemOut)
-def read_item(session: SessionDep, current_user: CurrentUser, id: int) -> Any:
-    """
-    Get item by ID.
-    """
-    item = session.get(Item, id)
-    if not item:
-        raise HTTPException(status_code=404, detail="Item not found")
-    if not current_user.is_superuser and (item.owner_id != current_user.id):
-        raise HTTPException(status_code=400, detail="Not enough permissions")
-    return item
+@router.get("/read-item", response_model=list[Item])
+async def read_items(db: SessionDep):
+    return await item.get_multi_by_table_name(db=db, table_name="items")
 
 
-@router.post("/", response_model=ItemOut)
-def create_item(
-    *, session: SessionDep, current_user: CurrentUser, item_in: ItemCreate
-) -> Any:
-    """
-    Create new item.
-    """
-    item = Item.from_orm(item_in, update={"owner_id": current_user.id})
-    session.add(item)
-    session.commit()
-    session.refresh(item)
-    return item
+@router.put("/update-item/{id}", response_model=Item)
+async def update_item(id: str, item_in: ItemUpdate, db: SessionDep):
+    return await item.update(db=db, obj_in=item_in)
 
 
-@router.put("/{id}", response_model=ItemOut)
-def update_item(
-    *, session: SessionDep, current_user: CurrentUser, id: int, item_in: ItemUpdate
-) -> Any:
-    """
-    Update an item.
-    """
-    item = session.get(Item, id)
-    if not item:
-        raise HTTPException(status_code=404, detail="Item not found")
-    if not current_user.is_superuser and (item.owner_id != current_user.id):
-        raise HTTPException(status_code=400, detail="Not enough permissions")
-    # TODO: check this actually works
-    update_dict = item_in.dict(exclude_unset=True)
-    item.from_orm(update_dict)
-    session.add(item)
-    session.commit()
-    session.refresh(item)
-    return item
-
-
-@router.delete("/{id}", response_model=ItemOut)
-def delete_item(session: SessionDep, current_user: CurrentUser, id: int) -> Any:
-    """
-    Delete an item.
-    """
-    item = session.get(Item, id)
-    if not item:
-        raise HTTPException(status_code=404, detail="Item not found")
-    if not current_user.is_superuser and (item.owner_id != current_user.id):
-        raise HTTPException(status_code=400, detail="Not enough permissions")
-    session.delete(item)
-    session.commit()
-    return item
+@router.delete("/delete/{id}", response_model=Item)
+async def delete_item(id: str, db: SessionDep):
+    return await item.delete(db=db, id=id)

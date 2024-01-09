@@ -16,8 +16,7 @@ from typing import Annotated
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 
-
-from app.core.config import settings
+from ..core.config import settings
 from ..core.events import super_client
 
 reusable_oauth2 = OAuth2PasswordBearer(

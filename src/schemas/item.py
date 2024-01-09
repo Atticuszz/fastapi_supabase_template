@@ -6,6 +6,7 @@ from pydantic import BaseModel
 # Shared properties
 class ItemBase(BaseModel):
     user_id: str
+    table_name: str
 
 
 
