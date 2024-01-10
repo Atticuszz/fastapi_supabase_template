@@ -2,23 +2,29 @@ from typing import Optional
 
 from pydantic import BaseModel
 
+## request
 
 # Shared properties
 class ItemBase(BaseModel):
-    user_id: str
+    # where the data
     table_name: str
 
 
 
 # Properties to receive on item creation
+# in
 class ItemCreate(ItemBase):
+    # inherent to add more properties for creating
     pass
 
 
 # Properties to receive on item update
+# in
 class ItemUpdate(ItemBase):
-    pass
+    # inherent to add more properties for updating
+    id：str
 
+## response
 
 # Properties shared by models stored in DB
 class ItemInDBBase(ItemBase):
@@ -29,6 +35,7 @@ class ItemInDBBase(ItemBase):
 
 
 # Properties to return to client
+# out
 class Item(ItemInDBBase):
     pass
 
