@@ -1,5 +1,3 @@
-from typing import Optional
-
 from gotrue import User, UserAttributes, AuthResponse
 from pydantic import BaseModel, EmailStr
 
@@ -23,10 +21,13 @@ class UserUpdate(UserAttributes):
 
 ## response
 
+class UserInDBBase(BaseModel):
+    email: EmailStr
+    id: str
 
 # Properties to return to client via api
 # out
-class UserOut(User):
+class UserOut(UserInDBBase):
     access_token: str | None = None
     expires_at: int | None = None
     """
@@ -36,6 +37,11 @@ class UserOut(User):
 
     @classmethod
     def from_auth_rsp(cls, auth_rsp: AuthResponse) -> "UserOut":
-        return cls(**auth_rsp.user.model_dump(), access_token=auth_rsp.session.access_token,
+        return cls(email=auth_rsp.user.model.email,id=auth_rsp.user.model.id, access_token=auth_rsp.session.access_token,
                    expires_at=auth_rsp.session.expires_at, token_type=auth_rsp.session.token_type)
 
+
+
+# Properties properties stored in DB
+class UserInDB(User):
+    pass
