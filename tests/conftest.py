@@ -1,14 +1,13 @@
 import os
-from collections.abc import Generator
-from typing import AsyncGenerator
+from collections.abc import AsyncGenerator, Generator
 
 import pytest
 from _pytest.config import Config
 from dotenv import load_dotenv
 from fastapi.testclient import TestClient
+from supabase_py_async import AsyncClient, create_client
 
 from app.main import app
-from supabase_py_async import create_client, AsyncClient
 
 
 def pytest_configure(config: Config) -> None:
@@ -19,6 +18,7 @@ def pytest_configure(config: Config) -> None:
 def client() -> Generator:
     with TestClient(app) as c:
         yield c
+
 
 # FIXME: AttributeError: 'async_generator' object has no attribute 'table'
 @pytest.fixture(scope="module")

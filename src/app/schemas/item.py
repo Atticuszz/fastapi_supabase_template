@@ -1,6 +1,5 @@
 from pydantic import BaseModel
 
-
 ## request
 
 
@@ -23,6 +22,7 @@ class ItemUpdate(ItemBase):
     # inherent to add more properties for updating
     id: str
     test_data: str
+
 
 ## response
 
