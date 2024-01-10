@@ -7,18 +7,25 @@ from pydantic import BaseModel, EmailStr
 # Shared properties
 
 ## request
+
 # Properties to receive via API on creation
+# in
 class UserCreate(BaseModel):
     email: EmailStr
     password: str
 
 
 # Properties to receive via API on update
+# in
 class UserUpdate(UserAttributes):
     pass
 
 
 ## response
+
+
+# Properties to return to client via api
+# out
 class UserOut(User):
     access_token: str | None = None
     expires_at: int | None = None
@@ -32,11 +39,3 @@ class UserOut(User):
         return cls(**auth_rsp.user.model_dump(), access_token=auth_rsp.session.access_token,
                    expires_at=auth_rsp.session.expires_at, token_type=auth_rsp.session.token_type)
 
-
-## db
-# user ，simplest name var is db model
-
-
-# Additional properties to return via API
-
-# Additional properties stored in DB
