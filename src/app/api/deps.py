@@ -6,21 +6,19 @@
 @Description  :
 """
 import logging
-
-from gotrue import User
-from supabase_py_async import create_client, AsyncClient
-from supabase_py_async.lib.client_options import ClientOptions
-
 from typing import Annotated
 
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
+from gotrue import User
+from supabase_py_async import AsyncClient, create_client
+from supabase_py_async.lib.client_options import ClientOptions
 
-from ..core.config import settings
-from ..core.events import super_client
+from app.core.config import settings
+from app.core.events import super_client
 
 reusable_oauth2 = OAuth2PasswordBearer(
-    tokenUrl=f"{settings.API_V1_STR}/login/access-token"
+    tokenUrl=f"please login by supabase-js to get token"
 )
 TokenDep = Annotated[str, Depends(reusable_oauth2)]
 
@@ -33,8 +31,10 @@ async def validate_user(token: str = Depends(reusable_oauth2)) -> str:
             detail="Invalid authentication credentials",
             headers={"WWW-Authenticate": "Bearer"},
         )
-    access_token = token[len(prefix):]
+    access_token = token[len(prefix) :]
     try:
+        if not super_client:
+            raise HTTPException(status_code=401, detail="No super client")
         await super_client.auth.get_user(access_token)
     except Exception as e:
         logging.error(e)
@@ -48,8 +48,13 @@ AccessTokenDep = Annotated[str, Depends(validate_user)]
 async def get_db(access_token: AccessTokenDep) -> AsyncClient:
     client: AsyncClient | None = None
     try:
-        client = await create_client(settings.SUPABASE_URL, access_token, options=ClientOptions(
-            postgrest_client_timeout=10, storage_client_timeout=10))
+        client = await create_client(
+            settings.SUPABASE_URL,
+            access_token,
+            options=ClientOptions(
+                postgrest_client_timeout=10, storage_client_timeout=10
+            ),
+        )
         yield client
     except Exception as e:
         logging.error(e)

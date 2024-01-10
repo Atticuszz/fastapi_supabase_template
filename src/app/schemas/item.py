@@ -1,6 +1,8 @@
 from pydantic import BaseModel
 
+
 ## request
+
 
 # Shared properties
 class ItemBase(BaseModel):
@@ -8,21 +10,22 @@ class ItemBase(BaseModel):
     table_name: str
 
 
-
 # Properties to receive on item creation
 # in
 class ItemCreate(ItemBase):
     # inherent to add more properties for creating
-    pass
+    test_data: str
 
 
 # Properties to receive on item update
 # in
 class ItemUpdate(ItemBase):
     # inherent to add more properties for updating
-    id：str
+    id: str
+    test_data: str
 
 ## response
+
 
 # Properties shared by models stored in DB
 class ItemInDBBase(ItemBase):
@@ -31,13 +34,12 @@ class ItemInDBBase(ItemBase):
     created_at: str
 
 
-
 # Properties to return to client
 # out
 class Item(ItemInDBBase):
-    pass
+    test_data: str
 
 
 # Properties properties stored in DB
 class ItemInDB(ItemInDBBase):
-    pass
+    test_data: str
