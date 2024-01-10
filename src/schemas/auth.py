@@ -34,12 +34,9 @@ class UserOut(User):
 
 
 ## db
-class UserInDBBase(User):
-    pass
+# user ，simplest name var is db model
 
 
 # Additional properties to return via API
-class User(UserInDBBase):
-    pass
 
 # Additional properties stored in DB
