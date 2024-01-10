@@ -16,7 +16,8 @@ from src.core.config import settings
 
 def create_app() -> FastAPI:
     # init FastAPI with lifespan
-    app = FastAPI(lifespan=lifespan)
+    app = FastAPI(lifespan=lifespan, title=settings.PROJECT_NAME, openapi_url=f"{settings.API_V1_STR}/openapi.json", generate_unique_id_function=lambda router:f"{route.tags[0]}-{route.name}"
+)
     # set CORS
     # Set all CORS enabled origins
     if settings.BACKEND_CORS_ORIGINS:
