@@ -9,7 +9,7 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from src.api.api_v1.api import api_router
+from src.api.api_v1 import api_router
 from src.core import lifespan
 from src.core.config import settings
 
