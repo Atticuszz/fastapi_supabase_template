@@ -37,8 +37,7 @@ class UserOut(UserInDBBase):
 
     @classmethod
     def from_auth_rsp(cls, auth_rsp: AuthResponse) -> "UserOut":
-        return cls(email=auth_rsp.user.model.email,id=auth_rsp.user.model.id, access_token=auth_rsp.session.access_token,
-                   expires_at=auth_rsp.session.expires_at, token_type=auth_rsp.session.token_type)
+        return cls(email=auth_rsp.user.model.email,id=auth_rsp.user.model.id, access_token=auth_rsp.session.access_token, expires_at=auth_rsp.session.expires_at, token_type=auth_rsp.session.token_type)
 
 
 
