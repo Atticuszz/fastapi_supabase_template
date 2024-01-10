@@ -35,7 +35,8 @@ class Settings(BaseSettings):
     SUPABASE_KEY: str = Field(default_factory=lambda: os.getenv("SUPABASE_KEY"))
 
     # SERVER_NAME: str
-    # SERVER_HOST: AnyHttpUrl
+    SERVER_HOST: AnyHttpUrl = "localhost"
+    SERVER_PORT：int = 8000
     # # TODO: the following  need to follow the newest version of fastapi
     # # BACKEND_CORS_ORIGINS is a JSON-formatted list of origins
     # # e.g: '["http://localhost", "http://localhost:4200", "http://localhost:3000", \
@@ -50,7 +51,7 @@ class Settings(BaseSettings):
     #         return v
     #     raise ValueError(v)
     #
-    # PROJECT_NAME: str
+    PROJECT_NAME: str = "fastapi supabase template"
 
     class Config:
         """sensitive to lowercase"""
