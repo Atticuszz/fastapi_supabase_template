@@ -1,45 +1,31 @@
-from pydantic import BaseModel
+from app.schemas.base import CreateBase, InDBBase, ResponseBase, UpdateBase
+
 
 ## request
-
-
-# Shared properties
-class ItemBase(BaseModel):
-    # where the data
-    table_name: str
-
-
 # Properties to receive on item creation
 # in
-class ItemCreate(ItemBase):
-    # inherent to add more properties for creating
+class ItemCreate(CreateBase):
     test_data: str
 
 
 # Properties to receive on item update
 # in
-class ItemUpdate(ItemBase):
-    # inherent to add more properties for updating
-    id: str
+class ItemUpdate(UpdateBase):
     test_data: str
-
-
-## response
-
-
-# Properties shared by models stored in DB
-class ItemInDBBase(ItemBase):
-    id: str
-    user_id: str
-    created_at: str
 
 
 # Properties to return to client
+# curd model
 # out
-class Item(ItemInDBBase):
+class Item(ResponseBase):
     test_data: str
+
+    # note: if u directly define table_name in this class, will failed to get by class name
+    @property
+    def table_name(self) -> str:
+        return "test_table"
 
 
 # Properties properties stored in DB
-class ItemInDB(ItemInDBBase):
+class ItemInDB(InDBBase):
     test_data: str

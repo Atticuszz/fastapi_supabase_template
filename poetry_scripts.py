@@ -13,8 +13,8 @@ def run_tests() -> None:
     # run_cmd("poetry run pre-commit autoupdate")
     run_cmd("poetry run pre-commit run --all-files")
 
-    # Generate coverage report
-    # run_cmd("poetry run pytest --asyncio-mode=strict --cov=./ --cov-report=xml --cov-report=html -vv")
+    # Generate coverage report --cov=./ --cov-report=xml --cov-report=html -vv
+    run_cmd("poetry run pytest")
 
 
 if __name__ == "__main__":

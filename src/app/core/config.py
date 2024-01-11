@@ -51,10 +51,10 @@ class Settings(BaseSettings):
     #
     PROJECT_NAME: str = "fastapi supabase template"
 
-    class Config:
-        """sensitive to lowercase"""
-
-        case_sensitive = True
+    # class Config(ConfigDict):
+    #     """sensitive to lowercase"""
+    #
+    #     case_sensitive = True
 
 
 settings = Settings()

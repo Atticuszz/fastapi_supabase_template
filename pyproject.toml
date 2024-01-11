@@ -31,7 +31,8 @@ pytest-cov = "^4.1.0"
 mypy = "^1.8.0"
 commitizen = "^3.13.0"
 asyncio = "^3.4.3"
-pytest-asyncio = "^0.23.3"
+anyio = "^4.2.0"
+trio = "^0.24.0"
 
 
 
