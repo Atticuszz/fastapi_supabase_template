@@ -8,12 +8,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
-    name: Test / OS ${{ matrix.os }} / Python ${{ matrix.python-version }}
+  test-and-changelog:
+    name: Test and Generate Changelog / OS ${{ matrix.os }} / Python ${{ matrix.python-version }}
     strategy:
       matrix:
         os: [ ubuntu-latest ]
-        python-version: [ "3.10", "3.11" ,"3.12"]
+        python-version: [ "3.10", "3.11", "3.12"]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Clone Repository
@@ -34,37 +34,27 @@ jobs:
 
       - name: Upload Coverage
         uses: codecov/codecov-action@v1
-#  publish:
-#    needs: test
-#    if: ${{ !startsWith(github.event.head_commit.message, 'bump') && !startsWith(github.event.head_commit.message, 'chore') && github.ref == 'refs/heads/main' && github.event_name == 'push' && github.repository_owner == 'Atticuszz' }}
-#    runs-on: ubuntu-latest
-#    name: "Bump version, create changelog and publish"
-#    environment:
-#      name: pypi
-#      url: https://pypi.org/project/supabase-py-async/
-#    permissions:
-#      id-token: write # IMPORTANT: this permission is mandatory for trusted publishing
-#      contents: write # needed for github actions bot to write to repo
-#    steps:
-#      - name: Clone Repository
-#        uses: actions/checkout@v3
-#        with:
-#          ref: ${{ github.ref }}
-#          fetch-depth: 0
-#          token: ${{ secrets.ATTICUS_PAT }}
-#      - name: Python Semantic Release
-#        id: release
-#        uses: python-semantic-release/python-semantic-release@master
-#        with:
-#          github_token: ${{ secrets.GITHUB_TOKEN }}
-#
-#      - name: Publish package distributions to PyPI
-#        uses: pypa/gh-action-pypi-publish@v1.8.11
-#        # NOTE: DO NOT wrap the conditional in ${{ }} as  evaluate to true.
-#        if: steps.release.outputs.released == 'true'
-#
-#      - name: Publish package distributions to GitHub Releases
-#        uses: python-semantic-release/upload-to-gh-release@main
-#        if: steps.release.outputs.released == 'true'
-#        with:
-#          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Python Semantic Release (Generate Changelog)
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: python-semantic-release/python-semantic-release@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  publish:
+    needs: test-and-changelog
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    name: "Publish to GitHub Releases"
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+          token: ${{ secrets.ATTICUS_PAT }}
+
+      - name: Publish package distributions to GitHub Releases
+        uses: python-semantic-release/upload-to-gh-release@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
