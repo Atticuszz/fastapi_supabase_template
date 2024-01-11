@@ -39,6 +39,16 @@ trio = "^0.24.0"
 [tool.poetry.scripts]
 tests = 'poetry_scripts:run_tests'
 
+[tool.semantic_release]
+version_variable = "pyproject.toml:tool.poetry.version"
+branch = "main"
+upload_to_PyPI = false  # 禁用上传到 PyPI
+upload_to_release = true  # 启用上传到 GitHub Releases
+build_command = "pip install poetry && poetry build"
+commit_message = "chore(release): bump version to v{version}"
+changelog_components = "semantic_release.changelog.changelog_headers,semantic_release.changelog.compare_url"
+
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
