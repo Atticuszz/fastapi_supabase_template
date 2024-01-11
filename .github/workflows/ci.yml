@@ -28,6 +28,12 @@ jobs:
         uses: abatilo/actions-poetry@v2.4.0
         with:
           poetry-version: 1.7.1
+          
+      - name: Python Semantic Release (Generate Changelog)
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: python-semantic-release/python-semantic-release@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run Tests
         run: poetry run tests
@@ -35,11 +41,7 @@ jobs:
       - name: Upload Coverage
         uses: codecov/codecov-action@v1
 
-      - name: Python Semantic Release (Generate Changelog)
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        uses: python-semantic-release/python-semantic-release@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      
 
   publish:
     needs: test-and-changelog
