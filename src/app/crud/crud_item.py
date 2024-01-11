@@ -6,7 +6,6 @@ from app.schemas import Item, ItemCreate, ItemUpdate
 
 class CRUDItem(CRUDBase[Item, ItemCreate, ItemUpdate]):
     async def create(self, db: AsyncClient, *, obj_in: ItemCreate) -> Item:
-
         return await super().create(db, obj_in=obj_in)
 
     async def get(self, db: AsyncClient, *, id: str) -> Item:

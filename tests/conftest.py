@@ -55,7 +55,6 @@ def client() -> Generator:
         yield c
 
 
-
 @pytest.fixture(scope="module")
 async def db() -> AsyncGenerator[AsyncClient, None]:
     url = os.environ.get("SUPABASE_TEST_URL")

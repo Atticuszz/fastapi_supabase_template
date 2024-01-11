@@ -14,7 +14,6 @@ async def test_create_item(db: AsyncClient) -> None:
     assert item.test_data == test_data
 
 
-
 #
 # @pytest.mark.anyio
 # async def test_get_item(db: AsyncClient) -> None:
