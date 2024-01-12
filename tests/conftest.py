@@ -6,6 +6,7 @@ from pathlib import Path
 
 import pytest
 from dotenv import load_dotenv
+from faker import Faker
 from fastapi.testclient import TestClient
 from pydantic import ConfigDict
 from supabase_py_async import AsyncClient, create_client
@@ -55,9 +56,36 @@ def pytest_configure(config: ConfigDict) -> None:
 
 
 @pytest.fixture(scope="module")
-def client() -> Generator:
+def client() -> Generator[TestClient, None, None]:
     with TestClient(app) as c:
         yield c
+
+
+@pytest.fixture(scope="module")
+async def access_token() -> AsyncGenerator[str, None]:
+    url = os.environ.get("SUPABASE_TEST_URL")
+    assert url is not None, "Must provide SUPABASE_TEST_URL environment variable"
+    key = os.environ.get("SUPABASE_TEST_KEY")
+    assert key is not None, "Must provide SUPABASE_TEST_KEY environment variable"
+    db_client = await create_client(url, key)
+    fake_email = Faker().email()
+    fake_password = Faker().password()
+    await db_client.auth.sign_up({"email": fake_email, "password": fake_password})
+    response = await db_client.auth.sign_in_with_password(
+        {"email": fake_email, "password": fake_password}
+    )
+    assert response.user.email == fake_email
+    assert response.user.id is not None
+    assert response.session.access_token is not None
+    assert response.session.refresh_token is not None
+    try:
+        yield response.session.access_token
+    finally:
+        await db_client.auth.sign_in_with_password(
+            {"email": "zhouge1831@gmail.com", "password": "Zz030327#"}
+        )
+        await db_client.table("users").delete().eq("id", response.user.id).execute()
+        await db_client.auth.sign_out()
 
 
 @pytest.fixture(scope="module")
@@ -78,3 +106,17 @@ async def db() -> AsyncGenerator[AsyncClient, None]:
     finally:
         if db_client:
             await db_client.auth.sign_out()
+
+
+# FIXME: failed to auth
+# @pytest.mark.anyio
+# async def test_create_item(client: TestClient, access_token: str):
+#     from tests.utils import get_auth_header
+#     test_data = Faker().sentence()
+#     assert isinstance(access_token, str)
+#     headers = get_auth_header(access_token)
+#
+#     response = client.post("/api/v1/i
+#     tems/create-item", headers=headers, json={"test_data": test_data})
+#     assert response.status_code == 200
+#     assert response.json()["test_data"] == "Sample Data"
