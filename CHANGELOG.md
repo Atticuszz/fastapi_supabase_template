@@ -2,9 +2,33 @@
 
 
 
+## v0.0.2 (2024-01-12)
+
+### Chore
+
+* chore: update ci ([`80e4db2`](https://github.com/Atticuszz/fastapi_supabase_template/commit/80e4db23f17662b3f7e21ae10624712dfc989a59))
+
+### Fix
+
+* fix: fix pytest bug of failed test gotrue client in trio,
+feat: add crud test ([`0d22fb1`](https://github.com/Atticuszz/fastapi_supabase_template/commit/0d22fb1fd833d815d29e141a913a36e07d7cabdc))
+
+### Unknown
+
+* Merge pull request #8 from Atticuszz/release
+
+release ([`6e9b807`](https://github.com/Atticuszz/fastapi_supabase_template/commit/6e9b8074f7f8c7112dee1b8ee1864a6f1c061d36))
+
+* bugs: failed to auth as dep on new user by access token ([`cba0fbd`](https://github.com/Atticuszz/fastapi_supabase_template/commit/cba0fbdb71c98ddb63545ecbc619bd8d29ffff20))
+
+* Merge branch &#39;main&#39; of github.com:/Atticuszz/fastapi_supabase_template ([`59d9d45`](https://github.com/Atticuszz/fastapi_supabase_template/commit/59d9d45ae449fd6f48fc1d16f1f063b4feea361e))
+
+
 ## v0.0.1 (2024-01-11)
 
 ### Chore
+
+* chore(release): bump version to v0.0.1 ([`4ee5548`](https://github.com/Atticuszz/fastapi_supabase_template/commit/4ee5548fb6d340f7f729f55ae38678817090d578))
 
 * chore: update ci ([`a0f5daa`](https://github.com/Atticuszz/fastapi_supabase_template/commit/a0f5daabdca3cfe93b16db7ab60e499372c6bb69))
 
