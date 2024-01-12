@@ -16,7 +16,7 @@ jobs:
         python-version: [ "3.10", "3.11", "3.12"]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
@@ -35,7 +35,7 @@ jobs:
     needs: test
     if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event.pull_request.merged == true)
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.ATTICUS_PAT }}
