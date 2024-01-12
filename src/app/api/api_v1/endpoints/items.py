@@ -12,9 +12,19 @@ async def create_item(item_in: ItemCreate, session: SessionDep) -> Item:
     return await item.create(session, obj_in=item_in)
 
 
-@router.get("/read-item", response_model=list[Item])
+@router.get("/read-all-item", response_model=list[Item])
 async def read_items(session: SessionDep) -> list[Item]:
     return await item.get_all(session)
+
+
+@router.get("/get-by-id", response_model=Item)
+async def read_item_by_id(id: str, session: SessionDep) -> Item | None:
+    return await item.get(session, id=id)
+
+
+@router.get("/get-by-owner", response_model=list[Item])
+async def read_item_by_owner(session: SessionDep) -> list[Item]:
+    return await item.get_multi_by_owner(session)
 
 
 @router.put("/update-item", response_model=Item)
