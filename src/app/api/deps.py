@@ -18,7 +18,7 @@ from app.core.config import settings
 from app.core.events import super_client
 
 reusable_oauth2 = OAuth2PasswordBearer(
-    tokenUrl=f"please login by supabase-js to get token"
+    tokenUrl="please login by supabase-js to get token"
 )
 TokenDep = Annotated[str, Depends(reusable_oauth2)]
 

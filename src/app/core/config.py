@@ -7,9 +7,10 @@
 """
 import logging
 import os
+from typing import ClassVar
 
 from dotenv import load_dotenv
-from pydantic import AnyHttpUrl, Field
+from pydantic import AnyHttpUrl, ConfigDict, Field
 from pydantic_settings import BaseSettings
 
 log_format = logging.Formatter("%(asctime)s : %(levelname)s - %(message)s")
@@ -55,6 +56,7 @@ class Settings(BaseSettings):
     #     """sensitive to lowercase"""
     #
     #     case_sensitive = True
+    Config: ClassVar[ConfigDict] = ConfigDict(arbitrary_types_allowed=True)
 
 
 settings = Settings()

@@ -5,9 +5,11 @@
 @Date Created : 11/01/2024
 @Description  :
 """
-from pydantic import BaseModel, Extra
+from typing import ClassVar
 
-## request
+from pydantic import BaseModel, ConfigDict
+
+# request
 
 
 # Shared properties
@@ -32,7 +34,7 @@ class UpdateBase(BaseModel):
     id: str
 
 
-## response
+# response
 
 
 # Properties shared by models stored in DB
@@ -47,9 +49,5 @@ class InDBBase(BaseModel):
 # out
 class ResponseBase(InDBBase):
     # inherent to add more properties for responding
-    @property
-    def table_name(self) -> str:
-        return self.__class__.__name__.lower()
-
-    class Config:
-        extra = Extra.ignore
+    table_name: ClassVar[str] = "ResponseBase".lower()
+    Config: ClassVar[ConfigDict] = ConfigDict(extra="ignore")

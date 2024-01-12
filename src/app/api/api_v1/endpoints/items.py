@@ -14,7 +14,7 @@ async def create_item(item_in: ItemCreate, session: SessionDep) -> Item:
 
 @router.get("/read-item", response_model=list[Item])
 async def read_items(session: SessionDep) -> list[Item]:
-    return await item.get_multi_by_table_name(session)
+    return await item.get_all(session)
 
 
 @router.put("/update-item", response_model=Item)

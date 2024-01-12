@@ -13,7 +13,7 @@ class Token(BaseModel):
     token_type: str
 
 
-## request
+# request
 # Properties to receive via API on creation
 # in
 class UserCreate(BaseModel):
@@ -26,7 +26,7 @@ class UserUpdate(UserAttributes):
     pass
 
 
-## response
+# response
 
 
 class UserInDBBase(BaseModel):

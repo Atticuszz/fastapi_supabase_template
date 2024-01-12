@@ -5,9 +5,9 @@ from logging.handlers import RotatingFileHandler
 from pathlib import Path
 
 import pytest
-from _pytest.config import Config
 from dotenv import load_dotenv
 from fastapi.testclient import TestClient
+from pydantic import ConfigDict
 from supabase_py_async import AsyncClient, create_client
 
 from app.main import app
@@ -45,8 +45,13 @@ def setup_logging(level: int = logging.INFO) -> None:
 setup_logging()
 
 
-def pytest_configure(config: Config) -> None:
-    load_dotenv(dotenv_path="tests/tests.env")
+@pytest.fixture(scope="module")
+def anyio_backend() -> str:
+    return "asyncio"
+
+
+def pytest_configure(config: ConfigDict) -> None:
+    load_dotenv()
 
 
 @pytest.fixture(scope="module")
@@ -67,7 +72,7 @@ async def db() -> AsyncGenerator[AsyncClient, None]:
     )
     get_session = await db_client.auth.get_session()
     assert get_session.user is not None
-    logging.info("db_client.get_session", get_session.user.model_dump())
+    # logging.info("db_client.get_session", get_session.user.model_dump())
     try:
         yield db_client  # 提供数据库客户端给测试用例
     finally:

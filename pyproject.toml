@@ -9,30 +9,24 @@ packages = [{include = "app", from = "src"}]
 [tool.poetry.dependencies]
 python = ">=3.9,<3.13"
 fastapi = {extras = ["full"], version = "^0.108.0"}
-supabase-py-async = "*"
 python-dotenv = "^1.0.0"
 uvicorn = "^0.25.0"
 pydantic = {extras = ["email"], version = "^2.5.3"}
 pydantic-settings = "^2.1.0"
 python-multipart = "^0.0.6"
+supabase-py-async = "*"
 
 
 [tool.poetry.group.dev.dependencies]
 pytest-dotenv = "^0.5.2"
 pytest = "^7.4.3"
 faker = "^22.2.0"
-isort = "^5.13.2"
-autoflake = "^2.2.1"
-pyupgrade = "^3.15.0"
-black = "^23.12.1"
 python-semantic-release = "^8.7.0"
 pre-commit = "^3.6.0"
 pytest-cov = "^4.1.0"
-mypy = "^1.8.0"
-commitizen = "^3.13.0"
-asyncio = "^3.4.3"
 anyio = "^4.2.0"
 trio = "^0.24.0"
+
 
 
 

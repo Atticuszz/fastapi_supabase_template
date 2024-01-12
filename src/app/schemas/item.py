@@ -1,7 +1,9 @@
+from typing import ClassVar
+
 from app.schemas.base import CreateBase, InDBBase, ResponseBase, UpdateBase
 
 
-## request
+# request
 # Properties to receive on item creation
 # in
 class ItemCreate(CreateBase):
@@ -20,10 +22,7 @@ class ItemUpdate(UpdateBase):
 class Item(ResponseBase):
     test_data: str
 
-    # note: if u directly define table_name in this class, will failed to get by class name
-    @property
-    def table_name(self) -> str:
-        return "test_table"
+    table_name: ClassVar[str] = "test_table"
 
 
 # Properties properties stored in DB
