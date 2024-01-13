@@ -36,7 +36,7 @@ jobs:
             pip install useful-scripts
 
       - name: Run the script for recently modified
-        run: markdown --root ${{ github.workspace }} modify_recent --output ${{ github.workspace }}/README.md --num_commits 15 --dir src --title "### Latest Changes"
+        run: markdown --root ${{ github.workspace }} modify_recent --output ${{ github.workspace }}/README.md --num_commits 50 --dir src --title "### Latest Changes"
 
 
       - name: Commit README changes
