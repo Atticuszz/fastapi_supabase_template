@@ -28,7 +28,7 @@ jobs:
         with:
           poetry-version: 1.7.1
       - run: poetry install
-      - run: poetry run pytest
+      - run: poetry run tests
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
