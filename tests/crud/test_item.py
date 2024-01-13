@@ -43,7 +43,7 @@ async def test_delete_item(db: AsyncClient) -> None:
     test_data = Faker().text()
     item_in = ItemCreate(table_name="test_table", test_data=test_data)
     item: Item = await crud.item.create(db=db, obj_in=item_in)
-    item2 = await crud.item.delete(db=db, obj_in=item)
+    item2 = await crud.item.delete(db=db, id=item.id)
     item3 = await crud.item.get(db, id=item.id)
     assert item3 is None
     assert item.id == item2.id

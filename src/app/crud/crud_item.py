@@ -20,8 +20,8 @@ class CRUDItem(CRUDBase[Item, ItemCreate, ItemUpdate]):
     async def update(self, db: AsyncClient, *, obj_in: ItemUpdate) -> Item:
         return await super().update(db, obj_in=obj_in)
 
-    async def delete(self, db: AsyncClient, *, obj_in: ItemUpdate) -> Item:
-        return await super().delete(db, obj_in=obj_in)
+    async def delete(self, db: AsyncClient, *, id: str) -> Item:
+        return await super().delete(db, id=id)
 
 
 item = CRUDItem(Item)

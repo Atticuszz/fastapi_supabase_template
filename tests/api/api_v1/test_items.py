@@ -1,43 +1,158 @@
 # Additional assertions based on your application's logic
+import pytest
+from faker import Faker
+from starlette.testclient import TestClient
+from supabase_py_async import AsyncClient
 
-# def test_create_item(test_client: TestClient,access_token: str):
-#     test_data = Faker().sentence()
-#     headers = get_auth_header(access_token)
-#     response = test_client.post("/create-item",headers=headers,
-#     json={"test_data": test_data})
-#     assert response.status_code == 200
-#     assert response.json()["test_data"] == "Sample Data"
-#     # Additional assertions based on your application's logic
-#
-# def test_read_all_items(test_client):
-#     response = test_client.get("/read-all-item")
-#     assert response.status_code == 200
-#     assert isinstance(response.json(), list)
-#     # Further assertions can be added here
-#
-# def test_read_item_by_id(test_client):
-#     # Use a valid ID for an existing item
-#     response = test_client.get("/get-by-id?id=valid_id")
-#     assert response.status_code == 200
-#     assert response.json()["id"] == "valid_id"
-#     # More assertions based on expected item details
-#
-# def test_read_item_by_owner(test_client):
-#     response = test_client.get("/get-by-owner")
-#     assert response.status_code == 200
-#     assert isinstance(response.json(), list)
-#     # Additional checks based on expected output
-#
-# def test_update_item(test_client):
-#     # Use a valid ID for an existing item
-#     response = test_client.put("/update-it
-#     em", json={"id": "valid_id", "test_data": "Updated Data"})
-#     assert response.status_code == 200
-#     assert response.json()["test_data"] == "Updated Data"
-#     # Additional checks and validations
-#
-# def test_delete_item(test_client):
-#     # Use a valid ID for an existing item
-#     response = test_client.delete("/delete", json={"id": "valid_id"})
-#     assert response.status_code == 200
-#     # Assertions to confirm deletion
+from app.schemas import Token
+from tests.utils import get_auth_header
+
+
+@pytest.mark.anyio
+async def test_create_item(client: TestClient, token: Token) -> None:
+    assert isinstance(token.access_token, str) and isinstance(token.refresh_token, str)
+
+    # 获取认证头
+    headers = get_auth_header(token.access_token)
+
+    test_data = Faker().sentence()
+
+    # 发送请求，同时设置cookie
+    response = client.post(
+        "/api/v1/items/create-item",
+        headers=headers,
+        cookies={"refresh_token": token.refresh_token},
+        json={"test_data": test_data},
+    )
+    assert response.status_code == 200
+    assert response.json()["test_data"] == test_data
+
+
+@pytest.mark.anyio
+async def test_read_all_items(client: TestClient, token: Token) -> None:
+    headers = get_auth_header(token.access_token)
+
+    response = client.get(
+        "/api/v1/items/read-all-item",
+        headers=headers,
+        cookies={"refresh_token": token.refresh_token},
+    )
+    assert response.status_code == 200
+    assert isinstance(response.json(), list)
+
+
+@pytest.mark.anyio
+async def test_read_item_by_id(client: TestClient, token: Token) -> None:
+    headers = get_auth_header(token.access_token)
+    test_data = Faker().sentence()
+
+    # 创建条目
+    create_response = client.post(
+        "/api/v1/items/create-item",
+        headers=headers,
+        cookies={"refresh_token": token.refresh_token},
+        json={"test_data": test_data},
+    )
+    assert create_response.status_code == 200
+    created_item_id = create_response.json()["id"]
+
+    # 按ID读取条目
+    read_response = client.get(
+        f"/api/v1/items/get-by-id/{created_item_id}",
+        headers=headers,
+        cookies={"refresh_token": token.refresh_token},
+    )
+    assert read_response.status_code == 200
+    assert read_response.json()["id"] == created_item_id
+    assert read_response.json()["test_data"] == test_data
+
+
+@pytest.mark.anyio
+async def test_read_item_by_owner(
+    client: TestClient, token: Token, db: AsyncClient
+) -> None:
+    headers = get_auth_header(token.access_token)
+    test_data = Faker().sentence()
+
+    # 创建条目
+    client.post(
+        "/api/v1/items/create-item",
+        headers=headers,
+        cookies={"refresh_token": token.refresh_token},
+        json={"test_data": test_data},
+    )
+
+    # 获取当前用户的ID
+    user = await db.auth.get_user(jwt=token.access_token)
+    user_id = user.user.id
+
+    # 按拥有者读取条目
+    read_response = client.get(
+        "/api/v1/items/get-by-owner",
+        headers=headers,
+        cookies={"refresh_token": token.refresh_token},
+    )
+    assert read_response.status_code == 200
+    items = read_response.json()
+    assert isinstance(items, list)
+    assert all(item["user_id"] == user_id for item in items)
+
+
+@pytest.mark.anyio
+async def test_update_item(client: TestClient, token: Token) -> None:
+    # 创建条目
+    headers = get_auth_header(token.access_token)
+    test_data = Faker().sentence()
+    create_response = client.post(
+        "/api/v1/items/create-item",
+        headers=headers,
+        cookies={"refresh_token": token.refresh_token},
+        json={"test_data": test_data},
+    )
+    assert create_response.status_code == 200
+    created_item = create_response.json()
+    created_item_id = created_item["id"]
+
+    # 更新条目
+    updated_data = {"test_data": Faker().sentence(), "id": created_item_id}
+
+    update_response = client.put(
+        "/api/v1/items/update-item",
+        headers=headers,
+        cookies={"refresh_token": token.refresh_token},
+        json=updated_data,
+    )
+    assert update_response.status_code == 200
+    assert update_response.json()["test_data"] == updated_data["test_data"]
+
+
+@pytest.mark.anyio
+async def test_delete_item(client: TestClient, token: Token) -> None:
+    # 创建条目
+    headers = get_auth_header(token.access_token)
+    test_data = Faker().sentence()
+    create_response = client.post(
+        "/api/v1/items/create-item",
+        headers=headers,
+        cookies={"refresh_token": token.refresh_token},
+        json={"test_data": test_data},
+    )
+    assert create_response.status_code == 200
+    created_item_id = create_response.json()["id"]
+
+    # 删除条目
+    delete_response = client.delete(
+        f"/api/v1/items/delete/{created_item_id}",
+        headers=headers,
+        cookies={"refresh_token": token.refresh_token},
+    )
+    assert delete_response.status_code == 200
+
+    # 尝试获取删除的条目
+    get_response = client.get(
+        f"/api/v1/items/get-by-id/{created_item_id}",
+        headers=headers,
+        cookies={"refresh_token": token.refresh_token},
+    )
+    assert get_response.status_code == 200
+    assert get_response.json() is None

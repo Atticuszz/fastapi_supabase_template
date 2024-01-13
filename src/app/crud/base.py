@@ -59,10 +59,10 @@ class CRUDBase(Generic[ModelType, CreateSchemaType, UpdateSchemaType]):
         _, updated = data
         return self.model(**updated[0])
 
-    async def delete(self, db: AsyncClient, *, obj_in: UpdateSchemaType) -> ModelType:
+    async def delete(self, db: AsyncClient, *, id: str) -> ModelType:
         """remove by UpdateSchemaType"""
         data, count = (
-            await db.table(self.model.table_name).delete().eq("id", obj_in.id).execute()
+            await db.table(self.model.table_name).delete().eq("id", id).execute()
         )
         _, deleted = data
         return self.model(**deleted[0])

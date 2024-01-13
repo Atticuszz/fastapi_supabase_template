@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../bug_reproduction/.idea/bug_reproduction.iml" filepath="$PROJECT_DIR$/../bug_reproduction/.idea/bug_reproduction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../fastapi-supabase-auth/.idea/fastapi-supabase-auth.iml" filepath="$PROJECT_DIR$/../fastapi-supabase-auth/.idea/fastapi-supabase-auth.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/fastapi_supabase_template.iml" filepath="$PROJECT_DIR$/.idea/fastapi_supabase_template.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../full-stack-fastapi-postgresql/.idea/full-stack-fastapi-postgresql.iml" filepath="$PROJECT_DIR$/../full-stack-fastapi-postgresql/.idea/full-stack-fastapi-postgresql.iml" />
       <module fileurl="file://$PROJECT_DIR$/../supabase-py-async/.idea/supabase-py-async.iml" filepath="$PROJECT_DIR$/../supabase-py-async/.idea/supabase-py-async.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../supabasedb-fastapi-tutorial/.idea/supabasedb-fastapi-tutorial.iml" filepath="$PROJECT_DIR$/../supabasedb-fastapi-tutorial/.idea/supabasedb-fastapi-tutorial.iml" />
     </modules>
   </component>
 </project>
