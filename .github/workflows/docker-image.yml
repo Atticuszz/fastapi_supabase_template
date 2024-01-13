@@ -24,4 +24,4 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: atticuszhou/work-space-fastapi-backend:latest
+          tags: atticuszhou/supafast:latest
