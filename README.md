@@ -1,4 +1,4 @@
-![image_resized_128x128.png](..%2F..%2F..%2FDownloads%2Fimage_resized_128x128.png)
+![](assets/logo.png)
 
 
 ## Features
