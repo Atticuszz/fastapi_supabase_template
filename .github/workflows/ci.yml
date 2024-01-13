@@ -52,7 +52,7 @@ jobs:
   latest-changes:
     name: Latest Changes
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request' && github.ref == 'refs/heads/main' && github.event.pull_request.merged == true && github.event_name == 'push'
+    if: (github.event_name == 'push' && github.ref == 'refs/heads/main') || (github.event_name == 'pull_request' && github.ref == 'refs/heads/main' && github.event.pull_request.merged == true)
     steps:
       - uses: actions/checkout@v4
         with:
@@ -60,3 +60,4 @@ jobs:
       - uses: docker://tiangolo/latest-changes:0.2.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: update README.md"
