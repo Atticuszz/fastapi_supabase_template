@@ -7,8 +7,6 @@
     <orderEntry type="jdk" jdkName="Poetry (fastapi_supabase_template)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="supabase-py-async" />
-    <orderEntry type="module" module-name="bug_reproduction" />
-    <orderEntry type="module" module-name="fastapi-supabase-auth" />
-    <orderEntry type="module" module-name="KnowledgeHub" />
+    <orderEntry type="module" module-name="full-stack-fastapi-postgresql" />
   </component>
 </module>
