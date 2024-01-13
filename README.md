@@ -91,10 +91,6 @@ ___
 - 🔨 [__init__.py](src/app/schemas/__init__.py)
 - 🔨 [auth.py](src/app/schemas/auth.py)
 - 🔨 [base.py](src/app/schemas/base.py)
-### 2024-01-12 by Atticuszz - bugs: failed to auth as dep on new user by access token
-- 🔨 [items.py](src/app/api/api_v1/endpoints/items.py)
-- 🔨 [deps.py](src/app/api/deps.py)
-- 🔨 [events.py](src/app/core/events.py)
 ## License
 
 This project is licensed under the terms of the MIT license.
