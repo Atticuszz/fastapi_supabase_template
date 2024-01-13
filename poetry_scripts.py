@@ -12,7 +12,7 @@ def run_tests() -> None:
     # Run pre-commit tests
     # run_cmd("poetry run pre-commit autoupdate")
     # run_cmd("poetry run pre-commit clean")
-    run_cmd("poetry run pre-commit install")
+    # run_cmd("poetry run pre-commit install")
     run_cmd("poetry run pre-commit run --all-files")
 
     # Generate coverage report --cov=./ --cov-report=xml --cov-report=html -vv
