@@ -46,6 +46,5 @@ jobs:
       - name: Commit README changes
         run: |
           git add README.md
-          git add docs/
           git commit -m "chore: update README.md" || echo "No changes to commit"
           git push origin main
