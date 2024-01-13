@@ -52,8 +52,7 @@ ___
 3. **pre-commit** for code quality
 4. **latest_changes.yml** for auto update README.md
 5. **Semantic Release** for auto release and changelog
-
-[//]: # (  4. **docker** for deployment)
+6. **docker** for deployment
 
 ## How to use it
 
@@ -142,8 +141,8 @@ ___
     - [ ] websocket with supabase-realtime
     - [ ] curd supabase-storage
     - [ ] supafunc integration
-- [ ] deployment
-    - [ ] Full **Docker** integration (Docker based).
+- [x] deployment
+    - [x] Full **Docker** integration (Docker based).
 
 ## Release Notes 🥸
 

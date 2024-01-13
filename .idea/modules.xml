@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/fastapi_supabase_template.iml" filepath="$PROJECT_DIR$/.idea/fastapi_supabase_template.iml" />
       <module fileurl="file://$PROJECT_DIR$/../full-stack-fastapi-postgresql/.idea/full-stack-fastapi-postgresql.iml" filepath="$PROJECT_DIR$/../full-stack-fastapi-postgresql/.idea/full-stack-fastapi-postgresql.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../supabase-py-async/.idea/supabase-py-async.iml" filepath="$PROJECT_DIR$/../supabase-py-async/.idea/supabase-py-async.iml" />
       <module fileurl="file://$PROJECT_DIR$/../work_space_fastapi/.idea/work_space_fastapi.iml" filepath="$PROJECT_DIR$/../work_space_fastapi/.idea/work_space_fastapi.iml" />
     </modules>
   </component>

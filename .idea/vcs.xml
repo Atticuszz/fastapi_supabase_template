@@ -3,7 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../full-stack-fastapi-postgresql" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../supabase-py-async" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../work_space_fastapi" vcs="Git" />
   </component>
 </project>

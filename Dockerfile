@@ -14,6 +14,7 @@ RUN poetry config virtualenvs.create false \
 # 第二阶段：构建最终镜像
 FROM python:3.11-rc-slim
 
+ENV PYTHONPATH=/app/src
 WORKDIR /app
 
 # 从 builder 阶段复制安装好的依赖
@@ -25,6 +26,7 @@ COPY . /app
 
 # 设置环境变量
 ENV PORT=5000
+
 
 # 暴露端口
 EXPOSE 5000
