@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         os: [ ubuntu-latest ]
-        python-version: [ "3.10", "3.11", "3.12"]
+        python-version: [ "3.10", "3.11", "3.12","3.13"]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
@@ -29,7 +29,9 @@ jobs:
           poetry-version: 1.7.1
       - run: poetry install
       - run: poetry run pytest
-      - uses: codecov/codecov-action@v3
+
+      - name: Upload Coverage
+        uses: codecov/codecov-action@v3
 
   semantic-release:
     name: Semantic Release and Publish
