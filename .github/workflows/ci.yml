@@ -18,18 +18,18 @@ jobs:
         python-version: [ "3.10", "3.11", "3.12"]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
       - name: Set up Poetry
-        uses: abatilo/actions-poetry@v2.4.0
+        uses: abatilo/actions-poetry@v3.0.0
         with:
           poetry-version: 1.7.1
       - run: poetry install
       - run: poetry run pytest
-      - uses: codecov/codecov-action@v1
+      - uses: codecov/codecov-action@v3
 
   semantic-release:
     name: Semantic Release and Publish
@@ -37,7 +37,7 @@ jobs:
     needs: test
     if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event.pull_request.merged == true)
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.ATTICUS_PAT }}

@@ -2,9 +2,151 @@
 
 
 
+## v0.0.2 (2024-01-13)
+
+### Chore
+
+* chore: set pro-commit-hooks autofix_prs -&gt; True ([`1bad181`](https://github.com/Atticuszz/fastapi_supabase_template/commit/1bad181c3d093089e0a061a5bce438b02f84d238))
+
+* chore: remove latest-changes: ci ([`53dc692`](https://github.com/Atticuszz/fastapi_supabase_template/commit/53dc69258c457e4ce878e7e286dcc12653799810))
+
+* chore(release): bump version to v0.0.2 ([`3fe22f0`](https://github.com/Atticuszz/fastapi_supabase_template/commit/3fe22f0ab60ba97944ab536aa217ae1c41432158))
+
+* chore: update ci ([`80e4db2`](https://github.com/Atticuszz/fastapi_supabase_template/commit/80e4db23f17662b3f7e21ae10624712dfc989a59))
+
+### Fix
+
+* fix: fix pytest bug of failed test gotrue client in trio,
+feat: add crud test ([`0d22fb1`](https://github.com/Atticuszz/fastapi_supabase_template/commit/0d22fb1fd833d815d29e141a913a36e07d7cabdc))
+
+### Unknown
+
+* Merge pull request #16 from Atticuszz/Atticuszz-patch-1
+
+Create LICENSE ([`68bd36b`](https://github.com/Atticuszz/fastapi_supabase_template/commit/68bd36be36bbada8c0912a37a64b958013d083f1))
+
+* Create LICENSE ([`89e348a`](https://github.com/Atticuszz/fastapi_supabase_template/commit/89e348aa52042bb1507f6faf6a14581352ad35b1))
+
+* Merge pull request #15 from Atticuszz/release
+
+release ([`00adb68`](https://github.com/Atticuszz/fastapi_supabase_template/commit/00adb68e1ccab3fc4f299c2c13bc6f6487d16f07))
+
+* Merge pull request #14 from Atticuszz/dependabot/pip/fastapi-0.109.0
+
+⬆ Bump fastapi from 0.108.0 to 0.109.0 ([`20ca637`](https://github.com/Atticuszz/fastapi_supabase_template/commit/20ca637f7059c7ffb9add1e68fdba51639235589))
+
+* Merge pull request #13 from Atticuszz/dependabot/github_actions/abatilo/actions-poetry-3.0.0
+
+⬆ Bump abatilo/actions-poetry from 2.4.0 to 3.0.0 ([`c583f38`](https://github.com/Atticuszz/fastapi_supabase_template/commit/c583f389e1ab7ef837693df279f8b27c0f974bc2))
+
+* Merge pull request #12 from Atticuszz/dependabot/github_actions/codecov/codecov-action-3
+
+⬆ Bump codecov/codecov-action from 1 to 3 ([`56685c3`](https://github.com/Atticuszz/fastapi_supabase_template/commit/56685c32490b2f462d628fe848ad1cb5074223e9))
+
+* Merge pull request #11 from Atticuszz/dependabot/github_actions/actions/checkout-4
+
+⬆ Bump actions/checkout from 2 to 4 ([`18709da`](https://github.com/Atticuszz/fastapi_supabase_template/commit/18709dabf02b846aec35b85f2c0ec0c6f5ca0665))
+
+* Merge pull request #10 from Atticuszz/dependabot/github_actions/actions/setup-python-5
+
+⬆ Bump actions/setup-python from 2 to 5 ([`0bc92d4`](https://github.com/Atticuszz/fastapi_supabase_template/commit/0bc92d40054424f005e74706aaf090722fa857a4))
+
+* ⬆ Bump fastapi from 0.108.0 to 0.109.0
+
+Bumps [fastapi](https://github.com/tiangolo/fastapi) from 0.108.0 to 0.109.0.
+- [Release notes](https://github.com/tiangolo/fastapi/releases)
+- [Commits](https://github.com/tiangolo/fastapi/compare/0.108.0...0.109.0)
+
+---
+updated-dependencies:
+- dependency-name: fastapi
+  dependency-type: direct:production
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`7f805e3`](https://github.com/Atticuszz/fastapi_supabase_template/commit/7f805e3d6cdb9ab3a999301b9785aa189b9479b8))
+
+* ⬆ Bump abatilo/actions-poetry from 2.4.0 to 3.0.0
+
+Bumps [abatilo/actions-poetry](https://github.com/abatilo/actions-poetry) from 2.4.0 to 3.0.0.
+- [Release notes](https://github.com/abatilo/actions-poetry/releases)
+- [Changelog](https://github.com/abatilo/actions-poetry/blob/master/.releaserc)
+- [Commits](https://github.com/abatilo/actions-poetry/compare/v2.4.0...v3.0.0)
+
+---
+updated-dependencies:
+- dependency-name: abatilo/actions-poetry
+  dependency-type: direct:production
+  update-type: version-update:semver-major
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`908985a`](https://github.com/Atticuszz/fastapi_supabase_template/commit/908985a01c3d9c22b3d8da17da022de810fa0b7c))
+
+* ⬆ Bump codecov/codecov-action from 1 to 3
+
+Bumps [codecov/codecov-action](https://github.com/codecov/codecov-action) from 1 to 3.
+- [Release notes](https://github.com/codecov/codecov-action/releases)
+- [Changelog](https://github.com/codecov/codecov-action/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/codecov/codecov-action/compare/v1...v3)
+
+---
+updated-dependencies:
+- dependency-name: codecov/codecov-action
+  dependency-type: direct:production
+  update-type: version-update:semver-major
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`809a94c`](https://github.com/Atticuszz/fastapi_supabase_template/commit/809a94ce17441dd8bc2ddff42667a3f45e48eb8c))
+
+* ⬆ Bump actions/checkout from 2 to 4
+
+Bumps [actions/checkout](https://github.com/actions/checkout) from 2 to 4.
+- [Release notes](https://github.com/actions/checkout/releases)
+- [Changelog](https://github.com/actions/checkout/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/actions/checkout/compare/v2...v4)
+
+---
+updated-dependencies:
+- dependency-name: actions/checkout
+  dependency-type: direct:production
+  update-type: version-update:semver-major
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`f2d6175`](https://github.com/Atticuszz/fastapi_supabase_template/commit/f2d6175f20eb6809b70b556423812973b8fc8037))
+
+* ⬆ Bump actions/setup-python from 2 to 5
+
+Bumps [actions/setup-python](https://github.com/actions/setup-python) from 2 to 5.
+- [Release notes](https://github.com/actions/setup-python/releases)
+- [Commits](https://github.com/actions/setup-python/compare/v2...v5)
+
+---
+updated-dependencies:
+- dependency-name: actions/setup-python
+  dependency-type: direct:production
+  update-type: version-update:semver-major
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`08b10dd`](https://github.com/Atticuszz/fastapi_supabase_template/commit/08b10dd163a5c1504257ffb1bf92e054a4ee8313))
+
+* Merge pull request #9 from Atticuszz/release
+
+release ([`f5228f6`](https://github.com/Atticuszz/fastapi_supabase_template/commit/f5228f67b15a21ed5575c8c5f79311752f384b0c))
+
+* Merge pull request #8 from Atticuszz/release
+
+release ([`6e9b807`](https://github.com/Atticuszz/fastapi_supabase_template/commit/6e9b8074f7f8c7112dee1b8ee1864a6f1c061d36))
+
+* bugs: failed to auth as dep on new user by access token ([`cba0fbd`](https://github.com/Atticuszz/fastapi_supabase_template/commit/cba0fbdb71c98ddb63545ecbc619bd8d29ffff20))
+
+* Merge branch &#39;main&#39; of github.com:/Atticuszz/fastapi_supabase_template ([`59d9d45`](https://github.com/Atticuszz/fastapi_supabase_template/commit/59d9d45ae449fd6f48fc1d16f1f063b4feea361e))
+
+
 ## v0.0.1 (2024-01-11)
 
 ### Chore
+
+* chore(release): bump version to v0.0.1 ([`4ee5548`](https://github.com/Atticuszz/fastapi_supabase_template/commit/4ee5548fb6d340f7f729f55ae38678817090d578))
 
 * chore: update ci ([`a0f5daa`](https://github.com/Atticuszz/fastapi_supabase_template/commit/a0f5daabdca3cfe93b16db7ab60e499372c6bb69))
 
