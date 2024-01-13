@@ -2,9 +2,40 @@
 
 
 
+## v0.3.0 (2024-01-13)
+
+### Chore
+
+* chore: update README.md ([`270a350`](https://github.com/Atticuszz/fastapi_supabase_template/commit/270a3500aa70056ebddc3dff01f8d95bd94e98e9))
+
+* chore: add Dockerfile ([`1b89e1c`](https://github.com/Atticuszz/fastapi_supabase_template/commit/1b89e1c2a79d41236f6ff3cff299d6a0beef8c9e))
+
+* chore: RUN pre-commit-hooks ([`f80de2c`](https://github.com/Atticuszz/fastapi_supabase_template/commit/f80de2c6884bcb3ae41f01b653992f2f4e30d458))
+
+* chore: update README.md ([`59cee0a`](https://github.com/Atticuszz/fastapi_supabase_template/commit/59cee0a091445bdb75a6503e136221ef6831ad42))
+
+### Feature
+
+* feat: add Dockerfile and image push ci ([`421572d`](https://github.com/Atticuszz/fastapi_supabase_template/commit/421572d86354b6f93ec8980a1fa67614237e6ce3))
+
+* feat: add Dockerfile ([`2ab91f5`](https://github.com/Atticuszz/fastapi_supabase_template/commit/2ab91f59fe152ac5537d612cdc9e62e68061b609))
+
+### Unknown
+
+* Merge branch &#39;main&#39; of github.com:/Atticuszz/fastapi_supabase_template ([`528a197`](https://github.com/Atticuszz/fastapi_supabase_template/commit/528a1973a0e6043d4091995743d0c1c99b358387))
+
+* 已添加 supafast.drawio.png ([`b9cace9`](https://github.com/Atticuszz/fastapi_supabase_template/commit/b9cace90d44169cc15944c56488f4f2a9bf95ad8))
+
+* 更新supafast.drawio.svg ([`e5f8c5b`](https://github.com/Atticuszz/fastapi_supabase_template/commit/e5f8c5bfb3158781ec3f5567fdf25323c3f49ad5))
+
+* 已添加 supafast.drawio.svg ([`d16864e`](https://github.com/Atticuszz/fastapi_supabase_template/commit/d16864e2b53d47048fd6bf5aa55e52a4c2d98fc7))
+
+
 ## v0.2.1 (2024-01-13)
 
 ### Chore
+
+* chore(release): bump version to v0.2.1 ([`ebb6ed6`](https://github.com/Atticuszz/fastapi_supabase_template/commit/ebb6ed68a33c190263cad0261a0008f9e7a825e9))
 
 * chore: Update ci.yml ([`6c454b7`](https://github.com/Atticuszz/fastapi_supabase_template/commit/6c454b702808800d0873621925b7804eb72e538a))
 
