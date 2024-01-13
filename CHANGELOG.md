@@ -2,7 +2,56 @@
 
 
 
+## v0.2.1 (2024-01-13)
+
+### Chore
+
+* chore: Update ci.yml ([`6c454b7`](https://github.com/Atticuszz/fastapi_supabase_template/commit/6c454b702808800d0873621925b7804eb72e538a))
+
+* chore: update README.md ([`3844c4f`](https://github.com/Atticuszz/fastapi_supabase_template/commit/3844c4f2c978f02c44c09ce3be0523ece7e601a3))
+
+* chore: update latest_changes.yml ([`e535440`](https://github.com/Atticuszz/fastapi_supabase_template/commit/e535440224881ec616dd7580a03368d07fbab1dd))
+
+* chore: update README.md ([`6efca18`](https://github.com/Atticuszz/fastapi_supabase_template/commit/6efca18086fae9039b2ead2980537603683fdf1a))
+
+* chore: update README.md ([`0295d3e`](https://github.com/Atticuszz/fastapi_supabase_template/commit/0295d3e6edb84793473858eed69aee1d6236d5bd))
+
+* chore: add latest_changes.yml ([`dca85c3`](https://github.com/Atticuszz/fastapi_supabase_template/commit/dca85c3cdf96c9f396e750e0a97c2fd19dad1e74))
+
+* chore: update README.md ([`0e55bc6`](https://github.com/Atticuszz/fastapi_supabase_template/commit/0e55bc6c3023f720c8fee1e86628c68c34f949a9))
+
+* chore: add latest_changes.yml
+
+Merge pull request #22 from Atticuszz/debuging ([`d6db3a5`](https://github.com/Atticuszz/fastapi_supabase_template/commit/d6db3a56bc0e65de708078a7f01dfb9f2d5b46c4))
+
+* chore: update README.md ([`9732760`](https://github.com/Atticuszz/fastapi_supabase_template/commit/9732760e6fad463c6f5e4b9a3dc85a1904ef8216))
+
+### Fix
+
+* fix: add latest_changes.yml ([`d15b2fa`](https://github.com/Atticuszz/fastapi_supabase_template/commit/d15b2fa7766a7fb12d13ee68cd0acc056c81bfa9))
+
+* fix: add latest_changes.yml ([`24927ee`](https://github.com/Atticuszz/fastapi_supabase_template/commit/24927ee71b41ed3846c56f036d81afe3f638a9f0))
+
+* fix: add latest_changes.yml ([`9110a7b`](https://github.com/Atticuszz/fastapi_supabase_template/commit/9110a7b568b996b6d774fce2dfbad2308bda5293))
+
+* fix: add latest_changes.yml ([`c2d9e69`](https://github.com/Atticuszz/fastapi_supabase_template/commit/c2d9e699e44f39f62b2783574c1608bc4a672549))
+
+* fix: add latest_changes.yml ([`7d66ee3`](https://github.com/Atticuszz/fastapi_supabase_template/commit/7d66ee37db6674d6e467b117665d26b233b45e04))
+
+### Unknown
+
+* chore：update ci
+
+debuging ([`2fbb785`](https://github.com/Atticuszz/fastapi_supabase_template/commit/2fbb7853bf975a095ec68d1cc6c1eafdc9d4e9fa))
+
+* Merge branch &#39;main&#39; into debuging ([`ea6077e`](https://github.com/Atticuszz/fastapi_supabase_template/commit/ea6077e06aa6ddef23550564d058e2b984a3f430))
+
+
 ## v0.2.0 (2024-01-13)
+
+### Chore
+
+* chore(release): bump version to v0.2.0 ([`0f3cb92`](https://github.com/Atticuszz/fastapi_supabase_template/commit/0f3cb92c3f651a0e128ff174797b2f8162ac5dd6))
 
 ### Feature
 
