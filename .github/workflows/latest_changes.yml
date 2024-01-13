@@ -2,6 +2,12 @@ name: Run Python Script and Update README
 
 on:
   push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   run-script:
