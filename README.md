@@ -95,15 +95,6 @@ ___
 - 🔨 [items.py](src/app/api/api_v1/endpoints/items.py)
 - 🔨 [deps.py](src/app/api/deps.py)
 - 🔨 [events.py](src/app/core/events.py)
-### 2024-01-12 by Atticuszz - fix: fix pytest bug of failed test gotrue client in trio, feat: add crud test
-- 🔨 [items.py](src/app/api/api_v1/endpoints/items.py)
-- 🔨 [deps.py](src/app/api/deps.py)
-- 🔨 [config.py](src/app/core/config.py)
-- 🔨 [base.py](src/app/crud/base.py)
-- 🔨 [crud_item.py](src/app/crud/crud_item.py)
-- 🔨 [auth.py](src/app/schemas/auth.py)
-- 🔨 [base.py](src/app/schemas/base.py)
-- 🔨 [item.py](src/app/schemas/item.py)
 ## License
 
 This project is licensed under the terms of the MIT license.
