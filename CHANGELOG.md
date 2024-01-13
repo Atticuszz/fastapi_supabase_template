@@ -2,9 +2,24 @@
 
 
 
+## v0.2.0 (2024-01-13)
+
+### Feature
+
+* feat: release
+
+debuging ([`e198aef`](https://github.com/Atticuszz/fastapi_supabase_template/commit/e198aefda642ef54be24e4e5aadcbeda1e1d3ae8))
+
+* feat: update ci and README.md ([`e01ae29`](https://github.com/Atticuszz/fastapi_supabase_template/commit/e01ae29f4bde167d5a31e4c500d2040845f61a57))
+
+* feat: update ci and README.md ([`971125f`](https://github.com/Atticuszz/fastapi_supabase_template/commit/971125f3e51d741dd80d59a3a074a2f6ff8d733b))
+
+
 ## v0.1.0 (2024-01-13)
 
 ### Chore
+
+* chore(release): bump version to v0.1.0 ([`cecd1e3`](https://github.com/Atticuszz/fastapi_supabase_template/commit/cecd1e3848bed23086811ad3477f139564d3dcc4))
 
 * chore: update ci ([`aa40254`](https://github.com/Atticuszz/fastapi_supabase_template/commit/aa4025472ebbd5c2d57cd421e1185a6bec74a1fa))
 
