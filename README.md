@@ -1,25 +1,84 @@
-![](assets/logo.png)
+<p align="center">
+  <img src="assets/logo.png" alt="Logo">
+</p>
 
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT">
+  </a>
+  <a href="https://codecov.io/gh/Atticuszz/fastapi_supabase_template">
+    <img src="https://codecov.io/gh/Atticuszz/fastapi_supabase_template/branch/main/graph/badge.svg?token=YOUR_TOKEN" alt="codecov">
+  </a>
+  <a href="https://github.com/Atticuszz/fastapi_supabase_template/actions">
+    <img src="https://github.com/Atticuszz/fastapi_supabase_template/actions/workflows/ci.yml/badge.svg" alt="CI">
+  </a>
+  <a href="https://github.com/Atticuszz/fastapi_supabase_template/releases/">
+    <img src="https://img.shields.io/github/release/Atticuszz/fastapi_supabase_template.svg" alt="GitHub release">
+  </a>
+  <img src="https://img.shields.io/badge/python-3.10|3.11|3.12-blue.svg" alt="Python">
+  <a href="https://supabase.com">
+    <img src="https://supabase.com/badge-made-with-supabase-dark.svg" alt="Made with Supabase">
+  </a>
+</p>
 
-## Features
-
-* Full **Docker** integration (Docker based).
-* Docker Swarm Mode deployment.
-* **Docker Compose** integration and optimization for local development.
-* Python <a href="https://github.com/tiangolo/fastapi" class="external-link" target="_blank">**FastAPI**</a> backend:
-    * **Fast**: Very high performance, on par with **NodeJS** and **Go** (thanks to Starlette and Pydantic).
-    * **Intuitive**: Great editor support. <abbr title="also known as auto-complete, autocompletion, IntelliSense">Completion</abbr> everywhere. Less time debugging.
-    * **Easy**: Designed to be easy to use and learn. Less time reading docs.
-    * **Short**: Minimize code duplication. Multiple features from each parameter declaration.
-    * **Robust**: Get production-ready code. With automatic interactive documentation.
-    * **Standards-based**: Based on (and fully compatible with) the open standards for APIs: <a href="https://github.com/OAI/OpenAPI-Specification" class="external-link" target="_blank">OpenAPI</a> and <a href="http://json-schema.org/" class="external-link" target="_blank">JSON Schema</a>.
-    * <a href="https://fastapi.tiangolo.com/features/" class="external-link" target="_blank">**Many other features**</a> including automatic validation, serialization, interactive documentation, authentication with OAuth2 JWT tokens, etc.
+# ⚡SupaFast⚡
+___
+> supabase &  fastapi crud template
+## Roadmap 🫶
+___
+- [x] FastAPI backend
+  - [x] **standard** structure for <a href="https://github.com/tiangolo/fastapi" class="external-link" target="_blank">**FastAPI**</a> project 
+  ```text
+  ── src
+  │   └── app
+  │       ├── api
+  │       │   ├── api_v1
+  │       │   │   ├── endpoints
+  │       │   │   │   ├── __init__.py
+  │       │   │   │   └── items.py
+  │       │   │   ├── __init__.py
+  │       │   │   └── api.py
+  │       │   ├── __init__.py
+  │       │   └── deps.py
+  │       ├── core
+  │       │   ├── __init__.py
+  │       │   ├── config.py
+  │       │   └── events.py
+  │       ├── crud
+  │       │   ├── __init__.py
+  │       │   ├── base.py
+  │       │   └── crud_item.py
+  │       ├── schemas
+  │       │   ├── __init__.py
+  │       │   ├── auth.py
+  │       │   ├── base.py
+  │       │   ├── item.py
+  │       │   └── msg.py
+  │       ├── services
+  │       │   └── __init__.py
+  │       ├── utils
+  │       │   └── __init__.py
+  │       ├── __init__.py
+  │       └── main.py
+  ...
+  ```
+  - [x] **auto-auth** by fastapi dependency with supabase-auth
+  - [x] Full coverage of **CRUD** operations and **api** tests
+  - [x] pytest integration
+- [ ] Supabase integration
+  - [x] crud supabase-postgresql
+  - [ ] websocket with supabase-realtime 
+  - [ ] curd supabase-storage
+  - [ ] supafunc integration
+- [ ] deployment
+  - [ ] Full **Docker** integration (Docker based).
 
 
 ## How to use it
-
-## Release Notes
-
+___
+![](assets/usage.gif)
+## Release Notes 🥸
+___
 ### Latest Changes
 
 * ✨ Upgrade items router with new SQLModel models, simplified logic, and new FastAPI Annotated dependencies. PR [#560](https://github.com/tiangolo/full-stack-fastapi-postgresql/pull/560) by [@tiangolo](https://github.com/tiangolo).

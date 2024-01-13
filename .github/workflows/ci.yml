@@ -29,7 +29,9 @@ jobs:
           poetry-version: 1.7.1
       - run: poetry install
       - run: poetry run pytest
-      - uses: codecov/codecov-action@v3
+
+      - name: Upload Coverage
+        uses: codecov/codecov-action@v3
 
   semantic-release:
     name: Semantic Release and Publish
