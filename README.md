@@ -80,7 +80,30 @@ ___
 ## Release Notes 🥸
 ___
 ### Latest Changes
-
+### 2024-01-13 by Atticuszz - feat: update ci and README.md
+- 🚚 [img.png](img.png) <- img.png
+### 2024-01-13 by Atticuszz - upgrade: release 0.1.0
+- 🔨 [items.py](src/app/api/api_v1/endpoints/items.py)
+- 🔨 [deps.py](src/app/api/deps.py)
+- 🔨 [config.py](src/app/core/config.py)
+- 🔨 [base.py](src/app/crud/base.py)
+- 🔨 [crud_item.py](src/app/crud/crud_item.py)
+- 🔨 [__init__.py](src/app/schemas/__init__.py)
+- 🔨 [auth.py](src/app/schemas/auth.py)
+- 🔨 [base.py](src/app/schemas/base.py)
+### 2024-01-12 by Atticuszz - bugs: failed to auth as dep on new user by access token
+- 🔨 [items.py](src/app/api/api_v1/endpoints/items.py)
+- 🔨 [deps.py](src/app/api/deps.py)
+- 🔨 [events.py](src/app/core/events.py)
+### 2024-01-12 by Atticuszz - fix: fix pytest bug of failed test gotrue client in trio, feat: add crud test
+- 🔨 [items.py](src/app/api/api_v1/endpoints/items.py)
+- 🔨 [deps.py](src/app/api/deps.py)
+- 🔨 [config.py](src/app/core/config.py)
+- 🔨 [base.py](src/app/crud/base.py)
+- 🔨 [crud_item.py](src/app/crud/crud_item.py)
+- 🔨 [auth.py](src/app/schemas/auth.py)
+- 🔨 [base.py](src/app/schemas/base.py)
+- 🔨 [item.py](src/app/schemas/item.py)
 ## License
 
 This project is licensed under the terms of the MIT license.
