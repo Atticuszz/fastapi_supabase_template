@@ -2,9 +2,54 @@
 
 
 
+## v0.1.0 (2024-01-13)
+
+### Chore
+
+* chore: update ci ([`aa40254`](https://github.com/Atticuszz/fastapi_supabase_template/commit/aa4025472ebbd5c2d57cd421e1185a6bec74a1fa))
+
+* chore: update README.md ([`8c8fbb5`](https://github.com/Atticuszz/fastapi_supabase_template/commit/8c8fbb50f2c5f9cf6321bda5ef93beca80a911aa))
+
+* chore: update README.md ([`552f934`](https://github.com/Atticuszz/fastapi_supabase_template/commit/552f934a9c821e018b676d5c55ed461350ef819a))
+
+* chore: update ci ([`6608ef7`](https://github.com/Atticuszz/fastapi_supabase_template/commit/6608ef7a19c63bcd89ef7bdb82672f1eed047b3b))
+
+### Feature
+
+* feat: release
+
+Merge pull request #20 from Atticuszz/debuging ([`57a8f19`](https://github.com/Atticuszz/fastapi_supabase_template/commit/57a8f19a2ed24889d15204e69a2a910277aad8d3))
+
+* feat: update ci and README.md ([`a491d7d`](https://github.com/Atticuszz/fastapi_supabase_template/commit/a491d7d4b8678f2aedebee74650ec9750e25f785))
+
+* feat: update ci and README.md ([`1f4f88c`](https://github.com/Atticuszz/fastapi_supabase_template/commit/1f4f88c530d2d6f2fb53460b29efcddd26dbc6c8))
+
+### Unknown
+
+* Merge pull request #19 from Atticuszz/debuging
+
+chore:update ci ([`2ad605e`](https://github.com/Atticuszz/fastapi_supabase_template/commit/2ad605e0b9342d745dcc0c5c4d1eb91fbff74163))
+
+* Merge pull request #18 from Atticuszz/debuging
+
+fix: update ci latest changes ([`3a30288`](https://github.com/Atticuszz/fastapi_supabase_template/commit/3a30288f6b2bbc97f579218c005c8a7a3a97d2e4))
+
+* Merge remote-tracking branch &#39;origin/debuging&#39; into debuging ([`dbd4ca6`](https://github.com/Atticuszz/fastapi_supabase_template/commit/dbd4ca6d1209c86c38f39cd6d1bb07594e63e78a))
+
+* Merge pull request #17 from Atticuszz/debuging
+
+feat: upgrade to the first version 0.1.0 ([`d895131`](https://github.com/Atticuszz/fastapi_supabase_template/commit/d89513113601632e784dbd32204e0c07b7db1f4f))
+
+* Merge branch &#39;main&#39; into debuging ([`dd3047b`](https://github.com/Atticuszz/fastapi_supabase_template/commit/dd3047b8b0898d194ecb1740a337efc46383dcb1))
+
+* upgrade: release 0.1.0 ([`5738b0e`](https://github.com/Atticuszz/fastapi_supabase_template/commit/5738b0edbfc50043205e3cf749c9f8b0cb419d6b))
+
+
 ## v0.0.2 (2024-01-13)
 
 ### Chore
+
+* chore(release): bump version to v0.0.2 ([`26f5e3b`](https://github.com/Atticuszz/fastapi_supabase_template/commit/26f5e3bb947335bbb359617ffef530be8599767d))
 
 * chore: set pro-commit-hooks autofix_prs -&gt; True ([`1bad181`](https://github.com/Atticuszz/fastapi_supabase_template/commit/1bad181c3d093089e0a061a5bce438b02f84d238))
 
