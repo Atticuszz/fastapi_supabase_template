@@ -32,7 +32,8 @@ class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
     SUPABASE_URL: str = Field(default_factory=lambda: os.getenv("SUPABASE_URL"))
     SUPABASE_KEY: str = Field(default_factory=lambda: os.getenv("SUPABASE_KEY"))
-
+    SUPERUSER_EMAIL: str = Field(default_factory=lambda: os.getenv("SUPERUSER_EMAIL"))
+    SUPERUSER_PASSWORD: str = Field(default=lambda: os.getenv("SUPERUSER_PASSWORD"))
     # SERVER_NAME: str
     SERVER_HOST: AnyHttpUrl = "https://localhost"
     SERVER_PORT: int = 8000

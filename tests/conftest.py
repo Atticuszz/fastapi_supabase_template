@@ -12,17 +12,16 @@ from pydantic import ConfigDict
 from supabase_py_async import AsyncClient, create_client
 
 from app.main import app
+from app.schemas import Token
+from tests.utils import get_auth_header
 
 LOG_FILE = Path(__file__).parent / "scripts.log"
 
 
-# 日志配置函数
 def setup_logging(level: int = logging.INFO) -> None:
-    # 创建 Logger
     logger = logging.getLogger()
     logger.setLevel(level)
 
-    # 创建用于写入日志文件的 Handler
     file_handler = RotatingFileHandler(
         LOG_FILE, maxBytes=1024 * 1024 * 5, backupCount=5
     )
@@ -32,13 +31,11 @@ def setup_logging(level: int = logging.INFO) -> None:
     )
     file_handler.setFormatter(file_formatter)
 
-    # 创建用于控制台输出的 Handler
     console_handler = logging.StreamHandler()
     console_handler.setLevel(level)
     console_formatter = logging.Formatter("%(name)s - %(levelname)s - %(message)s")
     console_handler.setFormatter(console_formatter)
 
-    # 添加 Handlers 到 Logger
     logger.addHandler(file_handler)
     logger.addHandler(console_handler)
 
@@ -62,7 +59,7 @@ def client() -> Generator[TestClient, None, None]:
 
 
 @pytest.fixture(scope="module")
-async def access_token() -> AsyncGenerator[str, None]:
+async def token() -> AsyncGenerator[Token, None]:
     url = os.environ.get("SUPABASE_TEST_URL")
     assert url is not None, "Must provide SUPABASE_TEST_URL environment variable"
     key = os.environ.get("SUPABASE_TEST_KEY")
@@ -79,12 +76,16 @@ async def access_token() -> AsyncGenerator[str, None]:
     assert response.session.access_token is not None
     assert response.session.refresh_token is not None
     try:
-        yield response.session.access_token
+        yield Token(
+            access_token=response.session.access_token,
+            refresh_token=response.session.refresh_token,
+        )
     finally:
         await db_client.auth.sign_in_with_password(
             {"email": "zhouge1831@gmail.com", "password": "Zz030327#"}
         )
-        await db_client.table("users").delete().eq("id", response.user.id).execute()
+        # need new feature to delete user
+
         await db_client.auth.sign_out()
 
 
@@ -108,15 +109,14 @@ async def db() -> AsyncGenerator[AsyncClient, None]:
             await db_client.auth.sign_out()
 
 
-# FIXME: failed to auth
-# @pytest.mark.anyio
-# async def test_create_item(client: TestClient, access_token: str):
-#     from tests.utils import get_auth_header
-#     test_data = Faker().sentence()
-#     assert isinstance(access_token, str)
-#     headers = get_auth_header(access_token)
-#
-#     response = client.post("/api/v1/i
-#     tems/create-item", headers=headers, json={"test_data": test_data})
-#     assert response.status_code == 200
-#     assert response.json()["test_data"] == "Sample Data"
+@pytest.mark.anyio
+async def test_read_all_items(client: TestClient, token: Token) -> None:
+    headers = get_auth_header(token.access_token)
+
+    response = client.get(
+        "/api/v1/items/read-all-item",
+        headers=headers,
+        cookies={"refresh_token": token.refresh_token},
+    )
+    assert response.status_code == 200
+    assert isinstance(response.json(), list)

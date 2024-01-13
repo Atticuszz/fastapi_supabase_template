@@ -6,11 +6,6 @@ from pydantic import BaseModel
 class Token(BaseModel):
     access_token: str | None = None
     refresh_token: str | None = None
-    expires_at: int | None = None
-    """
-    A timestamp of when the token will expire. Returned when a login is confirmed.
-    """
-    token_type: str
 
 
 # request

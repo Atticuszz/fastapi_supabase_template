@@ -8,16 +8,38 @@
 import logging
 from typing import Annotated
 
-from fastapi import Depends, HTTPException
+from fastapi import Cookie, Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer
 from gotrue import User
+from gotrue.errors import AuthApiError
 from supabase_py_async import AsyncClient, create_client
 from supabase_py_async.lib.client_options import ClientOptions
 
 from app.core.config import settings
+from app.schemas import Token
+
+# auto get access_token from header
+reusable_oauth2 = OAuth2PasswordBearer(
+    tokenUrl="please login by supabase-js to get token"
+)
+AccessTokenDep = Annotated[str, Depends(reusable_oauth2)]
+RefreshTokenDep = Annotated[str | None, Cookie()]
 
 
-async def supser_client() -> AsyncClient:
+async def get_token(
+    access_token: AccessTokenDep, refresh_token: RefreshTokenDep
+) -> Token | None:
+    if not access_token:
+        raise HTTPException(status_code=401, detail="No access token")
+    if not refresh_token:
+        raise HTTPException(status_code=401, detail="No refresh token")
+    return Token(access_token=access_token, refresh_token=refresh_token)
+
+
+TokenDep = Annotated[Token | None, Depends(get_token)]
+
+
+async def get_db(token: TokenDep) -> AsyncClient:
     client: AsyncClient | None = None
     try:
         client = await create_client(
@@ -27,52 +49,18 @@ async def supser_client() -> AsyncClient:
                 postgrest_client_timeout=10, storage_client_timeout=10
             ),
         )
+        # checks all done in supabase-py !
+        if not token:
+            raise HTTPException(status_code=401, detail="Invalid authentication")
+        await client.auth.set_session(token.access_token, token.refresh_token)
+        # session = await client.auth.get_session()
         yield client
-    finally:
-        if client:
-            await client.auth.sign_out()
 
-
-SuperClientDep = Annotated[AsyncClient, Depends(supser_client)]
-
-# auto get access_token from header
-reusable_oauth2 = OAuth2PasswordBearer(
-    tokenUrl="please login by supabase-js to get token"
-)
-
-TokenDep = Annotated[str, Depends(reusable_oauth2)]
-
-
-async def validate_user(access_token: TokenDep, super_client: SuperClientDep) -> str:
-    try:
-        if not super_client:
-            raise HTTPException(status_code=401, detail="No super client")
-        await super_client.auth.get_user(access_token)
-    except Exception as e:
+    except AuthApiError as e:
         logging.error(e)
-        raise HTTPException(status_code=401, detail=e)
-    return access_token
-
-
-AccessTokenDep = Annotated[str, Depends(validate_user)]
-
-
-async def get_db(access_token: AccessTokenDep) -> AsyncClient:
-    client: AsyncClient | None = None
-    try:
-        client = await create_client(
-            settings.SUPABASE_URL,
-            access_token,
-            options=ClientOptions(
-                postgrest_client_timeout=10, storage_client_timeout=10
-            ),
+        raise HTTPException(
+            status_code=401, detail="Invalid authentication credentials"
         )
-        # client.postgrest.auth(token=access_token)
-        # await client.auth.get_user(access_token)
-        yield client
-    except Exception as e:
-        logging.error(e)
-        raise HTTPException(status_code=401, detail=e)
     finally:
         if client:
             await client.auth.sign_out()

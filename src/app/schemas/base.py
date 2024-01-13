@@ -50,4 +50,6 @@ class InDBBase(BaseModel):
 class ResponseBase(InDBBase):
     # inherent to add more properties for responding
     table_name: ClassVar[str] = "ResponseBase".lower()
-    Config: ClassVar[ConfigDict] = ConfigDict(extra="ignore")
+    Config: ClassVar[ConfigDict] = ConfigDict(
+        extra="ignore", arbitrary_types_allowed=True
+    )
