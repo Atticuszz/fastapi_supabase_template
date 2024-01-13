@@ -8,5 +8,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="supabase-py-async" />
     <orderEntry type="module" module-name="full-stack-fastapi-postgresql" />
+    <orderEntry type="module" module-name="work_space_fastapi" />
   </component>
 </module>
