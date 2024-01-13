@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../KnowledgeHub" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bug_reproduction" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../fastapi-supabase-auth" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../full-stack-fastapi-postgresql" vcs="Git" />

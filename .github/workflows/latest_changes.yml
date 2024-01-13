@@ -1,0 +1,45 @@
+name: Run Python Script and Update README
+
+on:
+  push:
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: 'main'
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configuring git credentials
+        run: |
+          git config --global user.email "1831768457@qq.com"
+          git config --global user.name "Atticuszz"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+            python -m pip install --upgrade pip
+            pip install useful-scripts pre-commit
+
+      - name: Run pre-commit hooks
+        run: pre-commit run --all-files
+        continue-on-error: true
+
+      - name: Run the script for recently modified
+        run: markdown --root ${{ github.workspace }} modify_recent --output ${{ github.workspace }}/README.md --num_commits 15 --dir src --title "### Latest Changes"
+
+
+      - name: Commit README changes
+        run: |
+          git add README.md
+          git add docs/
+          git commit -m "Update README.md automatically" || echo "No changes to commit"
+          git push origin main

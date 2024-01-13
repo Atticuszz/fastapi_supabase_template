@@ -9,5 +9,6 @@
     <orderEntry type="module" module-name="supabase-py-async" />
     <orderEntry type="module" module-name="bug_reproduction" />
     <orderEntry type="module" module-name="fastapi-supabase-auth" />
+    <orderEntry type="module" module-name="KnowledgeHub" />
   </component>
 </module>
