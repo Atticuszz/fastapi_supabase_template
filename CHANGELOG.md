@@ -2,9 +2,37 @@
 
 
 
+## v0.3.1 (2024-01-15)
+
+### Chore
+
+* chore: update README.md ([`fa73822`](https://github.com/Atticuszz/fastapi_supabase_template/commit/fa73822af2dfcd5baff78e7ddc75f7840e1c7a4f))
+
+* chore: update README.md ([`90dc099`](https://github.com/Atticuszz/fastapi_supabase_template/commit/90dc0994d14beabd76c4048e4f3d71fb677eae82))
+
+* chore: Delete .idea directory ([`0e5f4d9`](https://github.com/Atticuszz/fastapi_supabase_template/commit/0e5f4d9eb16c65f2f1989e66b9651b83a05c0f92))
+
+### Fix
+
+* fix: bump version to 0.3.1 ([`31d3469`](https://github.com/Atticuszz/fastapi_supabase_template/commit/31d346934e00d627d5116efc0c8186df31244adc))
+
+* fix: no need to pass refresh token for validation ,only access_token
+chore: bump supabase_py_async to 2.5.0 ([`6c77e46`](https://github.com/Atticuszz/fastapi_supabase_template/commit/6c77e4669049cd234bf4bfe6f36700e400a187b0))
+
+### Unknown
+
+* chore：Update ci.yml ([`1dfec09`](https://github.com/Atticuszz/fastapi_supabase_template/commit/1dfec094a5c5e36b372aab864b792c13917463de))
+
+* Merge branch &#39;main&#39; of github.com:/Atticuszz/fastapi_supabase_template ([`4a6601f`](https://github.com/Atticuszz/fastapi_supabase_template/commit/4a6601f732df054d4c264b5288e36d9d9e8aabfd))
+
+* Merge branch &#39;main&#39; of github.com:/Atticuszz/fastapi_supabase_template ([`39373de`](https://github.com/Atticuszz/fastapi_supabase_template/commit/39373dead79ae45f8afe5deea06f71b4a656c269))
+
+
 ## v0.3.0 (2024-01-13)
 
 ### Chore
+
+* chore(release): bump version to v0.3.0 ([`ee43372`](https://github.com/Atticuszz/fastapi_supabase_template/commit/ee4337261961babf31b9ec5a79a175ea6ca801b7))
 
 * chore: update README.md ([`270a350`](https://github.com/Atticuszz/fastapi_supabase_template/commit/270a3500aa70056ebddc3dff01f8d95bd94e98e9))
 
