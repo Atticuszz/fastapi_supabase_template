@@ -150,6 +150,15 @@ ___
 ___
 
 ### Latest Changes
+### 2024-01-15 by Atticuszz - fix: no need to pass refresh token for validation ,only access_token chore: bump supabase_py_async to 2.5.0
+- 🔨 [items.py](src/app/api/api_v1/endpoints/items.py)
+- 🔨 [deps.py](src/app/api/deps.py)
+- 🔨 [__init__.py](src/app/core/__init__.py)
+- 🔨 [events.py](src/app/core/events.py)
+- 🔨 [base.py](src/app/crud/base.py)
+- 🔨 [crud_item.py](src/app/crud/crud_item.py)
+- 🔨 [main.py](src/app/main.py)
+- 🔨 [auth.py](src/app/schemas/auth.py)
 ### 2024-01-13 by Atticuszz - feat: update ci and README.md
 - 🚚 [img.png](img.png) <- img.png
 ### 2024-01-13 by Atticuszz - upgrade: release 0.1.0
