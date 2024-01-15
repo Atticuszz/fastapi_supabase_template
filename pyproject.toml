@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fastapi_supabase_template"
-version = "0.3.0"
+version = "0.3.1"
 description = ""
 authors = ["Atticuszz <1831768457@qq.com>"]
 readme = "README.md"
