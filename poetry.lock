@@ -1704,13 +1704,13 @@ test = ["pylint", "pytest", "pytest-black", "pytest-cov", "pytest-pylint"]
 
 [[package]]
 name = "supabase-py-async"
-version = "2.4.2"
+version = "2.5.0"
 description = "supabase-py with async synax"
 optional = false
 python-versions = ">=3.9,<4.0"
 files = [
-    {file = "supabase_py_async-2.4.2-py3-none-any.whl", hash = "sha256:b1227cdd1fc02808d7be8d66b7faaeb378ee62d2243f46e4a7bd70974ad516e3"},
-    {file = "supabase_py_async-2.4.2.tar.gz", hash = "sha256:7e4abb68907a90a2b87f73d31deb76c89d199300c083fba66e861e40bd997ee3"},
+    {file = "supabase_py_async-2.5.0-py3-none-any.whl", hash = "sha256:8368131b2391aff12f5eac0a94844d203be3cc17f25b492f36be0449c28ab3a1"},
+    {file = "supabase_py_async-2.5.0.tar.gz", hash = "sha256:7f680327154b759840ef1ba0f82f2a486dc4a69f5ba52f76deed3488618a02dd"},
 ]
 
 [package.dependencies]
@@ -2050,4 +2050,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.13"
-content-hash = "f82915f1ca5252dfd0a846e1e2554e22a852d471e4ff27f98d212692d1734a82"
+content-hash = "eb6313e224fce1d56588130026c4f92bce299535d1394fac50e7a38200d361b9"

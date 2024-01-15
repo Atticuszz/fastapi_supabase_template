@@ -10,8 +10,6 @@ from tests.utils import get_auth_header
 
 @pytest.mark.anyio
 async def test_create_item(client: TestClient, token: Token) -> None:
-    assert isinstance(token.access_token, str) and isinstance(token.refresh_token, str)
-
     # 获取认证头
     headers = get_auth_header(token.access_token)
 
@@ -21,7 +19,6 @@ async def test_create_item(client: TestClient, token: Token) -> None:
     response = client.post(
         "/api/v1/items/create-item",
         headers=headers,
-        cookies={"refresh_token": token.refresh_token},
         json={"test_data": test_data},
     )
     assert response.status_code == 200
@@ -35,7 +32,6 @@ async def test_read_all_items(client: TestClient, token: Token) -> None:
     response = client.get(
         "/api/v1/items/read-all-item",
         headers=headers,
-        cookies={"refresh_token": token.refresh_token},
     )
     assert response.status_code == 200
     assert isinstance(response.json(), list)
@@ -50,7 +46,6 @@ async def test_read_item_by_id(client: TestClient, token: Token) -> None:
     create_response = client.post(
         "/api/v1/items/create-item",
         headers=headers,
-        cookies={"refresh_token": token.refresh_token},
         json={"test_data": test_data},
     )
     assert create_response.status_code == 200
@@ -60,7 +55,6 @@ async def test_read_item_by_id(client: TestClient, token: Token) -> None:
     read_response = client.get(
         f"/api/v1/items/get-by-id/{created_item_id}",
         headers=headers,
-        cookies={"refresh_token": token.refresh_token},
     )
     assert read_response.status_code == 200
     assert read_response.json()["id"] == created_item_id
@@ -78,7 +72,6 @@ async def test_read_item_by_owner(
     client.post(
         "/api/v1/items/create-item",
         headers=headers,
-        cookies={"refresh_token": token.refresh_token},
         json={"test_data": test_data},
     )
 
@@ -90,7 +83,6 @@ async def test_read_item_by_owner(
     read_response = client.get(
         "/api/v1/items/get-by-owner",
         headers=headers,
-        cookies={"refresh_token": token.refresh_token},
     )
     assert read_response.status_code == 200
     items = read_response.json()
@@ -106,7 +98,6 @@ async def test_update_item(client: TestClient, token: Token) -> None:
     create_response = client.post(
         "/api/v1/items/create-item",
         headers=headers,
-        cookies={"refresh_token": token.refresh_token},
         json={"test_data": test_data},
     )
     assert create_response.status_code == 200
@@ -119,7 +110,6 @@ async def test_update_item(client: TestClient, token: Token) -> None:
     update_response = client.put(
         "/api/v1/items/update-item",
         headers=headers,
-        cookies={"refresh_token": token.refresh_token},
         json=updated_data,
     )
     assert update_response.status_code == 200
@@ -134,7 +124,6 @@ async def test_delete_item(client: TestClient, token: Token) -> None:
     create_response = client.post(
         "/api/v1/items/create-item",
         headers=headers,
-        cookies={"refresh_token": token.refresh_token},
         json={"test_data": test_data},
     )
     assert create_response.status_code == 200
@@ -144,7 +133,6 @@ async def test_delete_item(client: TestClient, token: Token) -> None:
     delete_response = client.delete(
         f"/api/v1/items/delete/{created_item_id}",
         headers=headers,
-        cookies={"refresh_token": token.refresh_token},
     )
     assert delete_response.status_code == 200
 
@@ -152,7 +140,6 @@ async def test_delete_item(client: TestClient, token: Token) -> None:
     get_response = client.get(
         f"/api/v1/items/get-by-id/{created_item_id}",
         headers=headers,
-        cookies={"refresh_token": token.refresh_token},
     )
     assert get_response.status_code == 200
     assert get_response.json() is None

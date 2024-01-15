@@ -9,6 +9,10 @@ class Token(BaseModel):
 
 
 # request
+class UserIn(Token, User):
+    pass
+
+
 # Properties to receive via API on creation
 # in
 class UserCreate(BaseModel):

@@ -2,6 +2,7 @@ from supabase_py_async import AsyncClient
 
 from app.crud.base import CRUDBase
 from app.schemas import Item, ItemCreate, ItemUpdate
+from app.schemas.auth import UserIn
 
 
 class CRUDItem(CRUDBase[Item, ItemCreate, ItemUpdate]):
@@ -14,8 +15,8 @@ class CRUDItem(CRUDBase[Item, ItemCreate, ItemUpdate]):
     async def get_all(self, db: AsyncClient) -> list[Item]:
         return await super().get_all(db)
 
-    async def get_multi_by_owner(self, db: AsyncClient) -> list[Item]:
-        return await super().get_multi_by_owner(db)
+    async def get_multi_by_owner(self, db: AsyncClient, *, user: UserIn) -> list[Item]:
+        return await super().get_multi_by_owner(db, user=user)
 
     async def update(self, db: AsyncClient, *, obj_in: ItemUpdate) -> Item:
         return await super().update(db, obj_in=obj_in)

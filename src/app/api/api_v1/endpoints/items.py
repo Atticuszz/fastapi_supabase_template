@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.api.deps import SessionDep
+from app.api.deps import CurrentUser, SessionDep
 from app.crud import item
 from app.schemas import Item, ItemCreate, ItemUpdate
 
@@ -23,8 +23,8 @@ async def read_item_by_id(id: str, session: SessionDep) -> Item | None:
 
 
 @router.get("/get-by-owner")
-async def read_item_by_owner(session: SessionDep) -> list[Item]:
-    return await item.get_multi_by_owner(session)
+async def read_item_by_owner(session: SessionDep, user: CurrentUser) -> list[Item]:
+    return await item.get_multi_by_owner(session, user=user)
 
 
 @router.put("/update-item")

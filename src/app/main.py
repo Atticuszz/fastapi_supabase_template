@@ -10,8 +10,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.api_v1.api import api_router
-from app.core import lifespan
 from app.core.config import settings
+from app.core.events import lifespan
 
 
 def create_app() -> FastAPI:

@@ -143,7 +143,8 @@ ___
     - [ ] supafunc integration
 - [x] deployment
     - [x] Full **Docker** integration (Docker based).
-
+- [ ] clone
+    - [ ] cookiecutter
 ## Release Notes 🥸
 
 ___

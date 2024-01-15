@@ -67,25 +67,22 @@ async def token() -> AsyncGenerator[Token, None]:
     db_client = await create_client(url, key)
     fake_email = Faker().email()
     fake_password = Faker().password()
-    await db_client.auth.sign_up({"email": fake_email, "password": fake_password})
-    response = await db_client.auth.sign_in_with_password(
+    response = await db_client.auth.sign_up(
         {"email": fake_email, "password": fake_password}
     )
     assert response.user.email == fake_email
     assert response.user.id is not None
     assert response.session.access_token is not None
-    assert response.session.refresh_token is not None
     try:
         yield Token(
             access_token=response.session.access_token,
-            refresh_token=response.session.refresh_token,
         )
     finally:
         await db_client.auth.sign_in_with_password(
             {"email": "zhouge1831@gmail.com", "password": "Zz030327#"}
         )
         # need new feature to delete user
-
+        # await db_client.auth.admin.delete_user(response.user.id)
         await db_client.auth.sign_out()
 
 
@@ -116,7 +113,6 @@ async def test_read_all_items(client: TestClient, token: Token) -> None:
     response = client.get(
         "/api/v1/items/read-all-item",
         headers=headers,
-        cookies={"refresh_token": token.refresh_token},
     )
     assert response.status_code == 200
     assert isinstance(response.json(), list)
