@@ -159,8 +159,6 @@ ___
 - 🔨 [crud_item.py](src/app/crud/crud_item.py)
 - 🔨 [main.py](src/app/main.py)
 - 🔨 [auth.py](src/app/schemas/auth.py)
-### 2024-01-13 by Atticuszz - feat: update ci and README.md
-- 🚚 [img.png](img.png) <- img.png
 ## License
 
 This project is licensed under the terms of the MIT license.
