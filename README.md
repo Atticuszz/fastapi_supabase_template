@@ -150,6 +150,8 @@ ___
 ___
 
 ### Latest Changes
+### 2024-01-29 by Atticuszz - chore: update README.md
+- 🔨 [README.md](README.md)
 ### 2024-01-29 by dependabot[bot] - ⬆ Bump pytest from 7.4.4 to 8.0.0
 - 🔨 [poetry.lock](poetry.lock)
 - 🔨 [pyproject.toml](pyproject.toml)
@@ -266,8 +268,6 @@ ___
 ### 2024-01-13 by Atticuszz - chore: add latest_changes.yml
 - 🔨 [ci.yml](.github/workflows/ci.yml)
 - 🔨 [latest_changes.yml](.github/workflows/latest_changes.yml)
-### 2024-01-13 by Atticuszz - chore: update README.md
-- 🔨 [README.md](README.md)
 ## License
 
 This project is licensed under the terms of the MIT license.
