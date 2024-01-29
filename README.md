@@ -150,7 +150,49 @@ ___
 ___
 
 ### Latest Changes
+### 2024-01-29 by dependabot[bot] - ⬆ Bump pytest from 7.4.4 to 8.0.0
+- 🔨 [poetry.lock](poetry.lock)
+- 🔨 [pyproject.toml](pyproject.toml)
+### 2024-01-29 by dependabot[bot] - ⬆ Bump uvicorn from 0.27.0 to 0.27.0.post1
+- 🔨 [poetry.lock](poetry.lock)
+### 2024-01-24 by dependabot[bot] - ⬆ Bump faker from 22.5.0 to 22.5.1
+- 🔨 [poetry.lock](poetry.lock)
+- 🔨 [pyproject.toml](pyproject.toml)
+### 2024-01-24 by dependabot[bot] - ⬆ Bump python-dotenv from 1.0.0 to 1.0.1
+- 🔨 [poetry.lock](poetry.lock)
+- 🔨 [pyproject.toml](pyproject.toml)
+### 2024-01-23 by dependabot[bot] - ⬆ Bump uvicorn from 0.26.0 to 0.27.0
+- 🔨 [poetry.lock](poetry.lock)
+- 🔨 [pyproject.toml](pyproject.toml)
+### 2024-01-23 by dependabot[bot] - ⬆ Bump faker from 22.4.0 to 22.5.0
+- 🔨 [poetry.lock](poetry.lock)
+- 🔨 [pyproject.toml](pyproject.toml)
+### 2024-01-22 by dependabot[bot] - ⬆ Bump faker from 22.2.0 to 22.4.0
+- 🔨 [poetry.lock](poetry.lock)
+- 🔨 [pyproject.toml](pyproject.toml)
+### 2024-01-17 by Atticuszz - chore: update README.md
+- 🔨 [README.md](README.md)
+### 2024-01-17 by dependabot[bot] - ⬆ Bump uvicorn from 0.25.0 to 0.26.0
+- 🔨 [poetry.lock](poetry.lock)
+- 🔨 [pyproject.toml](pyproject.toml)
+### 2024-01-15 by dependabot[bot] - ⬆ Bump docker/login-action from 1 to 3
+- 🔨 [docker-image.yml](.github/workflows/docker-image.yml)
+### 2024-01-15 by dependabot[bot] - ⬆ Bump docker/build-push-action from 2 to 5
+- 🔨 [docker-image.yml](.github/workflows/docker-image.yml)
+### 2024-01-15 by github-actions - chore(release): bump version to v0.3.1
+- 🔨 [CHANGELOG.md](CHANGELOG.md)
+### 2024-01-15 by Atticus Zhou - chore：Update ci.yml
+- 🔨 [ci.yml](.github/workflows/ci.yml)
+### 2024-01-15 by Atticuszz - chore: update README.md
+- 🔨 [README.md](README.md)
+### 2024-01-15 by Atticuszz - fix: bump version to 0.3.1
+- 🔨 [pyproject.toml](pyproject.toml)
+### 2024-01-15 by Atticuszz - chore: update README.md
+- 🔨 [README.md](README.md)
 ### 2024-01-15 by Atticuszz - fix: no need to pass refresh token for validation ,only access_token chore: bump supabase_py_async to 2.5.0
+- 🔨 [.gitignore](.gitignore)
+- 🔨 [README.md](README.md)
+- 🔨 [poetry.lock](poetry.lock)
 - 🔨 [items.py](src/app/api/api_v1/endpoints/items.py)
 - 🔨 [deps.py](src/app/api/deps.py)
 - 🔨 [__init__.py](src/app/core/__init__.py)
@@ -159,6 +201,73 @@ ___
 - 🔨 [crud_item.py](src/app/crud/crud_item.py)
 - 🔨 [main.py](src/app/main.py)
 - 🔨 [auth.py](src/app/schemas/auth.py)
+- 🔨 [test_items.py](tests/api/api_v1/test_items.py)
+- 🔨 [conftest.py](tests/conftest.py)
+### 2024-01-14 by Atticus Zhou - chore: Delete .idea directory
+- 🗑️ .gitignore
+- 🗑️ GitLink.xml
+- 🗑️ deployment.xml
+- 🗑️ fastapi_supabase_template.iml
+- 🗑️ git_toolbox_prj.xml
+- 🗑️ Project_Default.xml
+- 🗑️ profiles_settings.xml
+- 🗑️ misc.xml
+- 🗑️ modules.xml
+- 🗑️ poetry.xml
+- 🗑️ vcs.xml
+### 2024-01-13 by github-actions - chore(release): bump version to v0.3.0
+- 🔨 [CHANGELOG.md](CHANGELOG.md)
+### 2024-01-13 by Atticuszz - feat: add Dockerfile and image push ci
+- 🔨 [docker-image.yml](.github/workflows/docker-image.yml)
+- 🔨 [pyproject.toml](pyproject.toml)
+### 2024-01-13 by Atticuszz - feat: add Dockerfile
+- 🔨 [.dockerignore](.dockerignore)
+- ✨ [docker-image.yml](.github/workflows/docker-image.yml)
+- ✨ [deployment.xml](.idea/deployment.xml)
+- 🔨 [fastapi_supabase_template.iml](.idea/fastapi_supabase_template.iml)
+- 🔨 [misc.xml](.idea/misc.xml)
+- 🔨 [modules.xml](.idea/modules.xml)
+- 🔨 [vcs.xml](.idea/vcs.xml)
+- 🔨 [Dockerfile](Dockerfile)
+- 🔨 [README.md](README.md)
+### 2024-01-13 by Atticuszz - chore: update README.md
+- 🔨 [README.md](README.md)
+### 2024-01-13 by Atticuszz - chore: add Dockerfile
+- ✨ [.dockerignore](.dockerignore)
+- 🔨 [fastapi_supabase_template.iml](.idea/fastapi_supabase_template.iml)
+- 🔨 [modules.xml](.idea/modules.xml)
+- 🔨 [vcs.xml](.idea/vcs.xml)
+- ✨ [Dockerfile](Dockerfile)
+- 🔨 [README.md](README.md)
+### 2024-01-13 by Atticuszz - chore: RUN pre-commit-hooks
+- 🔨 [fastapi_supabase_template.iml](.idea/fastapi_supabase_template.iml)
+- 🔨 [modules.xml](.idea/modules.xml)
+- 🔨 [vcs.xml](.idea/vcs.xml)
+### 2024-01-13 by Atticuszz - chore: update README.md
+- 🗑️ supafast.drawio.svg
+### 2024-01-13 by Atticus Zhou - 已添加 supafast.drawio.png
+- ✨ [supafast.drawio.png](assets/supafast.drawio.png)
+### 2024-01-13 by Atticus Zhou - 更新supafast.drawio.svg
+- 🔨 [supafast.drawio.svg](assets/supafast.drawio.svg)
+### 2024-01-13 by Atticus Zhou - 已添加 supafast.drawio.svg
+- ✨ [supafast.drawio.svg](assets/supafast.drawio.svg)
+### 2024-01-13 by github-actions - chore(release): bump version to v0.2.1
+- 🔨 [CHANGELOG.md](CHANGELOG.md)
+### 2024-01-13 by Atticus Zhou - chore: Update ci.yml
+- 🔨 [ci.yml](.github/workflows/ci.yml)
+### 2024-01-13 by Atticuszz - chore: update README.md
+- 🔨 [README.md](README.md)
+### 2024-01-13 by Atticuszz - chore: update latest_changes.yml
+- 🔨 [poetry_scripts.py](poetry_scripts.py)
+### 2024-01-13 by Atticuszz - chore: update README.md
+- 🔨 [README.md](README.md)
+### 2024-01-13 by Atticuszz - chore: update README.md
+- 🔨 [README.md](README.md)
+### 2024-01-13 by Atticuszz - chore: add latest_changes.yml
+- 🔨 [ci.yml](.github/workflows/ci.yml)
+- 🔨 [latest_changes.yml](.github/workflows/latest_changes.yml)
+### 2024-01-13 by Atticuszz - chore: update README.md
+- 🔨 [README.md](README.md)
 ## License
 
 This project is licensed under the terms of the MIT license.
