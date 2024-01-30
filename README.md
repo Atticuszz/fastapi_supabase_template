@@ -160,6 +160,13 @@ ___
 ___
 
 ### Latest Changes
+### 2024-01-30 by Atticuszz - chore: update README.md
+- 🔨 [latest_changes.yml](.github/workflows/latest_changes.yml)
+- 🔨 [README.md](README.md)
+- ✨ [img.png](assets/img.png)
+- 🗑️ img.png
+### 2024-01-30 by Atticuszz - chore: update README.md
+- 🔨 [README.md](README.md)
 ### 2024-01-30 by dependabot[bot] - ⬆ Bump pydantic from 2.5.3 to 2.6.0
 - 🔨 [poetry.lock](poetry.lock)
 - 🔨 [pyproject.toml](pyproject.toml)
@@ -272,10 +279,6 @@ ___
 - 🔨 [supafast.drawio.svg](assets/supafast.drawio.svg)
 ### 2024-01-13 by Atticus Zhou - 已添加 supafast.drawio.svg
 - ✨ [supafast.drawio.svg](assets/supafast.drawio.svg)
-### 2024-01-13 by github-actions - chore(release): bump version to v0.2.1
-- 🔨 [CHANGELOG.md](CHANGELOG.md)
-### 2024-01-13 by Atticus Zhou - chore: Update ci.yml
-- 🔨 [ci.yml](.github/workflows/ci.yml)
 ## License
 
 This project is licensed under the terms of the MIT license.
