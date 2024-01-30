@@ -209,6 +209,8 @@ ___
 ### 2024-01-30 by Atticuszz - chore: update README.md
 - 🔨 [README.md](README.md)
 ### 2024-01-30 by Atticuszz - chore: update README.md
+- 🔨 [README.md](README.md)
+### 2024-01-30 by Atticuszz - chore: update README.md
 - 🔨 [latest_changes.yml](.github/workflows/latest_changes.yml)
 - 🔨 [README.md](README.md)
 - ✨ [img.png](assets/img.png)
@@ -248,9 +250,6 @@ ___
 - 🔨 [pyproject.toml](pyproject.toml)
 ### 2024-01-17 by Atticuszz - chore: update README.md
 - 🔨 [README.md](README.md)
-### 2024-01-17 by dependabot[bot] - ⬆ Bump uvicorn from 0.25.0 to 0.26.0
-- 🔨 [poetry.lock](poetry.lock)
-- 🔨 [pyproject.toml](pyproject.toml)
 ## License
 
 This project is licensed under the terms of the MIT license.
