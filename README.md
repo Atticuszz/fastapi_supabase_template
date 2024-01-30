@@ -251,6 +251,8 @@ ___
 ### 2024-01-30 by Atticuszz - chore: update README.md
 - 🔨 [README.md](README.md)
 ### 2024-01-30 by Atticuszz - chore: update README.md
+- 🔨 [README.md](README.md)
+### 2024-01-30 by Atticuszz - chore: update README.md
 - 🔨 [latest_changes.yml](.github/workflows/latest_changes.yml)
 - 🔨 [README.md](README.md)
 - ✨ [img.png](assets/img.png)
@@ -260,8 +262,6 @@ ___
 ### 2024-01-30 by dependabot[bot] - ⬆ Bump pydantic from 2.5.3 to 2.6.0
 - 🔨 [poetry.lock](poetry.lock)
 - 🔨 [pyproject.toml](pyproject.toml)
-### 2024-01-30 by Atticuszz - chore: update README.md
-- 🔨 [README.md](README.md)
 ## License
 
 This project is licensed under the terms of the MIT license.
