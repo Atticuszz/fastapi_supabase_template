@@ -175,6 +175,8 @@ ___
 ### 2024-01-30 by Atticuszz - chore: update README.md
 - 🔨 [README.md](README.md)
 ### 2024-01-30 by Atticuszz - chore: update README.md
+- 🔨 [README.md](README.md)
+### 2024-01-30 by Atticuszz - chore: update README.md
 - 🔨 [latest_changes.yml](.github/workflows/latest_changes.yml)
 - 🔨 [README.md](README.md)
 - ✨ [img.png](assets/img.png)
@@ -262,16 +264,6 @@ ___
 ### 2024-01-13 by Atticuszz - feat: add Dockerfile and image push ci
 - 🔨 [docker-image.yml](.github/workflows/docker-image.yml)
 - 🔨 [pyproject.toml](pyproject.toml)
-### 2024-01-13 by Atticuszz - feat: add Dockerfile
-- 🔨 [.dockerignore](.dockerignore)
-- ✨ [docker-image.yml](.github/workflows/docker-image.yml)
-- ✨ [deployment.xml](.idea/deployment.xml)
-- 🔨 [fastapi_supabase_template.iml](.idea/fastapi_supabase_template.iml)
-- 🔨 [misc.xml](.idea/misc.xml)
-- 🔨 [modules.xml](.idea/modules.xml)
-- 🔨 [vcs.xml](.idea/vcs.xml)
-- 🔨 [Dockerfile](Dockerfile)
-- 🔨 [README.md](README.md)
 ## License
 
 This project is licensed under the terms of the MIT license.
