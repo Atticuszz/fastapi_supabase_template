@@ -11,7 +11,7 @@ python = ">=3.9,<3.13"
 fastapi = {extras = ["full"], version = "^0.109.0"}
 python-dotenv = "^1.0.1"
 uvicorn = "^0.27.0"
-pydantic = {extras = ["email"], version = "^2.5.3"}
+pydantic = {extras = ["email"], version = "^2.6.0"}
 pydantic-settings = "^2.1.0"
 python-multipart = "^0.0.6"
 supabase-py-async = "*"
