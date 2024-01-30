@@ -197,6 +197,8 @@ ___
 ### 2024-01-30 by Atticuszz - chore: update README.md
 - 🔨 [README.md](README.md)
 ### 2024-01-30 by Atticuszz - chore: update README.md
+- 🔨 [README.md](README.md)
+### 2024-01-30 by Atticuszz - chore: update README.md
 - 🔨 [latest_changes.yml](.github/workflows/latest_changes.yml)
 - 🔨 [README.md](README.md)
 - ✨ [img.png](assets/img.png)
@@ -245,8 +247,6 @@ ___
 - 🔨 [docker-image.yml](.github/workflows/docker-image.yml)
 ### 2024-01-15 by github-actions - chore(release): bump version to v0.3.1
 - 🔨 [CHANGELOG.md](CHANGELOG.md)
-### 2024-01-15 by Atticus Zhou - chore：Update ci.yml
-- 🔨 [ci.yml](.github/workflows/ci.yml)
 ## License
 
 This project is licensed under the terms of the MIT license.
