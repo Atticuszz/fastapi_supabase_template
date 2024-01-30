@@ -215,6 +215,8 @@ ___
 ### 2024-01-30 by Atticuszz - chore: update README.md
 - 🔨 [README.md](README.md)
 ### 2024-01-30 by Atticuszz - chore: update README.md
+- 🔨 [README.md](README.md)
+### 2024-01-30 by Atticuszz - chore: update README.md
 - 🔨 [latest_changes.yml](.github/workflows/latest_changes.yml)
 - 🔨 [README.md](README.md)
 - ✨ [img.png](assets/img.png)
@@ -247,9 +249,6 @@ ___
 - 🔨 [poetry.lock](poetry.lock)
 - 🔨 [pyproject.toml](pyproject.toml)
 ### 2024-01-23 by dependabot[bot] - ⬆ Bump faker from 22.4.0 to 22.5.0
-- 🔨 [poetry.lock](poetry.lock)
-- 🔨 [pyproject.toml](pyproject.toml)
-### 2024-01-22 by dependabot[bot] - ⬆ Bump faker from 22.2.0 to 22.4.0
 - 🔨 [poetry.lock](poetry.lock)
 - 🔨 [pyproject.toml](pyproject.toml)
 ## License
