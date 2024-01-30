@@ -150,6 +150,11 @@ ___
 ___
 
 ### Latest Changes
+### 2024-01-30 by dependabot[bot] - ⬆ Bump pydantic from 2.5.3 to 2.6.0
+- 🔨 [poetry.lock](poetry.lock)
+- 🔨 [pyproject.toml](pyproject.toml)
+### 2024-01-30 by Atticuszz - chore: update README.md
+- 🔨 [README.md](README.md)
 ### 2024-01-30 by dependabot[bot] - ⬆ Bump aiohttp from 3.9.1 to 3.9.2
 - 🔨 [poetry.lock](poetry.lock)
 ### 2024-01-29 by Atticuszz - chore: update README.md
@@ -261,12 +266,6 @@ ___
 - 🔨 [CHANGELOG.md](CHANGELOG.md)
 ### 2024-01-13 by Atticus Zhou - chore: Update ci.yml
 - 🔨 [ci.yml](.github/workflows/ci.yml)
-### 2024-01-13 by Atticuszz - chore: update README.md
-- 🔨 [README.md](README.md)
-### 2024-01-13 by Atticuszz - chore: update latest_changes.yml
-- 🔨 [poetry_scripts.py](poetry_scripts.py)
-### 2024-01-13 by Atticuszz - chore: update README.md
-- 🔨 [README.md](README.md)
 ## License
 
 This project is licensed under the terms of the MIT license.
