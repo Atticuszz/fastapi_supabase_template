@@ -183,6 +183,8 @@ ___
 ### 2024-01-30 by Atticuszz - chore: update README.md
 - 🔨 [README.md](README.md)
 ### 2024-01-30 by Atticuszz - chore: update README.md
+- 🔨 [README.md](README.md)
+### 2024-01-30 by Atticuszz - chore: update README.md
 - 🔨 [latest_changes.yml](.github/workflows/latest_changes.yml)
 - 🔨 [README.md](README.md)
 - ✨ [img.png](assets/img.png)
@@ -253,18 +255,6 @@ ___
 - 🔨 [auth.py](src/app/schemas/auth.py)
 - 🔨 [test_items.py](tests/api/api_v1/test_items.py)
 - 🔨 [conftest.py](tests/conftest.py)
-### 2024-01-14 by Atticus Zhou - chore: Delete .idea directory
-- 🗑️ .gitignore
-- 🗑️ GitLink.xml
-- 🗑️ deployment.xml
-- 🗑️ fastapi_supabase_template.iml
-- 🗑️ git_toolbox_prj.xml
-- 🗑️ Project_Default.xml
-- 🗑️ profiles_settings.xml
-- 🗑️ misc.xml
-- 🗑️ modules.xml
-- 🗑️ poetry.xml
-- 🗑️ vcs.xml
 ## License
 
 This project is licensed under the terms of the MIT license.
