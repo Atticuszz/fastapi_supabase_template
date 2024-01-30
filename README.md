@@ -181,6 +181,8 @@ ___
 ### 2024-01-30 by Atticuszz - chore: update README.md
 - 🔨 [README.md](README.md)
 ### 2024-01-30 by Atticuszz - chore: update README.md
+- 🔨 [README.md](README.md)
+### 2024-01-30 by Atticuszz - chore: update README.md
 - 🔨 [latest_changes.yml](.github/workflows/latest_changes.yml)
 - 🔨 [README.md](README.md)
 - ✨ [img.png](assets/img.png)
@@ -263,8 +265,6 @@ ___
 - 🗑️ modules.xml
 - 🗑️ poetry.xml
 - 🗑️ vcs.xml
-### 2024-01-13 by github-actions - chore(release): bump version to v0.3.0
-- 🔨 [CHANGELOG.md](CHANGELOG.md)
 ## License
 
 This project is licensed under the terms of the MIT license.
