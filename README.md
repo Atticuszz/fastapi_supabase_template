@@ -247,6 +247,8 @@ ___
 ### 2024-01-30 by Atticuszz - chore: update README.md
 - 🔨 [README.md](README.md)
 ### 2024-01-30 by Atticuszz - chore: update README.md
+- 🔨 [README.md](README.md)
+### 2024-01-30 by Atticuszz - chore: update README.md
 - 🔨 [latest_changes.yml](.github/workflows/latest_changes.yml)
 - 🔨 [README.md](README.md)
 - ✨ [img.png](assets/img.png)
@@ -258,8 +260,6 @@ ___
 - 🔨 [pyproject.toml](pyproject.toml)
 ### 2024-01-30 by Atticuszz - chore: update README.md
 - 🔨 [README.md](README.md)
-### 2024-01-30 by dependabot[bot] - ⬆ Bump aiohttp from 3.9.1 to 3.9.2
-- 🔨 [poetry.lock](poetry.lock)
 ## License
 
 This project is licensed under the terms of the MIT license.
