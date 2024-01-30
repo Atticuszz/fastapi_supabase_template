@@ -163,6 +163,8 @@ ___
 ### 2024-01-30 by Atticuszz - chore: update README.md
 - 🔨 [README.md](README.md)
 ### 2024-01-30 by Atticuszz - chore: update README.md
+- 🔨 [README.md](README.md)
+### 2024-01-30 by Atticuszz - chore: update README.md
 - 🔨 [latest_changes.yml](.github/workflows/latest_changes.yml)
 - 🔨 [README.md](README.md)
 - ✨ [img.png](assets/img.png)
@@ -277,8 +279,6 @@ ___
 - 🗑️ supafast.drawio.svg
 ### 2024-01-13 by Atticus Zhou - 已添加 supafast.drawio.png
 - ✨ [supafast.drawio.png](assets/supafast.drawio.png)
-### 2024-01-13 by Atticus Zhou - 更新supafast.drawio.svg
-- 🔨 [supafast.drawio.svg](assets/supafast.drawio.svg)
 ## License
 
 This project is licensed under the terms of the MIT license.
