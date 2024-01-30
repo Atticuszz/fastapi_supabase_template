@@ -150,6 +150,10 @@ ___
 ___
 
 ### Latest Changes
+### 2024-01-30 by dependabot[bot] - ⬆ Bump aiohttp from 3.9.1 to 3.9.2
+- 🔨 [poetry.lock](poetry.lock)
+### 2024-01-29 by Atticuszz - chore: update README.md
+- 🔨 [README.md](README.md)
 ### 2024-01-29 by Atticuszz - chore: update README.md
 - 🔨 [README.md](README.md)
 ### 2024-01-29 by dependabot[bot] - ⬆ Bump pytest from 7.4.4 to 8.0.0
@@ -263,11 +267,6 @@ ___
 - 🔨 [poetry_scripts.py](poetry_scripts.py)
 ### 2024-01-13 by Atticuszz - chore: update README.md
 - 🔨 [README.md](README.md)
-### 2024-01-13 by Atticuszz - chore: update README.md
-- 🔨 [README.md](README.md)
-### 2024-01-13 by Atticuszz - chore: add latest_changes.yml
-- 🔨 [ci.yml](.github/workflows/ci.yml)
-- 🔨 [latest_changes.yml](.github/workflows/latest_changes.yml)
 ## License
 
 This project is licensed under the terms of the MIT license.
