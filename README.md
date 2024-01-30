@@ -59,8 +59,16 @@ ___
 ___
 ![](assets/usage.gif)
 
-1. create your github repo and clone your repo
-
+1. create your github repo and config it
+   1. allow ci to access your repo
+      ![img.png](assets/img.png)
+   2. config ci_tokens
+      1. `CODECOV_TOKEN` for codecov in `.github/workflows/ci.yml` ,`semantic-release` is optional for auto release
+      2. `ATTICUS_PAT`should replace with your GitHub token for latest_changes.yml in `.github/workflows/latest_changes.yml`
+      3. `DOCKER_USERNAME` and `DOCKER_PASSWORD` for docker-image.yml in `.github/workflows/docker-image.yml`
+      4. replace `tags: atticuszhou/supafast:latest` with your docker repo in `.github/workflows/docker-image.yml`
+   3. config fastapi setting in `your_project\src\app\core\config.py`
+   4. config `pyproject.toml` with your project name and description,etc
 2. cd your repo and install dependencies
 
 ```shell
@@ -71,6 +79,8 @@ poetry install
 ```shell
 export SUPABASE_URL=your_supabase_url
 export SUPABASE_KEY=your_supabase_key
+export SUPERUSER_EMAIL=your_superuser_email
+export SUPERUSER_PASSWORD=your_superuser_password
 ```
 4. config fastapi settings
 ```python

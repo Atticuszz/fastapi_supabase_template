@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  run-script:
+  update_readme:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main branch
@@ -18,7 +18,7 @@ jobs:
         with:
           ref: 'main'
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ATTICUS_PAT }}
 
       - name: Configuring git credentials
         run: |
