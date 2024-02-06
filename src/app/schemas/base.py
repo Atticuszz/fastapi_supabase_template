@@ -5,6 +5,7 @@
 @Date Created : 11/01/2024
 @Description  :
 """
+
 from typing import ClassVar
 
 from pydantic import BaseModel, ConfigDict
