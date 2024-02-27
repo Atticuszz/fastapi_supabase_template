@@ -1683,13 +1683,13 @@ test = ["pylint", "pytest", "pytest-black", "pytest-cov", "pytest-pylint"]
 
 [[package]]
 name = "supabase-py-async"
-version = "2.5.1"
+version = "2.5.4"
 description = "supabase-py with async synax"
 optional = false
 python-versions = ">=3.9,<4.0"
 files = [
-    {file = "supabase_py_async-2.5.1-py3-none-any.whl", hash = "sha256:835de11a3b215e6a85a6df1aebfa8fb17fa3876820c37f93255fa438f0684fbb"},
-    {file = "supabase_py_async-2.5.1.tar.gz", hash = "sha256:48028c85730c6f23745da1cb98722392588922815d5517f812e6d27d985dcfc5"},
+    {file = "supabase_py_async-2.5.4-py3-none-any.whl", hash = "sha256:6ecb43048d267ab6522b72f13b3b0f006f421b74fa2fdbcab38f041409cc25c5"},
+    {file = "supabase_py_async-2.5.4.tar.gz", hash = "sha256:3a5139958f87cc5c1241ea7a1354efa531723753318f1ef06aaf173724caed5e"},
 ]
 
 [package.dependencies]
