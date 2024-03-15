@@ -1683,13 +1683,13 @@ test = ["pylint", "pytest", "pytest-black", "pytest-cov", "pytest-pylint"]
 
 [[package]]
 name = "supabase-py-async"
-version = "2.5.4"
+version = "2.5.5"
 description = "supabase-py with async synax"
 optional = false
 python-versions = ">=3.9,<4.0"
 files = [
-    {file = "supabase_py_async-2.5.4-py3-none-any.whl", hash = "sha256:6ecb43048d267ab6522b72f13b3b0f006f421b74fa2fdbcab38f041409cc25c5"},
-    {file = "supabase_py_async-2.5.4.tar.gz", hash = "sha256:3a5139958f87cc5c1241ea7a1354efa531723753318f1ef06aaf173724caed5e"},
+    {file = "supabase_py_async-2.5.5-py3-none-any.whl", hash = "sha256:cbb7fb870be5bfa5df73b8191c2f41134bc65157e7f4bee646ccc7332344a4a3"},
+    {file = "supabase_py_async-2.5.5.tar.gz", hash = "sha256:77a1e0474763c7509e6b5c77259ddbdd209faa863348ef4075959a109e32860f"},
 ]
 
 [package.dependencies]
@@ -1697,20 +1697,20 @@ aiohttp = ">=3.9.0,<4.0.0"
 commitizen = ">=3.13.0,<4.0.0"
 deprecation = ">=2.1.0,<3.0.0"
 gotrue = ">=1.2,<3.0"
-postgrest = ">=0.13,<0.16"
-realtime = ">=1.0.0,<2.0.0"
+postgrest = ">=0.13,<0.17"
+realtime = ">=1.0.2,<2.0.0"
 storage3 = ">=0.6.1,<0.8.0"
-supafunc = "0.3.3"
+supafunc = "0.4.0"
 
 [[package]]
 name = "supafunc"
-version = "0.3.3"
+version = "0.4.0"
 description = "Library for Supabase Functions"
 optional = false
 python-versions = ">=3.8,<4.0"
 files = [
-    {file = "supafunc-0.3.3-py3-none-any.whl", hash = "sha256:8260b4742335932f9cab64c8f66fb6998681b7e8ca7a46b559a4eb640cc0af80"},
-    {file = "supafunc-0.3.3.tar.gz", hash = "sha256:c35897a2f40465b40d7a08ae11f872f08eb8d1390c3ebc72c80e27d33ba91b99"},
+    {file = "supafunc-0.4.0-py3-none-any.whl", hash = "sha256:260c833523c3f5430a4f49ededd9b09a79ddcfe41279be5f987ab604731d62a3"},
+    {file = "supafunc-0.4.0.tar.gz", hash = "sha256:7fc3b1eca86f6aacf65030fd74b0c8b9e6bbf07e690319e7570a9510a917c755"},
 ]
 
 [package.dependencies]
