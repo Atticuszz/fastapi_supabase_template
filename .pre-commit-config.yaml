@@ -18,7 +18,7 @@ repos:
         args: [ "--fix=lf" ]
 
   - repo: https://github.com/codespell-project/codespell
-    rev: v2.2.6
+    rev: v2.3.0
     hooks:
       - id: codespell
         files: \.(py|sh|rst|yml|yaml)$
@@ -66,7 +66,7 @@ repos:
         args: [--line-length=88]
 
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v3.25.0
+    rev: v3.27.0
     hooks:
       - id: commitizen
         # 确保commit信息遵循Conventional Commits标准
