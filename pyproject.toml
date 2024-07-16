@@ -24,7 +24,7 @@ faker = "^24.8.0"
 python-semantic-release = "^9.4.1"
 pre-commit = "^3.7.1"
 pytest-cov = "^5.0.0"
-anyio = "^4.3.0"
+anyio = "^4.4.0"
 
 
 
