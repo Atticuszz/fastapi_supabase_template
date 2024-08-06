@@ -52,28 +52,28 @@ repos:
           ]
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.16.0
+    rev: v3.17.0
     hooks:
       - id: pyupgrade
         # 将Python代码升级到新版本的Python语法
         args: [ "--py310-plus" ]
 
   - repo: https://github.com/psf/black
-    rev: "24.4.2"
+    rev: "24.8.0"
     hooks:
       - id: black
         # 自动格式化Python代码，符合PEP 8风格指南
         args: [--line-length=88]
 
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v3.27.0
+    rev: v3.28.0
     hooks:
       - id: commitizen
         # 确保commit信息遵循Conventional Commits标准
         stages: [ commit-msg ]
 
   - repo: 'https://github.com/PyCQA/flake8'
-    rev: 7.1.0
+    rev: 7.1.1
     hooks:
       - id: flake8
         args:
@@ -83,7 +83,7 @@ repos:
         types: [ python ]
 
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.10.1
+    rev: v1.11.1
     hooks:
       - id: mypy
         args: [ --ignore-missing-imports,--disallow-untyped-defs, --show-error-codes ]
