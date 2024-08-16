@@ -8,7 +8,7 @@ packages = [{include = "app", from = "src"}]
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.13"
-fastapi = {extras = ["full"], version = "^0.111.1"}
+fastapi = {extras = ["full"], version = "^0.112.1"}
 python-dotenv = "^1.0.1"
 uvicorn = "^0.30.4"
 pydantic = {extras = ["email"], version = "^2.8.2"}
