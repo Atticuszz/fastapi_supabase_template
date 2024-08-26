@@ -10,7 +10,7 @@ packages = [{include = "app", from = "src"}]
 python = ">=3.9,<3.13"
 fastapi = {extras = ["full"], version = "^0.111.1"}
 python-dotenv = "^1.0.1"
-uvicorn = "^0.30.4"
+uvicorn = "^0.30.6"
 pydantic = {extras = ["email"], version = "^2.8.2"}
 pydantic-settings = "^2.4.0"
 python-multipart = "^0.0.9"
