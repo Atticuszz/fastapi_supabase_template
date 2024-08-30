@@ -1,8 +1,162 @@
 # CHANGELOG
 
+## v0.4.0 (2024-08-30)
+
+### Feature
+
+* feat: use uv to manage venvs ([`3b8bf2b`](https://github.com/Atticuszz/fastapi_supabase_template/commit/3b8bf2b293eb1d65807213deb730a849887fc891))
+
+### Fix
+
+* fix: ci ([`6ab7d76`](https://github.com/Atticuszz/fastapi_supabase_template/commit/6ab7d7654d201c2c6656174b051738696a766aa0))
+
+* fix: ci ([`abe41b3`](https://github.com/Atticuszz/fastapi_supabase_template/commit/abe41b30fbf5664de0d61b0e95dac51e6e1e8bf1))
+
+* fix: ci docker push ([`4d333be`](https://github.com/Atticuszz/fastapi_supabase_template/commit/4d333be57415c7978dae20367ec3e4bb13597b65))
+
+* fix: remove ci ([`b5e45b2`](https://github.com/Atticuszz/fastapi_supabase_template/commit/b5e45b2a133fce2e362d682752caed41c9d54f60))
+
+### Unknown
+
+* fix ([`f11b28d`](https://github.com/Atticuszz/fastapi_supabase_template/commit/f11b28dc5d3d3ae887ed7a96fb50fd22c52d3797))
+
+* Merge pull request #128 from Atticuszz/dependabot/pip/uvicorn-0.30.6
+
+⬆ Bump uvicorn from 0.30.4 to 0.30.6 ([`27b168d`](https://github.com/Atticuszz/fastapi_supabase_template/commit/27b168d7a8443eb9757ad70afc7d1ad0d8f28364))
+
+* ⬆ Bump uvicorn from 0.30.4 to 0.30.6
+
+Bumps [uvicorn](https://github.com/encode/uvicorn) from 0.30.4 to 0.30.6.
+- [Release notes](https://github.com/encode/uvicorn/releases)
+- [Changelog](https://github.com/encode/uvicorn/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/encode/uvicorn/compare/0.30.4...0.30.6)
+
+---
+updated-dependencies:
+- dependency-name: uvicorn
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`8881662`](https://github.com/Atticuszz/fastapi_supabase_template/commit/88816626b0e937051bf2a17f1c1cd8ccba0020f9))
+
+* Merge pull request #135 from Atticuszz/dependabot/pip/aiohttp-3.10.2
+
+⬆ Bump aiohttp from 3.9.4 to 3.10.2 ([`3ae51e8`](https://github.com/Atticuszz/fastapi_supabase_template/commit/3ae51e87f32dba85fb9baea38882630b25c4dc42))
+
+* ⬆ Bump aiohttp from 3.9.4 to 3.10.2
+
+Bumps [aiohttp](https://github.com/aio-libs/aiohttp) from 3.9.4 to 3.10.2.
+- [Release notes](https://github.com/aio-libs/aiohttp/releases)
+- [Changelog](https://github.com/aio-libs/aiohttp/blob/master/CHANGES.rst)
+- [Commits](https://github.com/aio-libs/aiohttp/compare/v3.9.4...v3.10.2)
+
+---
+updated-dependencies:
+- dependency-name: aiohttp
+  dependency-type: indirect
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`266f615`](https://github.com/Atticuszz/fastapi_supabase_template/commit/266f615680f36226716beaa697145bbf788e5a50))
+
+* Merge pull request #133 from Atticuszz/dependabot/pip/faker-28.0.0
+
+⬆ Bump faker from 26.1.0 to 28.0.0 ([`f2995d1`](https://github.com/Atticuszz/fastapi_supabase_template/commit/f2995d1340e751ddbd35982589bd7d8efaa2da8b))
+
+* ⬆ Bump faker from 26.1.0 to 28.0.0
+
+Bumps [faker](https://github.com/joke2k/faker) from 26.1.0 to 28.0.0.
+- [Release notes](https://github.com/joke2k/faker/releases)
+- [Changelog](https://github.com/joke2k/faker/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/joke2k/faker/compare/v26.1.0...v28.0.0)
+
+---
+updated-dependencies:
+- dependency-name: faker
+  dependency-type: direct:development
+  update-type: version-update:semver-major
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`a8c59b8`](https://github.com/Atticuszz/fastapi_supabase_template/commit/a8c59b869ede6cf68ac6c863f818843d676cfd79))
+
+* Merge pull request #125 from Atticuszz/pre-commit-ci-update-config
+
+[pre-commit.ci] autoupdate ([`db32e5b`](https://github.com/Atticuszz/fastapi_supabase_template/commit/db32e5bddc066552a64509419b3773569a9aef16))
+
+* [pre-commit.ci] autoupdate
+
+updates:
+- [github.com/asottile/pyupgrade: v3.16.0 → v3.17.0](https://github.com/asottile/pyupgrade/compare/v3.16.0...v3.17.0)
+- [github.com/psf/black: 24.4.2 → 24.8.0](https://github.com/psf/black/compare/24.4.2...24.8.0)
+- [github.com/commitizen-tools/commitizen: v3.27.0 → v3.28.0](https://github.com/commitizen-tools/commitizen/compare/v3.27.0...v3.28.0)
+- [github.com/PyCQA/flake8: 7.1.0 → 7.1.1](https://github.com/PyCQA/flake8/compare/7.1.0...7.1.1)
+- [github.com/pre-commit/mirrors-mypy: v1.10.1 → v1.11.1](https://github.com/pre-commit/mirrors-mypy/compare/v1.10.1...v1.11.1) ([`a03ba13`](https://github.com/Atticuszz/fastapi_supabase_template/commit/a03ba133037492f4d20c5b41eb13defa6a706ec9))
+
+* Merge pull request #124 from Atticuszz/dependabot/pip/faker-26.1.0
+
+⬆ Bump faker from 26.0.0 to 26.1.0 ([`747f170`](https://github.com/Atticuszz/fastapi_supabase_template/commit/747f17067fcf30d8c86c3b77af1e288cdb62208c))
+
+* ⬆ Bump faker from 26.0.0 to 26.1.0
+
+Bumps [faker](https://github.com/joke2k/faker) from 26.0.0 to 26.1.0.
+- [Release notes](https://github.com/joke2k/faker/releases)
+- [Changelog](https://github.com/joke2k/faker/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/joke2k/faker/compare/v26.0.0...v26.1.0)
+
+---
+updated-dependencies:
+- dependency-name: faker
+  dependency-type: direct:development
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`f1adfc4`](https://github.com/Atticuszz/fastapi_supabase_template/commit/f1adfc49a3216b2bfec0311de43755472271bbe2))
+
+* Merge pull request #121 from Atticuszz/dependabot/pip/uvicorn-0.30.4
+
+⬆ Bump uvicorn from 0.30.1 to 0.30.4 ([`555dc7c`](https://github.com/Atticuszz/fastapi_supabase_template/commit/555dc7c3f5267659be803b18276fdf7b4872e3f1))
+
+* ⬆ Bump uvicorn from 0.30.1 to 0.30.4
+
+Bumps [uvicorn](https://github.com/encode/uvicorn) from 0.30.1 to 0.30.4.
+- [Release notes](https://github.com/encode/uvicorn/releases)
+- [Changelog](https://github.com/encode/uvicorn/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/encode/uvicorn/compare/0.30.1...0.30.4)
+
+---
+updated-dependencies:
+- dependency-name: uvicorn
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`6fc9326`](https://github.com/Atticuszz/fastapi_supabase_template/commit/6fc93260a0c8359bf48743a46e56360e5d875a22))
+
+* Merge pull request #119 from Atticuszz/dependabot/pip/pre-commit-3.8.0
+
+⬆ Bump pre-commit from 3.7.1 to 3.8.0 ([`dea4717`](https://github.com/Atticuszz/fastapi_supabase_template/commit/dea47172e2869338102d00fef7f142c173b76131))
+
+* ⬆ Bump pre-commit from 3.7.1 to 3.8.0
+
+Bumps [pre-commit](https://github.com/pre-commit/pre-commit) from 3.7.1 to 3.8.0.
+- [Release notes](https://github.com/pre-commit/pre-commit/releases)
+- [Changelog](https://github.com/pre-commit/pre-commit/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/pre-commit/pre-commit/compare/v3.7.1...v3.8.0)
+
+---
+updated-dependencies:
+- dependency-name: pre-commit
+  dependency-type: direct:development
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`eca2d97`](https://github.com/Atticuszz/fastapi_supabase_template/commit/eca2d97e29a34e645c9d5cf8607d2a917d5a14a4))
+
 ## v0.3.2 (2024-07-30)
 
 ### Chore
+
+* chore(release): bump version to v0.3.2 ([`2418fac`](https://github.com/Atticuszz/fastapi_supabase_template/commit/2418face6defed2073aefd0496ce90d85d2e4e00))
 
 * chore: update README.md ([`b791786`](https://github.com/Atticuszz/fastapi_supabase_template/commit/b7917861ecfb92eb27091a8f6c1981e3d3831009))
 
