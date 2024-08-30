@@ -69,10 +69,11 @@ ___
       4. replace `tags: atticuszhou/supafast:latest` with your docker repo in `.github/workflows/docker-image.yml`
    3. config fastapi setting in `your_project\src\app\core\config.py`
    4. config `pyproject.toml` with your project name and description,etc
-2. cd your repo and install dependencies
+
+2. cd your repo and install dependencies with [uv](https://github.com/astral-sh/uv), which is an extremely fast Python package and project manager, written in Rust.
 
 ```shell
-poetry install
+uv sync --all-extras --dev
 ```
 3. set your supabase env
 
@@ -98,9 +99,10 @@ class Settings(BaseSettings):
     PROJECT_NAME: str = "fastapi supabase template"
     Config: ClassVar[ConfigDict] = ConfigDict(arbitrary_types_allowed=True)
 ```
+
 5. run server
 ```shell
-poetry run uvicorn src.app.main:app --reload
+uv run uvicorn src.app.main:app --reload
 ```
 
 ## Roadmap 🫶
