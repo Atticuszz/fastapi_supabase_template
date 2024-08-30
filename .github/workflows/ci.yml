@@ -24,12 +24,11 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Set up uv
-        # Install latest uv version using the installer
-        run: curl -LsSf https://astral.sh/uv/install.sh | sh
-
-      - name: Install the project
-        run: uv sync --all-extras --dev
+      - name: Install dependencies with uv
+        run: |
+          # Install latest uv version using the installer
+          run: curl -LsSf https://astral.sh/uv/install.sh | sh
+          uv sync --all-extras --dev
 
       - name: Run tests
         run: uv run scripts.py
@@ -53,11 +52,12 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install dependencies
+      - name: Install dependencies with uv
         run: |
-          python -m pip install --upgrade pip
-          pip install poetry
-          poetry install
+          # Install latest uv version using the installer
+          run: curl -LsSf https://astral.sh/uv/install.sh | sh
+          uv sync --all-extras --dev
+        
       - name: Pull latest changes
         run: git pull origin main
       - name: Python Semantic Release
