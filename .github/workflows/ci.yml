@@ -57,7 +57,7 @@ jobs:
           # Install latest uv version using the installer
           run: curl -LsSf https://astral.sh/uv/install.sh | sh
           uv sync --all-extras --dev
-        
+
       - name: Pull latest changes
         run: git pull origin main
       - name: Python Semantic Release
