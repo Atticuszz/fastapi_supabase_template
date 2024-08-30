@@ -7,16 +7,16 @@ def run_cmd(cmd: str) -> None:
 
 def run_tests() -> None:
     # Install requirements by poetry
-    run_cmd("poetry install")
+    run_cmd("uv sync --all-extras --dev")
 
     # Run pre-commit tests
     # run_cmd("poetry run pre-commit autoupdate")
     # run_cmd("poetry run pre-commit clean")
     # run_cmd("poetry run pre-commit install")
-    run_cmd("poetry run pre-commit run --all-files")
+    run_cmd("uv run pre-commit run --all-files")
 
     # Generate coverage report --cov=./ --cov-report=xml --cov-report=html -vv
-    run_cmd("poetry run pytest  --cov=./ --cov-report=xml --cov-report=html -vv")
+    run_cmd("uv run pytest  --cov=./ --cov-report=xml --cov-report=html -vv")
 
 
 if __name__ == "__main__":

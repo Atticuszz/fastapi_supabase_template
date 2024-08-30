@@ -23,12 +23,16 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Set up Poetry
-        uses: abatilo/actions-poetry@v3.0.0
-        with:
-          poetry-version: 1.7.1
-      - run: poetry install
-      - run: poetry run tests
+
+      - name: Set up uv
+        # Install latest uv version using the installer
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      - name: Install the project
+        run: uv sync --all-extras --dev
+
+      - name: Run tests
+        run: uv run scripts.py
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4
