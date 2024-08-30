@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies with uv
         run: |
           # Install latest uv version using the installer
-          run: curl -LsSf https://astral.sh/uv/install.sh | sh
+          curl -LsSf https://astral.sh/uv/install.sh | sh
           uv sync --all-extras --dev
 
       - name: Run tests
@@ -55,7 +55,7 @@ jobs:
       - name: Install dependencies with uv
         run: |
           # Install latest uv version using the installer
-          run: curl -LsSf https://astral.sh/uv/install.sh | sh
+          curl -LsSf https://astral.sh/uv/install.sh | sh
           uv sync --all-extras --dev
 
       - name: Pull latest changes
