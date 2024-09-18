@@ -2,7 +2,7 @@
 import pytest
 from faker import Faker
 from starlette.testclient import TestClient
-from supabase_py_async import AsyncClient
+from supabase._async.client import AsyncClient
 
 from app.schemas import Token
 from tests.utils import get_auth_header
@@ -68,18 +68,15 @@ async def test_read_item_by_owner(
     headers = get_auth_header(token.access_token)
     test_data = Faker().sentence()
 
-    # 创建条目
     client.post(
         "/api/v1/items/create-item",
         headers=headers,
         json={"test_data": test_data},
     )
 
-    # 获取当前用户的ID
     user = await db.auth.get_user(jwt=token.access_token)
     user_id = user.user.id
 
-    # 按拥有者读取条目
     read_response = client.get(
         "/api/v1/items/get-by-owner",
         headers=headers,
@@ -118,7 +115,7 @@ async def test_update_item(client: TestClient, token: Token) -> None:
 
 @pytest.mark.anyio
 async def test_delete_item(client: TestClient, token: Token) -> None:
-    # 创建条目
+
     headers = get_auth_header(token.access_token)
     test_data = Faker().sentence()
     create_response = client.post(
@@ -129,14 +126,12 @@ async def test_delete_item(client: TestClient, token: Token) -> None:
     assert create_response.status_code == 200
     created_item_id = create_response.json()["id"]
 
-    # 删除条目
     delete_response = client.delete(
         f"/api/v1/items/delete/{created_item_id}",
         headers=headers,
     )
     assert delete_response.status_code == 200
 
-    # 尝试获取删除的条目
     get_response = client.get(
         f"/api/v1/items/get-by-id/{created_item_id}",
         headers=headers,

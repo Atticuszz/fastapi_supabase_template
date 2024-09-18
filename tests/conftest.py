@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 from faker import Faker
 from fastapi.testclient import TestClient
 from pydantic import ConfigDict
-from supabase_py_async import AsyncClient, create_client
+from supabase._async.client import AsyncClient, create_client
 
 from app.main import app
 from app.schemas import Token
@@ -73,17 +73,10 @@ async def token() -> AsyncGenerator[Token, None]:
     assert response.user.email == fake_email
     assert response.user.id is not None
     assert response.session.access_token is not None
-    try:
-        yield Token(
-            access_token=response.session.access_token,
-        )
-    finally:
-        await db_client.auth.sign_in_with_password(
-            {"email": "zhouge1831@gmail.com", "password": "Zz030327#"}
-        )
-        # need new feature to delete user
-        # await db_client.auth.admin.delete_user(response.user.id)
-        await db_client.auth.sign_out()
+
+    yield Token(
+        access_token=response.session.access_token,
+    )
 
 
 @pytest.fixture(scope="module")
@@ -100,7 +93,7 @@ async def db() -> AsyncGenerator[AsyncClient, None]:
     assert get_session.user is not None
     # logging.info("db_client.get_session", get_session.user.model_dump())
     try:
-        yield db_client  # 提供数据库客户端给测试用例
+        yield db_client
     finally:
         if db_client:
             await db_client.auth.sign_out()
