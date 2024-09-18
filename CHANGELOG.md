@@ -1,6 +1,46 @@
 # CHANGELOG
 
+## v0.4.1 (2024-09-18)
+
+### Chore
+
+* chore: remove ci ([`ff95b88`](https://github.com/Atticuszz/fastapi_supabase_template/commit/ff95b88472158cf6f0133207ba904a4df0fd5e52))
+
+* chore: update README.md ([`7844c99`](https://github.com/Atticuszz/fastapi_supabase_template/commit/7844c990fa58c846f29e71e83e1972d41e80346b))
+
+### Fix
+
+* fix: Merge pull request #139 from Atticuszz/work-with-supabase-py
+
+fix: remove supabase-py-async with supabase-py ([`4864352`](https://github.com/Atticuszz/fastapi_supabase_template/commit/48643527cd753128bf7dd3e552f07f09635a6e99))
+
+* fix: remove supabase-py-async with supabase-py ([`a9bdc3a`](https://github.com/Atticuszz/fastapi_supabase_template/commit/a9bdc3a7df2c992b653b1398f7296e8b5f5c673b))
+
+* fix: remove supabase-py-async with supabase-py ([`e4db077`](https://github.com/Atticuszz/fastapi_supabase_template/commit/e4db077b211b93dbd9c532f55681132a645eb646))
+
+### Unknown
+
+* [pre-commit.ci] auto fixes from pre-commit.com hooks
+
+for more information, see https://pre-commit.ci ([`a0c0143`](https://github.com/Atticuszz/fastapi_supabase_template/commit/a0c01438fad3c87bcebaa5aefed0dc2130379759))
+
+* pre-commit ([`508c1ff`](https://github.com/Atticuszz/fastapi_supabase_template/commit/508c1ffc7f663eef9eacdd11f471c86a67a9caf9))
+
+* Merge pull request #136 from Atticuszz/pre-commit-ci-update-config
+
+[pre-commit.ci] autoupdate ([`4f4a7f1`](https://github.com/Atticuszz/fastapi_supabase_template/commit/4f4a7f17aa9ad12d49fa3b66ac55868ad5443ede))
+
+* [pre-commit.ci] autoupdate
+
+updates:
+- [github.com/commitizen-tools/commitizen: v3.28.0 → v3.29.0](https://github.com/commitizen-tools/commitizen/compare/v3.28.0...v3.29.0)
+- [github.com/pre-commit/mirrors-mypy: v1.11.1 → v1.11.2](https://github.com/pre-commit/mirrors-mypy/compare/v1.11.1...v1.11.2) ([`a77848b`](https://github.com/Atticuszz/fastapi_supabase_template/commit/a77848b60a363005e5a939374490563adad549fe))
+
 ## v0.4.0 (2024-08-30)
+
+### Chore
+
+* chore(release): bump version to v0.4.0 ([`0214da5`](https://github.com/Atticuszz/fastapi_supabase_template/commit/0214da5e5b900081954ca77e8c2f447e636d7f89))
 
 ### Feature
 
