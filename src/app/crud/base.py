@@ -1,6 +1,6 @@
 from typing import Generic, TypeVar
 
-from supabase_py_async import AsyncClient
+from supabase._async.client import AsyncClient
 
 from app.schemas.auth import UserIn
 from app.schemas.base import CreateBase, ResponseBase, UpdateBase

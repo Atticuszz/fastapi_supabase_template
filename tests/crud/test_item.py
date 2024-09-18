@@ -1,6 +1,6 @@
 import pytest
 from faker import Faker
-from supabase_py_async import AsyncClient
+from supabase._async.client import AsyncClient
 
 from app import crud
 from app.schemas.item import Item, ItemCreate, ItemUpdate

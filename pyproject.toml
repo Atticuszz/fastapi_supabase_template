@@ -14,7 +14,7 @@ dependencies = [
     "pydantic[email]>=2.8.2",
     "pydantic-settings>=2.4.0",
     "python-multipart>=0.0.9",
-    "supabase-py-async",
+    "supabase>=2.7.4",
 ]
 
 [project.optional-dependencies]
