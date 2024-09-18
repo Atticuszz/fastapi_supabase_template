@@ -1,19 +1,11 @@
-"""
--*- coding: utf-8 -*-
-@Organization : SupaVision
-@Author       : 18317
-@Date Created : 05/01/2024
-@Description  :
-"""
-
 import logging
 from typing import Annotated
 
 from fastapi import Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer
 from gotrue.errors import AuthApiError
-from supabase_py_async import AsyncClient, create_client
-from supabase_py_async.lib.client_options import ClientOptions
+from supabase._async.client import AsyncClient, create_client
+from supabase.lib.client_options import ClientOptions
 
 from app.core.config import settings
 from app.schemas.auth import UserIn
@@ -62,9 +54,10 @@ async def get_db(user: CurrentUser) -> AsyncClient:
         client = await create_client(
             settings.SUPABASE_URL,
             settings.SUPABASE_KEY,
-            access_token=user.access_token,
             options=ClientOptions(
-                postgrest_client_timeout=10, storage_client_timeout=10
+                postgrest_client_timeout=30,
+                storage_client_timeout=30,
+                headers={"Authorization": f"Bearer {user.access_token}"},
             ),
         )
         # checks all done in supabase-py !
@@ -77,9 +70,6 @@ async def get_db(user: CurrentUser) -> AsyncClient:
         raise HTTPException(
             status_code=401, detail="Invalid authentication credentials"
         )
-    finally:
-        if client:
-            await client.auth.sign_out()
 
 
 SessionDep = Annotated[AsyncClient, Depends(get_db)]

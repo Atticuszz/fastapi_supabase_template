@@ -1,4 +1,4 @@
-from supabase_py_async import AsyncClient
+from supabase._async.client import AsyncClient
 
 from app.crud.base import CRUDBase
 from app.schemas import Item, ItemCreate, ItemUpdate

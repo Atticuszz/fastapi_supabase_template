@@ -1,11 +1,3 @@
-"""
--*- coding: utf-8 -*-
-@Organization : SupaVision
-@Author       : 18317
-@Date Created : 07/01/2024
-@Description  :
-"""
-
 from .crud_item import item
 
 # For a new basic set of CRUD operations you could just do
