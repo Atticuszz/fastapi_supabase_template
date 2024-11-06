@@ -5,11 +5,11 @@ from typing import Annotated
 from fastapi import Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer
 from gotrue.errors import AuthApiError  # type: ignore
-from supabase._async.client import AsyncClient, create_client
-from supabase.lib.client_options import ClientOptions
 
 from app.core.config import settings
 from app.schemas.auth import UserIn
+from supabase._async.client import AsyncClient, create_client
+from supabase.lib.client_options import ClientOptions
 
 super_client: AsyncClient | None = None
 

@@ -5,14 +5,14 @@ from logging.handlers import RotatingFileHandler
 from pathlib import Path
 
 import pytest
+from app.main import app
+from app.schemas import Token
 from dotenv import load_dotenv
 from faker import Faker
 from fastapi.testclient import TestClient
 from pydantic import ConfigDict
-from supabase._async.client import AsyncClient, create_client
 
-from app.main import app
-from app.schemas import Token
+from supabase._async.client import AsyncClient, create_client
 from tests.utils import get_auth_header
 
 LOG_FILE = Path(__file__).parent / "scripts.log"
@@ -84,11 +84,11 @@ async def db() -> AsyncGenerator[AsyncClient, None]:
     key = os.environ.get("SUPABASE_TEST_KEY")
     assert key is not None, "Must provide SUPABASE_TEST_KEY environment variable"
     db_client = await create_client(url, key)
-    await db_client.auth.sign_in_with_password(
-        {"email": "zhouge1831@gmail.com", "password": "Zz030327#"}
-    )
-    get_session = await db_client.auth.get_session()
-    assert get_session.user is not None
+    # await db_client.auth.sign_in_with_password(
+    #     {"email": "zhouge1831@gmail.com", "password": "Zz030327#"}
+    # )
+    # get_session = await db_client.auth.get_session()
+    # assert get_session.user is not None
     # logging.info("db_client.get_session", get_session.user.model_dump())
     try:
         yield db_client

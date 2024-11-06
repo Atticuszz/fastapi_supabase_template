@@ -3,19 +3,19 @@ import pytest
 from app.schemas import Token
 from faker import Faker
 from starlette.testclient import TestClient
-from supabase._async.client import AsyncClient
 
+from supabase._async.client import AsyncClient
 from tests.utils import get_auth_header
 
 
 @pytest.mark.anyio
 async def test_create_item(client: TestClient, token: Token) -> None:
-    # 获取认证头
+
     headers = get_auth_header(token.access_token)
 
     test_data = Faker().sentence()
 
-    # 发送请求，同时设置cookie
+
     response = client.post(
         "/api/v1/items/create-item", headers=headers, json={"test_data": test_data}
     )
@@ -37,14 +37,14 @@ async def test_read_item_by_id(client: TestClient, token: Token) -> None:
     headers = get_auth_header(token.access_token)
     test_data = Faker().sentence()
 
-    # 创建条目
+
     create_response = client.post(
         "/api/v1/items/create-item", headers=headers, json={"test_data": test_data}
     )
     assert create_response.status_code == 200
     created_item_id = create_response.json()["id"]
 
-    # 按ID读取条目
+
     read_response = client.get(
         f"/api/v1/items/get-by-id/{created_item_id}", headers=headers
     )
@@ -76,7 +76,6 @@ async def test_read_item_by_owner(
 
 @pytest.mark.anyio
 async def test_update_item(client: TestClient, token: Token) -> None:
-    # 创建条目
     headers = get_auth_header(token.access_token)
     test_data = Faker().sentence()
     create_response = client.post(
@@ -85,8 +84,6 @@ async def test_update_item(client: TestClient, token: Token) -> None:
     assert create_response.status_code == 200
     created_item = create_response.json()
     created_item_id = created_item["id"]
-
-    # 更新条目
     updated_data = {"test_data": Faker().sentence(), "id": created_item_id}
 
     update_response = client.put(
