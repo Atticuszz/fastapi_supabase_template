@@ -53,6 +53,7 @@ exclude = ["venv", ".venv"]
 addopts = "-rXs --strict-config --strict-markers"
 xfail_strict = true         # Treat tests that are marked as xfail but pass as test failures
 filterwarnings = ["error"]  # Treat all warnings as errors
+pythonpath = "src"
 
 [tool.coverage.run]
 branch = true
