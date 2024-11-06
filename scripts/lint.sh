@@ -3,6 +3,6 @@
 set -e
 set -x
 
-mypy app             # type check
-ruff check app          # linter
-ruff format app --check # formatter
+mypy src/app             # type check
+ruff check src/app          # linter
+ruff format src/app --check # formatter
