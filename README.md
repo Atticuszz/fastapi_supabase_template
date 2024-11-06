@@ -75,7 +75,17 @@ ___
 ```shell
 uv sync
 ```
-3. set your supabase env
+
+3. [start your supabase locally](https://supabase.com/docs/guides/local-development/cli/getting-started?queryGroups=platform&platform=linux&queryGroups=access-method&access-method=postgres)
+
+```bash
+# brew in linux https://brew.sh/ 
+brew install supabase/tap/supabase
+supabase init
+supabase start
+```
+
+4. set your supabase env
 
 ```shell
 export SUPABASE_URL=your_supabase_url
@@ -83,7 +93,9 @@ export SUPABASE_KEY=your_supabase_key
 export SUPERUSER_EMAIL=your_superuser_email
 export SUPERUSER_PASSWORD=your_superuser_password
 ```
-4. config fastapi settings
+
+5. config fastapi settings
+
 ```python
 # src/app/core/config.py
 class Settings(BaseSettings):
@@ -100,17 +112,20 @@ class Settings(BaseSettings):
     Config: ClassVar[ConfigDict] = ConfigDict(arbitrary_types_allowed=True)
 ```
 
-5. run server
+6. run server
+
 ```shell
-uv run uvicorn src.app.main:app --reload
+uv run uvicorn app.main:app --reload
 ```
 
 ## Roadmap 🫶
+
 ___
 
 - [x] FastAPI backend
-    - [x] **standard** structure
+  - [x] **standard** structure
       for <a href="https://github.com/tiangolo/fastapi" class="external-link" target="_blank">**FastAPI**</a> project
+
   ```text
   ── src
   │   └── app
@@ -145,18 +160,20 @@ ___
   │       └── main.py
   ...
   ```
-    - [x] **auto-auth** by fastapi dependency with supabase-auth
-    - [x] **CRUD** operations pytest
-    - [x] **api** requests pytest
+
+  - [x] **auto-auth** by fastapi dependency with supabase-auth
+  - [x] **CRUD** operations pytest
+  - [x] **api** requests pytest
 - [ ] Supabase integration
-    - [x] crud supabase-postgresql
-    - [ ] websocket with supabase-realtime
-    - [ ] curd supabase-storage
-    - [ ] supafunc integration
+  - [x] crud supabase-postgresql
+  - [ ] websocket with supabase-realtime
+  - [ ] curd supabase-storage
+  - [ ] supafunc integration
 - [x] deployment
-    - [x] Full **Docker** integration (Docker based).
+  - [x] Full **Docker** integration (Docker based).
 - [ ] clone
-    - [ ] cookiecutter
+  - [ ] cookiecutter
+
 ## Release Notes 🥸
 
 ___
