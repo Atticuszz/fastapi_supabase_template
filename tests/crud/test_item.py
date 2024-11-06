@@ -1,9 +1,8 @@
 import pytest
-from faker import Faker
-from supabase._async.client import AsyncClient
-
 from app import crud
 from app.schemas.item import Item, ItemCreate, ItemUpdate
+from faker import Faker
+from supabase._async.client import AsyncClient
 
 
 @pytest.mark.anyio

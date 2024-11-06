@@ -48,7 +48,7 @@ def anyio_backend() -> str:
     return "asyncio"
 
 
-def pytest_configure(config: ConfigDict) -> None:
+def pytest_configure(config: ConfigDict) -> None:  # noqa ARG001
     load_dotenv()
 
 
@@ -74,9 +74,7 @@ async def token() -> AsyncGenerator[Token, None]:
     assert response.user.id is not None
     assert response.session.access_token is not None
 
-    yield Token(
-        access_token=response.session.access_token,
-    )
+    yield Token(access_token=response.session.access_token)
 
 
 @pytest.fixture(scope="module")
@@ -103,9 +101,6 @@ async def db() -> AsyncGenerator[AsyncClient, None]:
 async def test_read_all_items(client: TestClient, token: Token) -> None:
     headers = get_auth_header(token.access_token)
 
-    response = client.get(
-        "/api/v1/items/read-all-item",
-        headers=headers,
-    )
+    response = client.get("/api/v1/items/read-all-item", headers=headers)
     assert response.status_code == 200
     assert isinstance(response.json(), list)
