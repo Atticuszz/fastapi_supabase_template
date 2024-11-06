@@ -28,7 +28,7 @@ class Settings(BaseSettings):
     SUPERUSER_EMAIL: str = Field(default_factory=lambda: os.getenv("SUPERUSER_EMAIL"))
     SUPERUSER_PASSWORD: str = Field(default=lambda: os.getenv("SUPERUSER_PASSWORD"))
     # SERVER_NAME: str
-    SERVER_HOST: AnyHttpUrl = "https://localhost"
+    SERVER_HOST: AnyHttpUrl = AnyHttpUrl("https://localhost")
     SERVER_PORT: int = 8000
     # # TODO: the following  need to follow the newest version of fastapi
     # # BACKEND_CORS_ORIGINS is a JSON-formatted list of origins

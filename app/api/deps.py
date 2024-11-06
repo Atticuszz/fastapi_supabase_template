@@ -1,9 +1,10 @@
 import logging
+from collections.abc import AsyncGenerator
 from typing import Annotated
 
 from fastapi import Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer
-from gotrue.errors import AuthApiError
+from gotrue.errors import AuthApiError  # type: ignore
 from supabase._async.client import AsyncClient, create_client
 from supabase.lib.client_options import ClientOptions
 
@@ -48,7 +49,7 @@ async def get_current_user(access_token: AccessTokenDep) -> UserIn:
 CurrentUser = Annotated[UserIn, Depends(get_current_user)]
 
 
-async def get_db(user: CurrentUser) -> AsyncClient:
+async def get_db(user: CurrentUser) -> AsyncGenerator[AsyncClient, None]:
     client: AsyncClient | None = None
     try:
         client = await create_client(
