@@ -1,0 +1,41 @@
+name: Test And Release
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Run Tests / OS ${{ matrix.os }} / Python ${{ matrix.python-version }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest ]
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      - name: Set up Python ${{ matrix.python-version }}
+        run: uv python install ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: uv sync --python ${{ matrix.python-version }} --all-extras --dev
+
+      - name: Run tests
+        run: uv run bash scripts/test.sh
+
+      - name: Run linters
+        run: uv run bash scripts/lint.sh
+
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
