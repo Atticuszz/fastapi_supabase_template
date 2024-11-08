@@ -5,15 +5,14 @@ from logging.handlers import RotatingFileHandler
 from pathlib import Path
 
 import pytest
-from app.main import app
-from app.schemas import Token
-from dotenv import load_dotenv
 from faker import Faker
 from fastapi.testclient import TestClient
-from pydantic import ConfigDict
+from sqlmodel import Session
 
-from supabase._async.client import AsyncClient, create_client
-from tests.utils import get_auth_header
+from src.app.api.deps import engine
+from src.app.main import app
+from src.app.schemas import Token
+from supabase._async.client import create_client
 
 LOG_FILE = Path(__file__).parent / "scripts.log"
 
@@ -48,8 +47,10 @@ def anyio_backend() -> str:
     return "asyncio"
 
 
-def pytest_configure(config: ConfigDict) -> None:  # noqa ARG001
-    load_dotenv()
+@pytest.fixture(scope="session", autouse=True)
+def db() -> Generator[Session, None, None]:
+    with Session(engine) as session:
+        yield session
 
 
 @pytest.fixture(scope="module")
@@ -77,30 +78,21 @@ async def token() -> AsyncGenerator[Token, None]:
     yield Token(access_token=response.session.access_token)
 
 
-@pytest.fixture(scope="module")
-async def db() -> AsyncGenerator[AsyncClient, None]:
-    url = os.environ.get("SUPABASE_TEST_URL")
-    assert url is not None, "Must provide SUPABASE_TEST_URL environment variable"
-    key = os.environ.get("SUPABASE_TEST_KEY")
-    assert key is not None, "Must provide SUPABASE_TEST_KEY environment variable"
-    db_client = await create_client(url, key)
-    # await db_client.auth.sign_in_with_password(
-    #     {"email": "zhouge1831@gmail.com", "password": "Zz030327#"}
-    # )
-    # get_session = await db_client.auth.get_session()
-    # assert get_session.user is not None
-    # logging.info("db_client.get_session", get_session.user.model_dump())
-    try:
-        yield db_client
-    finally:
-        if db_client:
-            await db_client.auth.sign_out()
-
-
-@pytest.mark.anyio
-async def test_read_all_items(client: TestClient, token: Token) -> None:
-    headers = get_auth_header(token.access_token)
-
-    response = client.get("/api/v1/items/read-all-item", headers=headers)
-    assert response.status_code == 200
-    assert isinstance(response.json(), list)
+# @pytest.fixture(scope="module")
+# async def db() -> AsyncGenerator[AsyncClient, None]:
+#     url = os.environ.get("SUPABASE_TEST_URL")
+#     assert url is not None, "Must provide SUPABASE_TEST_URL environment variable"
+#     key = os.environ.get("SUPABASE_TEST_KEY")
+#     assert key is not None, "Must provide SUPABASE_TEST_KEY environment variable"
+#     db_client = await create_client(url, key)
+#     # await db_client.auth.sign_in_with_password(
+#     #     {"email": "zhouge1831@gmail.com", "password": "Zz030327#"}
+#     # )
+#     # get_session = await db_client.auth.get_session()
+#     # assert get_session.user is not None
+#     # logging.info("db_client.get_session", get_session.user.model_dump())
+#     try:
+#         yield db_client
+#     finally:
+#         if db_client:
+#             await db_client.auth.sign_out()

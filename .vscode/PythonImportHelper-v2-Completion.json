@@ -116,7 +116,15 @@
         "documentation": {}
     },
     {
-        "label": "init_super_client",
+        "label": "engine",
+        "importPath": "app.api.deps",
+        "description": "app.api.deps",
+        "isExtraImport": true,
+        "detail": "app.api.deps",
+        "documentation": {}
+    },
+    {
+        "label": "get_super_client",
         "importPath": "app.api.deps",
         "description": "app.api.deps",
         "isExtraImport": true,
@@ -189,7 +197,7 @@
         "documentation": {}
     },
     {
-        "label": "AsyncGenerator",
+        "label": "Generator",
         "importPath": "collections.abc",
         "description": "collections.abc",
         "isExtraImport": true,
@@ -301,11 +309,99 @@
         "documentation": {}
     },
     {
-        "label": "AuthApiError",
-        "importPath": "gotrue.errors",
-        "description": "gotrue.errors",
+        "label": "Session",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
         "isExtraImport": true,
-        "detail": "gotrue.errors",
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "create_engine",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "select",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "SQLModel",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "Relationship",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "SQLModel",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "app.core.config",
+        "description": "app.core.config",
+        "isExtraImport": true,
+        "detail": "app.core.config",
         "documentation": {}
     },
     {
@@ -358,14 +454,6 @@
     },
     {
         "label": "create_client",
-        "importPath": "supabase._async.client",
-        "description": "supabase._async.client",
-        "isExtraImport": true,
-        "detail": "supabase._async.client",
-        "documentation": {}
-    },
-    {
-        "label": "AsyncClient",
         "importPath": "supabase._async.client",
         "description": "supabase._async.client",
         "isExtraImport": true,
@@ -471,6 +559,14 @@
         "documentation": {}
     },
     {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
         "label": "BaseModel",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -496,14 +592,6 @@
     },
     {
         "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "ConfigDict",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -532,6 +620,22 @@
         "description": "pydantic_settings",
         "isExtraImport": true,
         "detail": "pydantic_settings",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "app.models",
+        "description": "app.models",
+        "isExtraImport": true,
+        "detail": "app.models",
+        "documentation": {}
+    },
+    {
+        "label": "Item",
+        "importPath": "app.models",
+        "description": "app.models",
+        "isExtraImport": true,
+        "detail": "app.models",
         "documentation": {}
     },
     {
@@ -607,6 +711,15 @@
         "documentation": {}
     },
     {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
         "label": "User",
         "importPath": "gotrue",
         "description": "gotrue",
@@ -665,6 +778,30 @@
         "documentation": {}
     },
     {
+        "label": "engine",
+        "importPath": "src.app.api.deps",
+        "description": "src.app.api.deps",
+        "isExtraImport": true,
+        "detail": "src.app.api.deps",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "importPath": "src.app.api.deps",
+        "description": "src.app.api.deps",
+        "isExtraImport": true,
+        "detail": "src.app.api.deps",
+        "documentation": {}
+    },
+    {
+        "label": "init_db",
+        "importPath": "src.app.core.db",
+        "description": "src.app.core.db",
+        "isExtraImport": true,
+        "detail": "src.app.core.db",
+        "documentation": {}
+    },
+    {
         "label": "TestClient",
         "importPath": "fastapi.testclient",
         "description": "fastapi.testclient",
@@ -694,14 +831,6 @@
         "description": "pathlib",
         "isExtraImport": true,
         "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "load_dotenv",
-        "importPath": "dotenv",
-        "description": "dotenv",
-        "isExtraImport": true,
-        "detail": "dotenv",
         "documentation": {}
     },
     {
@@ -819,11 +948,29 @@
         "documentation": {}
     },
     {
+        "label": "get_db",
+        "kind": 2,
+        "importPath": "src.app.api.deps",
+        "description": "src.app.api.deps",
+        "peekOfCode": "def get_db() -> Generator[Session, None, None]:\n    with Session(engine) as session:\n        yield session\nSessionDep = Annotated[Session, Depends(get_db)]",
+        "detail": "src.app.api.deps",
+        "documentation": {}
+    },
+    {
+        "label": "SuperClient",
+        "kind": 5,
+        "importPath": "src.app.api.deps",
+        "description": "src.app.api.deps",
+        "peekOfCode": "SuperClient = Annotated[AsyncClient, Depends(get_super_client)]\n# auto get access_token from header\nreusable_oauth2 = OAuth2PasswordBearer(tokenUrl=\"Token\")\nAccessTokenDep = Annotated[str, Depends(reusable_oauth2)]\nasync def get_current_user(\n    access_token: AccessTokenDep, super_client: SuperClient\n) -> UserIn:\n    \"\"\"get current user from access_token and  validate same time\"\"\"\n    user_rsp = await super_client.auth.get_user(jwt=access_token)\n    if not user_rsp:",
+        "detail": "src.app.api.deps",
+        "documentation": {}
+    },
+    {
         "label": "reusable_oauth2",
         "kind": 5,
         "importPath": "src.app.api.deps",
         "description": "src.app.api.deps",
-        "peekOfCode": "reusable_oauth2 = OAuth2PasswordBearer(\n    tokenUrl=\"please login by supabase-js to get token\"\n)\nAccessTokenDep = Annotated[str, Depends(reusable_oauth2)]\nasync def get_current_user(access_token: AccessTokenDep) -> UserIn:\n    \"\"\"get current user from access_token and  validate same time\"\"\"\n    if not super_client:\n        raise HTTPException(status_code=500, detail=\"Super client not initialized\")\n    user_rsp = await super_client.auth.get_user(jwt=access_token)\n    if not user_rsp:",
+        "peekOfCode": "reusable_oauth2 = OAuth2PasswordBearer(tokenUrl=\"Token\")\nAccessTokenDep = Annotated[str, Depends(reusable_oauth2)]\nasync def get_current_user(\n    access_token: AccessTokenDep, super_client: SuperClient\n) -> UserIn:\n    \"\"\"get current user from access_token and  validate same time\"\"\"\n    user_rsp = await super_client.auth.get_user(jwt=access_token)\n    if not user_rsp:\n        logging.error(\"User not found\")\n        raise HTTPException(status_code=404, detail=\"User not found\")",
         "detail": "src.app.api.deps",
         "documentation": {}
     },
@@ -832,7 +979,7 @@
         "kind": 5,
         "importPath": "src.app.api.deps",
         "description": "src.app.api.deps",
-        "peekOfCode": "AccessTokenDep = Annotated[str, Depends(reusable_oauth2)]\nasync def get_current_user(access_token: AccessTokenDep) -> UserIn:\n    \"\"\"get current user from access_token and  validate same time\"\"\"\n    if not super_client:\n        raise HTTPException(status_code=500, detail=\"Super client not initialized\")\n    user_rsp = await super_client.auth.get_user(jwt=access_token)\n    if not user_rsp:\n        logging.error(\"User not found\")\n        raise HTTPException(status_code=404, detail=\"User not found\")\n    return UserIn(**user_rsp.user.model_dump(), access_token=access_token)",
+        "peekOfCode": "AccessTokenDep = Annotated[str, Depends(reusable_oauth2)]\nasync def get_current_user(\n    access_token: AccessTokenDep, super_client: SuperClient\n) -> UserIn:\n    \"\"\"get current user from access_token and  validate same time\"\"\"\n    user_rsp = await super_client.auth.get_user(jwt=access_token)\n    if not user_rsp:\n        logging.error(\"User not found\")\n        raise HTTPException(status_code=404, detail=\"User not found\")\n    return UserIn(**user_rsp.user.model_dump(), access_token=access_token)",
         "detail": "src.app.api.deps",
         "documentation": {}
     },
@@ -841,7 +988,16 @@
         "kind": 5,
         "importPath": "src.app.api.deps",
         "description": "src.app.api.deps",
-        "peekOfCode": "CurrentUser = Annotated[UserIn, Depends(get_current_user)]\nasync def get_db(user: CurrentUser) -> AsyncGenerator[AsyncClient, None]:\n    client: AsyncClient | None = None\n    try:\n        client = await create_client(\n            settings.SUPABASE_URL,\n            settings.SUPABASE_KEY,\n            options=ClientOptions(\n                postgrest_client_timeout=30,\n                storage_client_timeout=30,",
+        "peekOfCode": "CurrentUser = Annotated[UserIn, Depends(get_current_user)]\nengine = create_engine(str(settings.SQLALCHEMY_DATABASE_URI))\ndef get_db() -> Generator[Session, None, None]:\n    with Session(engine) as session:\n        yield session\nSessionDep = Annotated[Session, Depends(get_db)]",
+        "detail": "src.app.api.deps",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "src.app.api.deps",
+        "description": "src.app.api.deps",
+        "peekOfCode": "engine = create_engine(str(settings.SQLALCHEMY_DATABASE_URI))\ndef get_db() -> Generator[Session, None, None]:\n    with Session(engine) as session:\n        yield session\nSessionDep = Annotated[Session, Depends(get_db)]",
         "detail": "src.app.api.deps",
         "documentation": {}
     },
@@ -850,7 +1006,7 @@
         "kind": 5,
         "importPath": "src.app.api.deps",
         "description": "src.app.api.deps",
-        "peekOfCode": "SessionDep = Annotated[AsyncClient, Depends(get_db)]",
+        "peekOfCode": "SessionDep = Annotated[Session, Depends(get_db)]",
         "detail": "src.app.api.deps",
         "documentation": {}
     },
@@ -886,7 +1042,7 @@
         "kind": 5,
         "importPath": "src.app.core.config",
         "description": "src.app.core.config",
-        "peekOfCode": "log_format = logging.Formatter(\"%(asctime)s : %(levelname)s - %(message)s\")\n# root logger\nroot_logger = logging.getLogger()\nroot_logger.setLevel(logging.INFO)\n# standard stream handler\nstream_handler = logging.StreamHandler()\nstream_handler.setFormatter(log_format)\nroot_logger.addHandler(stream_handler)\nlogger = logging.getLogger(__name__)\ndef parse_cors(v: Any) -> list[str] | str:",
+        "peekOfCode": "log_format = logging.Formatter(\"%(asctime)s : %(levelname)s - %(message)s\")\n# root logger\nroot_logger = logging.getLogger()\nroot_logger.setLevel(logging.INFO)\n# standard stream handler\nstream_handler = logging.StreamHandler()\nstream_handler.setFormatter(log_format)\nroot_logger.addHandler(stream_handler)\nlogger = logging.getLogger(__name__)\n# TODO: remove logger configs",
         "detail": "src.app.core.config",
         "documentation": {}
     },
@@ -895,7 +1051,7 @@
         "kind": 5,
         "importPath": "src.app.core.config",
         "description": "src.app.core.config",
-        "peekOfCode": "root_logger = logging.getLogger()\nroot_logger.setLevel(logging.INFO)\n# standard stream handler\nstream_handler = logging.StreamHandler()\nstream_handler.setFormatter(log_format)\nroot_logger.addHandler(stream_handler)\nlogger = logging.getLogger(__name__)\ndef parse_cors(v: Any) -> list[str] | str:\n    if isinstance(v, str) and not v.startswith(\"[\"):\n        return [i.strip() for i in v.split(\",\")]",
+        "peekOfCode": "root_logger = logging.getLogger()\nroot_logger.setLevel(logging.INFO)\n# standard stream handler\nstream_handler = logging.StreamHandler()\nstream_handler.setFormatter(log_format)\nroot_logger.addHandler(stream_handler)\nlogger = logging.getLogger(__name__)\n# TODO: remove logger configs\ndef parse_cors(v: Any) -> list[str] | str:\n    if isinstance(v, str) and not v.startswith(\"[\"):",
         "detail": "src.app.core.config",
         "documentation": {}
     },
@@ -904,7 +1060,7 @@
         "kind": 5,
         "importPath": "src.app.core.config",
         "description": "src.app.core.config",
-        "peekOfCode": "stream_handler = logging.StreamHandler()\nstream_handler.setFormatter(log_format)\nroot_logger.addHandler(stream_handler)\nlogger = logging.getLogger(__name__)\ndef parse_cors(v: Any) -> list[str] | str:\n    if isinstance(v, str) and not v.startswith(\"[\"):\n        return [i.strip() for i in v.split(\",\")]\n    elif isinstance(v, list | str):\n        return v\n    raise ValueError(v)",
+        "peekOfCode": "stream_handler = logging.StreamHandler()\nstream_handler.setFormatter(log_format)\nroot_logger.addHandler(stream_handler)\nlogger = logging.getLogger(__name__)\n# TODO: remove logger configs\ndef parse_cors(v: Any) -> list[str] | str:\n    if isinstance(v, str) and not v.startswith(\"[\"):\n        return [i.strip() for i in v.split(\",\")]\n    elif isinstance(v, list | str):\n        return v",
         "detail": "src.app.core.config",
         "documentation": {}
     },
@@ -913,7 +1069,7 @@
         "kind": 5,
         "importPath": "src.app.core.config",
         "description": "src.app.core.config",
-        "peekOfCode": "logger = logging.getLogger(__name__)\ndef parse_cors(v: Any) -> list[str] | str:\n    if isinstance(v, str) and not v.startswith(\"[\"):\n        return [i.strip() for i in v.split(\",\")]\n    elif isinstance(v, list | str):\n        return v\n    raise ValueError(v)\nclass Settings(BaseSettings):\n    \"\"\"auto load config from .env and validate settings\"\"\"\n    # https://docs.pydantic.dev/latest/concepts/pydantic_settings/#dotenv-env-support",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n# TODO: remove logger configs\ndef parse_cors(v: Any) -> list[str] | str:\n    if isinstance(v, str) and not v.startswith(\"[\"):\n        return [i.strip() for i in v.split(\",\")]\n    elif isinstance(v, list | str):\n        return v\n    raise ValueError(v)\nclass Settings(BaseSettings):\n    \"\"\"auto load config from .env and validate settings\"\"\"",
         "detail": "src.app.core.config",
         "documentation": {}
     },
@@ -978,6 +1134,69 @@
         "description": "src.app.crud.crud_item",
         "peekOfCode": "item = CRUDItem(Item)",
         "detail": "src.app.crud.crud_item",
+        "documentation": {}
+    },
+    {
+        "label": "ItemBase",
+        "kind": 6,
+        "importPath": "src.app.models.item",
+        "description": "src.app.models.item",
+        "peekOfCode": "class ItemBase(SQLModel):\n    title: str = Field(min_length=1, max_length=255)\n    description: str | None = Field(default=None, max_length=255)\n# Properties to receive on item creation\nclass ItemCreate(ItemBase):\n    pass\n# Properties to receive on item update\nclass ItemUpdate(ItemBase):\n    title: str | None = Field(default=None, min_length=1, max_length=255)  # type: ignore\n# Database model, database table inferred from class name",
+        "detail": "src.app.models.item",
+        "documentation": {}
+    },
+    {
+        "label": "ItemCreate",
+        "kind": 6,
+        "importPath": "src.app.models.item",
+        "description": "src.app.models.item",
+        "peekOfCode": "class ItemCreate(ItemBase):\n    pass\n# Properties to receive on item update\nclass ItemUpdate(ItemBase):\n    title: str | None = Field(default=None, min_length=1, max_length=255)  # type: ignore\n# Database model, database table inferred from class name\nclass Item(ItemBase, table=True):\n    id: uuid.UUID = Field(default_factory=uuid.uuid4, primary_key=True)\n    title: str = Field(max_length=255)\n    owner_id: uuid.UUID = Field(",
+        "detail": "src.app.models.item",
+        "documentation": {}
+    },
+    {
+        "label": "ItemUpdate",
+        "kind": 6,
+        "importPath": "src.app.models.item",
+        "description": "src.app.models.item",
+        "peekOfCode": "class ItemUpdate(ItemBase):\n    title: str | None = Field(default=None, min_length=1, max_length=255)  # type: ignore\n# Database model, database table inferred from class name\nclass Item(ItemBase, table=True):\n    id: uuid.UUID = Field(default_factory=uuid.uuid4, primary_key=True)\n    title: str = Field(max_length=255)\n    owner_id: uuid.UUID = Field(\n        foreign_key=\"user.id\", nullable=False, ondelete=\"CASCADE\"\n    )\n# Properties to return via API, id is always required",
+        "detail": "src.app.models.item",
+        "documentation": {}
+    },
+    {
+        "label": "Item",
+        "kind": 6,
+        "importPath": "src.app.models.item",
+        "description": "src.app.models.item",
+        "peekOfCode": "class Item(ItemBase, table=True):\n    id: uuid.UUID = Field(default_factory=uuid.uuid4, primary_key=True)\n    title: str = Field(max_length=255)\n    owner_id: uuid.UUID = Field(\n        foreign_key=\"user.id\", nullable=False, ondelete=\"CASCADE\"\n    )\n# Properties to return via API, id is always required\nclass ItemPublic(ItemBase):\n    id: uuid.UUID\n    owner_id: uuid.UUID",
+        "detail": "src.app.models.item",
+        "documentation": {}
+    },
+    {
+        "label": "ItemPublic",
+        "kind": 6,
+        "importPath": "src.app.models.item",
+        "description": "src.app.models.item",
+        "peekOfCode": "class ItemPublic(ItemBase):\n    id: uuid.UUID\n    owner_id: uuid.UUID\nclass ItemsPublic(SQLModel):\n    data: list[ItemPublic]\n    count: int",
+        "detail": "src.app.models.item",
+        "documentation": {}
+    },
+    {
+        "label": "ItemsPublic",
+        "kind": 6,
+        "importPath": "src.app.models.item",
+        "description": "src.app.models.item",
+        "peekOfCode": "class ItemsPublic(SQLModel):\n    data: list[ItemPublic]\n    count: int",
+        "detail": "src.app.models.item",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "src.app.models.user",
+        "description": "src.app.models.user",
+        "peekOfCode": "class User(SQLModel, table=True):\n    # __table_args__ = {'extend_existing': True, 'autoload': True}\n    id: uuid.UUID = Field(default_factory=uuid.uuid4, primary_key=True)\n    email: EmailStr = Field(max_length=255)\n    items: list[\"Item\"] = Relationship(back_populates=\"owner\", cascade_delete=True)",
+        "detail": "src.app.models.user",
         "documentation": {}
     },
     {
@@ -1134,6 +1353,15 @@
         "documentation": {}
     },
     {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "tests.pre_start.test_db",
+        "description": "tests.pre_start.test_db",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n@pytest.mark.anyio\nasync def test_init_db() -> None:\n    with Session(engine) as session:\n        await init_db(session)",
+        "detail": "tests.pre_start.test_db",
+        "documentation": {}
+    },
+    {
         "label": "setup_logging",
         "kind": 2,
         "importPath": "tests.conftest",
@@ -1147,16 +1375,16 @@
         "kind": 2,
         "importPath": "tests.conftest",
         "description": "tests.conftest",
-        "peekOfCode": "def anyio_backend() -> str:\n    return \"asyncio\"\ndef pytest_configure(config: ConfigDict) -> None:  # noqa ARG001\n    load_dotenv()\n@pytest.fixture(scope=\"module\")\ndef client() -> Generator[TestClient, None, None]:\n    with TestClient(app) as c:\n        yield c\n@pytest.fixture(scope=\"module\")\nasync def token() -> AsyncGenerator[Token, None]:",
+        "peekOfCode": "def anyio_backend() -> str:\n    return \"asyncio\"\n@pytest.fixture(scope=\"session\", autouse=True)\ndef db() -> Generator[Session, None, None]:\n    with Session(engine) as session:\n        yield session\n@pytest.fixture(scope=\"module\")\ndef client() -> Generator[TestClient, None, None]:\n    with TestClient(app) as c:\n        yield c",
         "detail": "tests.conftest",
         "documentation": {}
     },
     {
-        "label": "pytest_configure",
+        "label": "db",
         "kind": 2,
         "importPath": "tests.conftest",
         "description": "tests.conftest",
-        "peekOfCode": "def pytest_configure(config: ConfigDict) -> None:  # noqa ARG001\n    load_dotenv()\n@pytest.fixture(scope=\"module\")\ndef client() -> Generator[TestClient, None, None]:\n    with TestClient(app) as c:\n        yield c\n@pytest.fixture(scope=\"module\")\nasync def token() -> AsyncGenerator[Token, None]:\n    url = os.environ.get(\"SUPABASE_TEST_URL\")\n    assert url is not None, \"Must provide SUPABASE_TEST_URL environment variable\"",
+        "peekOfCode": "def db() -> Generator[Session, None, None]:\n    with Session(engine) as session:\n        yield session\n@pytest.fixture(scope=\"module\")\ndef client() -> Generator[TestClient, None, None]:\n    with TestClient(app) as c:\n        yield c\n@pytest.fixture(scope=\"module\")\nasync def token() -> AsyncGenerator[Token, None]:\n    url = os.environ.get(\"SUPABASE_TEST_URL\")",
         "detail": "tests.conftest",
         "documentation": {}
     },
