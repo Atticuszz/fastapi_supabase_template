@@ -1,10 +1,17 @@
 import logging
-import os
-from typing import ClassVar
+import secrets
+import warnings
+from typing import Annotated, Any, Literal, Self
 
-from dotenv import load_dotenv
-from pydantic import AnyHttpUrl, ConfigDict, Field
-from pydantic_settings import BaseSettings
+from pydantic import (
+    AnyUrl,
+    BeforeValidator,
+    PostgresDsn,
+    computed_field,
+    model_validator,
+)
+from pydantic_core import MultiHostUrl
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 log_format = logging.Formatter("%(asctime)s : %(levelname)s - %(message)s")
 
@@ -18,39 +25,87 @@ stream_handler.setFormatter(log_format)
 root_logger.addHandler(stream_handler)
 
 logger = logging.getLogger(__name__)
-load_dotenv()
+
+
+def parse_cors(v: Any) -> list[str] | str:
+    if isinstance(v, str) and not v.startswith("["):
+        return [i.strip() for i in v.split(",")]
+    elif isinstance(v, list | str):
+        return v
+    raise ValueError(v)
 
 
 class Settings(BaseSettings):
+    """auto load config from .env and validate settings"""
+
+    # https://docs.pydantic.dev/latest/concepts/pydantic_settings/#dotenv-env-support
+    model_config = SettingsConfigDict(
+        # Use top level .env file (one level above ./backend/)
+        env_file="../.env",
+        env_ignore_empty=True,
+        extra="ignore",
+    )
     API_V1_STR: str = "/api/v1"
-    SUPABASE_URL: str = Field(default_factory=lambda: os.getenv("SUPABASE_URL"))
-    SUPABASE_KEY: str = Field(default_factory=lambda: os.getenv("SUPABASE_KEY"))
-    SUPERUSER_EMAIL: str = Field(default_factory=lambda: os.getenv("SUPERUSER_EMAIL"))
-    SUPERUSER_PASSWORD: str = Field(default=lambda: os.getenv("SUPERUSER_PASSWORD"))
-    # SERVER_NAME: str
-    SERVER_HOST: AnyHttpUrl = AnyHttpUrl("https://localhost")
-    SERVER_PORT: int = 8000
-    # # TODO: the following  need to follow the newest version of fastapi
-    # # BACKEND_CORS_ORIGINS is a JSON-formatted list of origins
-    # # e.g: '["http://localhost", "http://localhost:4200", "http://localhost:3000", \
-    # # "http://localhost:8080", "http://local.dockertoolbox.tiangolo.com"]'
-    BACKEND_CORS_ORIGINS: list[AnyHttpUrl] = []
-    #
-    # @validator("BACKEND_CORS_ORIGINS", pre=True)
-    # def assemble_cors_origins(cls, v: Union[str, List[str]]) -> Union[List[str], str]:
-    #     if isinstance(v, str) and not v.startswith("["):
-    #         return [i.strip() for i in v.split(",")]
-    #     elif isinstance(v, (list, str)):
-    #         return v
-    #     raise ValueError(v)
-    #
-    PROJECT_NAME: str = "fastapi supabase template"
+    SECRET_KEY: str = secrets.token_urlsafe(32)
+    ENVIRONMENT: Literal["local", "staging", "production"] = "local"
 
-    # class Config(ConfigDict):
-    #     """sensitive to lowercase"""
-    #
-    #     case_sensitive = True
-    Config: ClassVar[ConfigDict] = ConfigDict(arbitrary_types_allowed=True)
+    # FRONTEND_HOST: str = "http://localhost:5173"
+    BACKEND_CORS_ORIGINS: Annotated[
+        list[AnyUrl] | str, BeforeValidator(parse_cors)
+    ] = []
+
+    @computed_field  # type: ignore[prop-decorator]
+    @property
+    def all_cors_origins(self) -> list[str]:
+        return (
+            [str(origin).rstrip("/") for origin in self.BACKEND_CORS_ORIGINS]
+            + [
+                # self.FRONTEND_HOST
+            ]
+        )
+
+    PROJECT_NAME: str
+
+    ## DB
+    SUPABASE_URL: str
+    # NOTE: super user key is service_role key instead of the anon key
+    SUPABASE_KEY: str
+
+    POSTGRES_SERVER: str
+    POSTGRES_PORT: int = 5432
+    POSTGRES_USER: str
+    POSTGRES_PASSWORD: str = ""
+    POSTGRES_DB: str = ""
+
+    @computed_field  # type: ignore[prop-decorator]
+    @property
+    def SQLALCHEMY_DATABASE_URI(self) -> PostgresDsn:
+        return MultiHostUrl.build(
+            scheme="postgresql+psycopg",
+            username=self.POSTGRES_USER,
+            password=self.POSTGRES_PASSWORD,
+            host=self.POSTGRES_SERVER,
+            port=self.POSTGRES_PORT,
+            path=self.POSTGRES_DB,
+        )
+
+    def _check_default_secret(self, var_name: str, value: str | None) -> None:
+        if value == "changethis":
+            message = (
+                f'The value of {var_name} is "changethis", '
+                "for security, please change it, at least for deployments."
+            )
+            if self.ENVIRONMENT == "local":
+                warnings.warn(message, stacklevel=1)
+            else:
+                raise ValueError(message)
+
+    @model_validator(mode="after")
+    def _enforce_non_default_secrets(self) -> Self:
+        self._check_default_secret("SECRET_KEY", self.SECRET_KEY)
+        self._check_default_secret("POSTGRES_PASSWORD", self.POSTGRES_PASSWORD)
+
+        return self
 
 
-settings = Settings()
+settings = Settings()  # type: ignore[call-arg] # load args from env
