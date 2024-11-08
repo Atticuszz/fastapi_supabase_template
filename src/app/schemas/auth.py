@@ -1,4 +1,4 @@
-from gotrue import User, UserAttributes
+from gotrue import User, UserAttributes  # type: ignore
 from pydantic import BaseModel
 
 
@@ -9,7 +9,7 @@ class Token(BaseModel):
 
 
 # request
-class UserIn(Token, User):
+class UserIn(Token, User):  # type: ignore
     pass
 
 
@@ -21,7 +21,7 @@ class UserCreate(BaseModel):
 
 # Properties to receive via API on update
 # in
-class UserUpdate(UserAttributes):
+class UserUpdate(UserAttributes):  # type: ignore
     pass
 
 
@@ -39,5 +39,5 @@ class UserOut(Token):
 
 
 # Properties properties stored in DB
-class UserInDB(User):
+class UserInDB(User):  # type: ignore
     pass

@@ -1,9 +1,8 @@
 from typing import Generic, TypeVar
 
-from supabase._async.client import AsyncClient
-
 from app.schemas.auth import UserIn
 from app.schemas.base import CreateBase, ResponseBase, UpdateBase
+from supabase._async.client import AsyncClient
 
 ModelType = TypeVar("ModelType", bound=ResponseBase)
 CreateSchemaType = TypeVar("CreateSchemaType", bound=CreateBase)

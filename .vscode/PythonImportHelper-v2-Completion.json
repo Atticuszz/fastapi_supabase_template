@@ -52,14 +52,6 @@
         "documentation": {}
     },
     {
-        "label": "APIRouter",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
         "label": "Depends",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -69,6 +61,14 @@
     },
     {
         "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -116,7 +116,15 @@
         "documentation": {}
     },
     {
-        "label": "init_super_client",
+        "label": "engine",
+        "importPath": "app.api.deps",
+        "description": "app.api.deps",
+        "isExtraImport": true,
+        "detail": "app.api.deps",
+        "documentation": {}
+    },
+    {
+        "label": "get_super_client",
         "importPath": "app.api.deps",
         "description": "app.api.deps",
         "isExtraImport": true,
@@ -180,36 +188,44 @@
         "documentation": {}
     },
     {
-        "label": "Token",
-        "importPath": "app.schemas",
-        "description": "app.schemas",
-        "isExtraImport": true,
-        "detail": "app.schemas",
-        "documentation": {}
-    },
-    {
-        "label": "Token",
-        "importPath": "app.schemas",
-        "description": "app.schemas",
-        "isExtraImport": true,
-        "detail": "app.schemas",
-        "documentation": {}
-    },
-    {
-        "label": "items",
-        "importPath": "app.api.api_v1.endpoints",
-        "description": "app.api.api_v1.endpoints",
-        "isExtraImport": true,
-        "detail": "app.api.api_v1.endpoints",
-        "documentation": {}
-    },
-    {
         "label": "logging",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "logging",
         "description": "logging",
         "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "Generator",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncGenerator",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncGenerator",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "Generator",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
         "documentation": {}
     },
     {
@@ -221,7 +237,31 @@
         "documentation": {}
     },
     {
-        "label": "ClassVar",
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Self",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -269,11 +309,139 @@
         "documentation": {}
     },
     {
-        "label": "AuthApiError",
-        "importPath": "gotrue.errors",
-        "description": "gotrue.errors",
+        "label": "Session",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
         "isExtraImport": true,
-        "detail": "gotrue.errors",
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "create_engine",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "select",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "SQLModel",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "Relationship",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "SQLModel",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "app.core.config",
+        "description": "app.core.config",
+        "isExtraImport": true,
+        "detail": "app.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "app.core.config",
+        "description": "app.core.config",
+        "isExtraImport": true,
+        "detail": "app.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "app.core.config",
+        "description": "app.core.config",
+        "isExtraImport": true,
+        "detail": "app.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "UserIn",
+        "importPath": "app.schemas.auth",
+        "description": "app.schemas.auth",
+        "isExtraImport": true,
+        "detail": "app.schemas.auth",
+        "documentation": {}
+    },
+    {
+        "label": "UserIn",
+        "importPath": "app.schemas.auth",
+        "description": "app.schemas.auth",
+        "isExtraImport": true,
+        "detail": "app.schemas.auth",
+        "documentation": {}
+    },
+    {
+        "label": "UserIn",
+        "importPath": "app.schemas.auth",
+        "description": "app.schemas.auth",
+        "isExtraImport": true,
+        "detail": "app.schemas.auth",
         "documentation": {}
     },
     {
@@ -286,30 +454,6 @@
     },
     {
         "label": "create_client",
-        "importPath": "supabase._async.client",
-        "description": "supabase._async.client",
-        "isExtraImport": true,
-        "detail": "supabase._async.client",
-        "documentation": {}
-    },
-    {
-        "label": "AsyncClient",
-        "importPath": "supabase._async.client",
-        "description": "supabase._async.client",
-        "isExtraImport": true,
-        "detail": "supabase._async.client",
-        "documentation": {}
-    },
-    {
-        "label": "AsyncClient",
-        "importPath": "supabase._async.client",
-        "description": "supabase._async.client",
-        "isExtraImport": true,
-        "detail": "supabase._async.client",
-        "documentation": {}
-    },
-    {
-        "label": "AsyncClient",
         "importPath": "supabase._async.client",
         "description": "supabase._async.client",
         "isExtraImport": true,
@@ -349,63 +493,33 @@
         "documentation": {}
     },
     {
-        "label": "settings",
-        "importPath": "app.core.config",
-        "description": "app.core.config",
+        "label": "items",
+        "importPath": "app.api.routes",
+        "description": "app.api.routes",
         "isExtraImport": true,
-        "detail": "app.core.config",
+        "detail": "app.api.routes",
         "documentation": {}
     },
     {
-        "label": "settings",
-        "importPath": "app.core.config",
-        "description": "app.core.config",
+        "label": "secrets",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "app.core.config",
+        "importPath": "secrets",
+        "description": "secrets",
+        "detail": "secrets",
         "documentation": {}
     },
     {
-        "label": "UserIn",
-        "importPath": "app.schemas.auth",
-        "description": "app.schemas.auth",
+        "label": "warnings",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "app.schemas.auth",
+        "importPath": "warnings",
+        "description": "warnings",
+        "detail": "warnings",
         "documentation": {}
     },
     {
-        "label": "UserIn",
-        "importPath": "app.schemas.auth",
-        "description": "app.schemas.auth",
-        "isExtraImport": true,
-        "detail": "app.schemas.auth",
-        "documentation": {}
-    },
-    {
-        "label": "UserIn",
-        "importPath": "app.schemas.auth",
-        "description": "app.schemas.auth",
-        "isExtraImport": true,
-        "detail": "app.schemas.auth",
-        "documentation": {}
-    },
-    {
-        "label": "load_dotenv",
-        "importPath": "dotenv",
-        "description": "dotenv",
-        "isExtraImport": true,
-        "detail": "dotenv",
-        "documentation": {}
-    },
-    {
-        "label": "load_dotenv",
-        "importPath": "dotenv",
-        "description": "dotenv",
-        "isExtraImport": true,
-        "detail": "dotenv",
-        "documentation": {}
-    },
-    {
-        "label": "AnyHttpUrl",
+        "label": "AnyUrl",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -413,7 +527,7 @@
         "documentation": {}
     },
     {
-        "label": "ConfigDict",
+        "label": "BeforeValidator",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -421,7 +535,7 @@
         "documentation": {}
     },
     {
-        "label": "Field",
+        "label": "PostgresDsn",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -429,7 +543,23 @@
         "documentation": {}
     },
     {
-        "label": "BaseModel",
+        "label": "computed_field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "model_validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -438,14 +568,6 @@
     },
     {
         "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "ConfigDict",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -466,6 +588,22 @@
         "description": "pydantic",
         "isExtraImport": true,
         "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "MultiHostUrl",
+        "importPath": "pydantic_core",
+        "description": "pydantic_core",
+        "isExtraImport": true,
+        "detail": "pydantic_core",
         "documentation": {}
     },
     {
@@ -477,27 +615,27 @@
         "documentation": {}
     },
     {
-        "label": "AsyncGenerator",
-        "importPath": "collections.abc",
-        "description": "collections.abc",
+        "label": "SettingsConfigDict",
+        "importPath": "pydantic_settings",
+        "description": "pydantic_settings",
         "isExtraImport": true,
-        "detail": "collections.abc",
+        "detail": "pydantic_settings",
         "documentation": {}
     },
     {
-        "label": "AsyncGenerator",
-        "importPath": "collections.abc",
-        "description": "collections.abc",
+        "label": "User",
+        "importPath": "app.models",
+        "description": "app.models",
         "isExtraImport": true,
-        "detail": "collections.abc",
+        "detail": "app.models",
         "documentation": {}
     },
     {
-        "label": "Generator",
-        "importPath": "collections.abc",
-        "description": "collections.abc",
+        "label": "Item",
+        "importPath": "app.models",
+        "description": "app.models",
         "isExtraImport": true,
-        "detail": "collections.abc",
+        "detail": "app.models",
         "documentation": {}
     },
     {
@@ -573,6 +711,15 @@
         "documentation": {}
     },
     {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
         "label": "User",
         "importPath": "gotrue",
         "description": "gotrue",
@@ -607,10 +754,10 @@
     },
     {
         "label": "api_router",
-        "importPath": "app.api.api_v1.api",
-        "description": "app.api.api_v1.api",
+        "importPath": "app.api.main",
+        "description": "app.api.main",
         "isExtraImport": true,
-        "detail": "app.api.api_v1.api",
+        "detail": "app.api.main",
         "documentation": {}
     },
     {
@@ -631,83 +778,43 @@
         "documentation": {}
     },
     {
-        "label": "Faker",
-        "importPath": "faker",
-        "description": "faker",
+        "label": "engine",
+        "importPath": "src.app.api.deps",
+        "description": "src.app.api.deps",
         "isExtraImport": true,
-        "detail": "faker",
+        "detail": "src.app.api.deps",
         "documentation": {}
     },
     {
-        "label": "Faker",
-        "importPath": "faker",
-        "description": "faker",
+        "label": "engine",
+        "importPath": "src.app.api.deps",
+        "description": "src.app.api.deps",
         "isExtraImport": true,
-        "detail": "faker",
+        "detail": "src.app.api.deps",
         "documentation": {}
     },
     {
-        "label": "Faker",
-        "importPath": "faker",
-        "description": "faker",
+        "label": "init_db",
+        "importPath": "src.app.core.db",
+        "description": "src.app.core.db",
         "isExtraImport": true,
-        "detail": "faker",
+        "detail": "src.app.core.db",
         "documentation": {}
     },
     {
         "label": "TestClient",
-        "importPath": "starlette.testclient",
-        "description": "starlette.testclient",
+        "importPath": "fastapi.testclient",
+        "description": "fastapi.testclient",
         "isExtraImport": true,
-        "detail": "starlette.testclient",
+        "detail": "fastapi.testclient",
         "documentation": {}
     },
     {
-        "label": "get_auth_header",
-        "importPath": "tests.utils",
-        "description": "tests.utils",
+        "label": "TestClient",
+        "importPath": "fastapi.testclient",
+        "description": "fastapi.testclient",
         "isExtraImport": true,
-        "detail": "tests.utils",
-        "documentation": {}
-    },
-    {
-        "label": "get_auth_header",
-        "importPath": "tests.utils",
-        "description": "tests.utils",
-        "isExtraImport": true,
-        "detail": "tests.utils",
-        "documentation": {}
-    },
-    {
-        "label": "crud",
-        "importPath": "app",
-        "description": "app",
-        "isExtraImport": true,
-        "detail": "app",
-        "documentation": {}
-    },
-    {
-        "label": "Item",
-        "importPath": "app.schemas.item",
-        "description": "app.schemas.item",
-        "isExtraImport": true,
-        "detail": "app.schemas.item",
-        "documentation": {}
-    },
-    {
-        "label": "ItemCreate",
-        "importPath": "app.schemas.item",
-        "description": "app.schemas.item",
-        "isExtraImport": true,
-        "detail": "app.schemas.item",
-        "documentation": {}
-    },
-    {
-        "label": "ItemUpdate",
-        "importPath": "app.schemas.item",
-        "description": "app.schemas.item",
-        "isExtraImport": true,
-        "detail": "app.schemas.item",
+        "detail": "fastapi.testclient",
         "documentation": {}
     },
     {
@@ -727,28 +834,27 @@
         "documentation": {}
     },
     {
-        "label": "TestClient",
-        "importPath": "fastapi.testclient",
-        "description": "fastapi.testclient",
+        "label": "Faker",
+        "importPath": "faker",
+        "description": "faker",
         "isExtraImport": true,
-        "detail": "fastapi.testclient",
+        "detail": "faker",
         "documentation": {}
     },
     {
         "label": "app",
-        "importPath": "app.main",
-        "description": "app.main",
+        "importPath": "src.app.main",
+        "description": "src.app.main",
         "isExtraImport": true,
-        "detail": "app.main",
+        "detail": "src.app.main",
         "documentation": {}
     },
     {
-        "label": "subprocess",
-        "kind": 6,
+        "label": "Token",
+        "importPath": "src.app.schemas",
+        "description": "src.app.schemas",
         "isExtraImport": true,
-        "importPath": "subprocess",
-        "description": "subprocess",
-        "detail": "subprocess",
+        "detail": "src.app.schemas",
         "documentation": {}
     },
     {
@@ -835,19 +941,28 @@
     {
         "label": "router",
         "kind": 5,
-        "importPath": "src.app.api.api_v1.endpoints.items",
-        "description": "src.app.api.api_v1.endpoints.items",
+        "importPath": "src.app.api.routes.items",
+        "description": "src.app.api.routes.items",
         "peekOfCode": "router = APIRouter()\n@router.post(\"/create-item\")\nasync def create_item(item_in: ItemCreate, session: SessionDep) -> Item:\n    return await item.create(session, obj_in=item_in)\n@router.get(\"/read-all-item\")\nasync def read_items(session: SessionDep) -> list[Item]:\n    return await item.get_all(session)\n@router.get(\"/get-by-id/{id}\")\nasync def read_item_by_id(id: str, session: SessionDep) -> Item | None:\n    return await item.get(session, id=id)",
-        "detail": "src.app.api.api_v1.endpoints.items",
+        "detail": "src.app.api.routes.items",
         "documentation": {}
     },
     {
-        "label": "api_router",
+        "label": "get_db",
+        "kind": 2,
+        "importPath": "src.app.api.deps",
+        "description": "src.app.api.deps",
+        "peekOfCode": "def get_db() -> Generator[Session, None, None]:\n    with Session(engine) as session:\n        yield session\nSessionDep = Annotated[Session, Depends(get_db)]",
+        "detail": "src.app.api.deps",
+        "documentation": {}
+    },
+    {
+        "label": "SuperClient",
         "kind": 5,
-        "importPath": "src.app.api.api_v1.api",
-        "description": "src.app.api.api_v1.api",
-        "peekOfCode": "api_router = APIRouter()\napi_router.include_router(items.router, prefix=\"/items\", tags=[\"items\"])",
-        "detail": "src.app.api.api_v1.api",
+        "importPath": "src.app.api.deps",
+        "description": "src.app.api.deps",
+        "peekOfCode": "SuperClient = Annotated[AsyncClient, Depends(get_super_client)]\n# auto get access_token from header\nreusable_oauth2 = OAuth2PasswordBearer(tokenUrl=\"Token\")\nAccessTokenDep = Annotated[str, Depends(reusable_oauth2)]\nasync def get_current_user(\n    access_token: AccessTokenDep, super_client: SuperClient\n) -> UserIn:\n    \"\"\"get current user from access_token and  validate same time\"\"\"\n    user_rsp = await super_client.auth.get_user(jwt=access_token)\n    if not user_rsp:",
+        "detail": "src.app.api.deps",
         "documentation": {}
     },
     {
@@ -855,7 +970,7 @@
         "kind": 5,
         "importPath": "src.app.api.deps",
         "description": "src.app.api.deps",
-        "peekOfCode": "reusable_oauth2 = OAuth2PasswordBearer(\n    tokenUrl=\"please login by supabase-js to get token\"\n)\nAccessTokenDep = Annotated[str, Depends(reusable_oauth2)]\nasync def get_current_user(access_token: AccessTokenDep) -> UserIn:\n    \"\"\"get current user from access_token and  validate same time\"\"\"\n    if not super_client:\n        raise HTTPException(status_code=500, detail=\"Super client not initialized\")\n    user_rsp = await super_client.auth.get_user(jwt=access_token)\n    if not user_rsp:",
+        "peekOfCode": "reusable_oauth2 = OAuth2PasswordBearer(tokenUrl=\"Token\")\nAccessTokenDep = Annotated[str, Depends(reusable_oauth2)]\nasync def get_current_user(\n    access_token: AccessTokenDep, super_client: SuperClient\n) -> UserIn:\n    \"\"\"get current user from access_token and  validate same time\"\"\"\n    user_rsp = await super_client.auth.get_user(jwt=access_token)\n    if not user_rsp:\n        logging.error(\"User not found\")\n        raise HTTPException(status_code=404, detail=\"User not found\")",
         "detail": "src.app.api.deps",
         "documentation": {}
     },
@@ -864,7 +979,7 @@
         "kind": 5,
         "importPath": "src.app.api.deps",
         "description": "src.app.api.deps",
-        "peekOfCode": "AccessTokenDep = Annotated[str, Depends(reusable_oauth2)]\nasync def get_current_user(access_token: AccessTokenDep) -> UserIn:\n    \"\"\"get current user from access_token and  validate same time\"\"\"\n    if not super_client:\n        raise HTTPException(status_code=500, detail=\"Super client not initialized\")\n    user_rsp = await super_client.auth.get_user(jwt=access_token)\n    if not user_rsp:\n        logging.error(\"User not found\")\n        raise HTTPException(status_code=404, detail=\"User not found\")\n    return UserIn(**user_rsp.user.model_dump(), access_token=access_token)",
+        "peekOfCode": "AccessTokenDep = Annotated[str, Depends(reusable_oauth2)]\nasync def get_current_user(\n    access_token: AccessTokenDep, super_client: SuperClient\n) -> UserIn:\n    \"\"\"get current user from access_token and  validate same time\"\"\"\n    user_rsp = await super_client.auth.get_user(jwt=access_token)\n    if not user_rsp:\n        logging.error(\"User not found\")\n        raise HTTPException(status_code=404, detail=\"User not found\")\n    return UserIn(**user_rsp.user.model_dump(), access_token=access_token)",
         "detail": "src.app.api.deps",
         "documentation": {}
     },
@@ -873,7 +988,16 @@
         "kind": 5,
         "importPath": "src.app.api.deps",
         "description": "src.app.api.deps",
-        "peekOfCode": "CurrentUser = Annotated[UserIn, Depends(get_current_user)]\nasync def get_db(user: CurrentUser) -> AsyncClient:\n    client: AsyncClient | None = None\n    try:\n        client = await create_client(\n            settings.SUPABASE_URL,\n            settings.SUPABASE_KEY,\n            options=ClientOptions(\n                postgrest_client_timeout=30,\n                storage_client_timeout=30,",
+        "peekOfCode": "CurrentUser = Annotated[UserIn, Depends(get_current_user)]\nengine = create_engine(str(settings.SQLALCHEMY_DATABASE_URI))\ndef get_db() -> Generator[Session, None, None]:\n    with Session(engine) as session:\n        yield session\nSessionDep = Annotated[Session, Depends(get_db)]",
+        "detail": "src.app.api.deps",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "src.app.api.deps",
+        "description": "src.app.api.deps",
+        "peekOfCode": "engine = create_engine(str(settings.SQLALCHEMY_DATABASE_URI))\ndef get_db() -> Generator[Session, None, None]:\n    with Session(engine) as session:\n        yield session\nSessionDep = Annotated[Session, Depends(get_db)]",
         "detail": "src.app.api.deps",
         "documentation": {}
     },
@@ -882,8 +1006,17 @@
         "kind": 5,
         "importPath": "src.app.api.deps",
         "description": "src.app.api.deps",
-        "peekOfCode": "SessionDep = Annotated[AsyncClient, Depends(get_db)]",
+        "peekOfCode": "SessionDep = Annotated[Session, Depends(get_db)]",
         "detail": "src.app.api.deps",
+        "documentation": {}
+    },
+    {
+        "label": "api_router",
+        "kind": 5,
+        "importPath": "src.app.api.main",
+        "description": "src.app.api.main",
+        "peekOfCode": "api_router = APIRouter()\napi_router.include_router(items.router, prefix=\"/items\", tags=[\"items\"])",
+        "detail": "src.app.api.main",
         "documentation": {}
     },
     {
@@ -891,7 +1024,16 @@
         "kind": 6,
         "importPath": "src.app.core.config",
         "description": "src.app.core.config",
-        "peekOfCode": "class Settings(BaseSettings):\n    API_V1_STR: str = \"/api/v1\"\n    SUPABASE_URL: str = Field(default_factory=lambda: os.getenv(\"SUPABASE_URL\"))\n    SUPABASE_KEY: str = Field(default_factory=lambda: os.getenv(\"SUPABASE_KEY\"))\n    SUPERUSER_EMAIL: str = Field(default_factory=lambda: os.getenv(\"SUPERUSER_EMAIL\"))\n    SUPERUSER_PASSWORD: str = Field(default=lambda: os.getenv(\"SUPERUSER_PASSWORD\"))\n    # SERVER_NAME: str\n    SERVER_HOST: AnyHttpUrl = \"https://localhost\"\n    SERVER_PORT: int = 8000\n    # # TODO: the following  need to follow the newest version of fastapi",
+        "peekOfCode": "class Settings(BaseSettings):\n    \"\"\"auto load config from .env and validate settings\"\"\"\n    # https://docs.pydantic.dev/latest/concepts/pydantic_settings/#dotenv-env-support\n    model_config = SettingsConfigDict(\n        # Use top level .env file (one level above ./backend/)\n        env_file=\"../.env\",\n        env_ignore_empty=True,\n        extra=\"ignore\",\n    )\n    API_V1_STR: str = \"/api/v1\"",
+        "detail": "src.app.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "parse_cors",
+        "kind": 2,
+        "importPath": "src.app.core.config",
+        "description": "src.app.core.config",
+        "peekOfCode": "def parse_cors(v: Any) -> list[str] | str:\n    if isinstance(v, str) and not v.startswith(\"[\"):\n        return [i.strip() for i in v.split(\",\")]\n    elif isinstance(v, list | str):\n        return v\n    raise ValueError(v)\nclass Settings(BaseSettings):\n    \"\"\"auto load config from .env and validate settings\"\"\"\n    # https://docs.pydantic.dev/latest/concepts/pydantic_settings/#dotenv-env-support\n    model_config = SettingsConfigDict(",
         "detail": "src.app.core.config",
         "documentation": {}
     },
@@ -900,7 +1042,7 @@
         "kind": 5,
         "importPath": "src.app.core.config",
         "description": "src.app.core.config",
-        "peekOfCode": "log_format = logging.Formatter(\"%(asctime)s : %(levelname)s - %(message)s\")\n# root logger\nroot_logger = logging.getLogger()\nroot_logger.setLevel(logging.INFO)\n# standard stream handler\nstream_handler = logging.StreamHandler()\nstream_handler.setFormatter(log_format)\nroot_logger.addHandler(stream_handler)\nlogger = logging.getLogger(__name__)\nload_dotenv()",
+        "peekOfCode": "log_format = logging.Formatter(\"%(asctime)s : %(levelname)s - %(message)s\")\n# root logger\nroot_logger = logging.getLogger()\nroot_logger.setLevel(logging.INFO)\n# standard stream handler\nstream_handler = logging.StreamHandler()\nstream_handler.setFormatter(log_format)\nroot_logger.addHandler(stream_handler)\nlogger = logging.getLogger(__name__)\n# TODO: remove logger configs",
         "detail": "src.app.core.config",
         "documentation": {}
     },
@@ -909,7 +1051,7 @@
         "kind": 5,
         "importPath": "src.app.core.config",
         "description": "src.app.core.config",
-        "peekOfCode": "root_logger = logging.getLogger()\nroot_logger.setLevel(logging.INFO)\n# standard stream handler\nstream_handler = logging.StreamHandler()\nstream_handler.setFormatter(log_format)\nroot_logger.addHandler(stream_handler)\nlogger = logging.getLogger(__name__)\nload_dotenv()\nclass Settings(BaseSettings):\n    API_V1_STR: str = \"/api/v1\"",
+        "peekOfCode": "root_logger = logging.getLogger()\nroot_logger.setLevel(logging.INFO)\n# standard stream handler\nstream_handler = logging.StreamHandler()\nstream_handler.setFormatter(log_format)\nroot_logger.addHandler(stream_handler)\nlogger = logging.getLogger(__name__)\n# TODO: remove logger configs\ndef parse_cors(v: Any) -> list[str] | str:\n    if isinstance(v, str) and not v.startswith(\"[\"):",
         "detail": "src.app.core.config",
         "documentation": {}
     },
@@ -918,7 +1060,7 @@
         "kind": 5,
         "importPath": "src.app.core.config",
         "description": "src.app.core.config",
-        "peekOfCode": "stream_handler = logging.StreamHandler()\nstream_handler.setFormatter(log_format)\nroot_logger.addHandler(stream_handler)\nlogger = logging.getLogger(__name__)\nload_dotenv()\nclass Settings(BaseSettings):\n    API_V1_STR: str = \"/api/v1\"\n    SUPABASE_URL: str = Field(default_factory=lambda: os.getenv(\"SUPABASE_URL\"))\n    SUPABASE_KEY: str = Field(default_factory=lambda: os.getenv(\"SUPABASE_KEY\"))\n    SUPERUSER_EMAIL: str = Field(default_factory=lambda: os.getenv(\"SUPERUSER_EMAIL\"))",
+        "peekOfCode": "stream_handler = logging.StreamHandler()\nstream_handler.setFormatter(log_format)\nroot_logger.addHandler(stream_handler)\nlogger = logging.getLogger(__name__)\n# TODO: remove logger configs\ndef parse_cors(v: Any) -> list[str] | str:\n    if isinstance(v, str) and not v.startswith(\"[\"):\n        return [i.strip() for i in v.split(\",\")]\n    elif isinstance(v, list | str):\n        return v",
         "detail": "src.app.core.config",
         "documentation": {}
     },
@@ -927,7 +1069,7 @@
         "kind": 5,
         "importPath": "src.app.core.config",
         "description": "src.app.core.config",
-        "peekOfCode": "logger = logging.getLogger(__name__)\nload_dotenv()\nclass Settings(BaseSettings):\n    API_V1_STR: str = \"/api/v1\"\n    SUPABASE_URL: str = Field(default_factory=lambda: os.getenv(\"SUPABASE_URL\"))\n    SUPABASE_KEY: str = Field(default_factory=lambda: os.getenv(\"SUPABASE_KEY\"))\n    SUPERUSER_EMAIL: str = Field(default_factory=lambda: os.getenv(\"SUPERUSER_EMAIL\"))\n    SUPERUSER_PASSWORD: str = Field(default=lambda: os.getenv(\"SUPERUSER_PASSWORD\"))\n    # SERVER_NAME: str\n    SERVER_HOST: AnyHttpUrl = \"https://localhost\"",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n# TODO: remove logger configs\ndef parse_cors(v: Any) -> list[str] | str:\n    if isinstance(v, str) and not v.startswith(\"[\"):\n        return [i.strip() for i in v.split(\",\")]\n    elif isinstance(v, list | str):\n        return v\n    raise ValueError(v)\nclass Settings(BaseSettings):\n    \"\"\"auto load config from .env and validate settings\"\"\"",
         "detail": "src.app.core.config",
         "documentation": {}
     },
@@ -936,7 +1078,7 @@
         "kind": 5,
         "importPath": "src.app.core.config",
         "description": "src.app.core.config",
-        "peekOfCode": "settings = Settings()",
+        "peekOfCode": "settings = Settings()  # type: ignore[call-arg] # load args from env",
         "detail": "src.app.core.config",
         "documentation": {}
     },
@@ -995,11 +1137,74 @@
         "documentation": {}
     },
     {
+        "label": "ItemBase",
+        "kind": 6,
+        "importPath": "src.app.models.item",
+        "description": "src.app.models.item",
+        "peekOfCode": "class ItemBase(SQLModel):\n    title: str = Field(min_length=1, max_length=255)\n    description: str | None = Field(default=None, max_length=255)\n# Properties to receive on item creation\nclass ItemCreate(ItemBase):\n    pass\n# Properties to receive on item update\nclass ItemUpdate(ItemBase):\n    title: str | None = Field(default=None, min_length=1, max_length=255)  # type: ignore\n# Database model, database table inferred from class name",
+        "detail": "src.app.models.item",
+        "documentation": {}
+    },
+    {
+        "label": "ItemCreate",
+        "kind": 6,
+        "importPath": "src.app.models.item",
+        "description": "src.app.models.item",
+        "peekOfCode": "class ItemCreate(ItemBase):\n    pass\n# Properties to receive on item update\nclass ItemUpdate(ItemBase):\n    title: str | None = Field(default=None, min_length=1, max_length=255)  # type: ignore\n# Database model, database table inferred from class name\nclass Item(ItemBase, table=True):\n    id: uuid.UUID = Field(default_factory=uuid.uuid4, primary_key=True)\n    title: str = Field(max_length=255)\n    owner_id: uuid.UUID = Field(",
+        "detail": "src.app.models.item",
+        "documentation": {}
+    },
+    {
+        "label": "ItemUpdate",
+        "kind": 6,
+        "importPath": "src.app.models.item",
+        "description": "src.app.models.item",
+        "peekOfCode": "class ItemUpdate(ItemBase):\n    title: str | None = Field(default=None, min_length=1, max_length=255)  # type: ignore\n# Database model, database table inferred from class name\nclass Item(ItemBase, table=True):\n    id: uuid.UUID = Field(default_factory=uuid.uuid4, primary_key=True)\n    title: str = Field(max_length=255)\n    owner_id: uuid.UUID = Field(\n        foreign_key=\"user.id\", nullable=False, ondelete=\"CASCADE\"\n    )\n# Properties to return via API, id is always required",
+        "detail": "src.app.models.item",
+        "documentation": {}
+    },
+    {
+        "label": "Item",
+        "kind": 6,
+        "importPath": "src.app.models.item",
+        "description": "src.app.models.item",
+        "peekOfCode": "class Item(ItemBase, table=True):\n    id: uuid.UUID = Field(default_factory=uuid.uuid4, primary_key=True)\n    title: str = Field(max_length=255)\n    owner_id: uuid.UUID = Field(\n        foreign_key=\"user.id\", nullable=False, ondelete=\"CASCADE\"\n    )\n# Properties to return via API, id is always required\nclass ItemPublic(ItemBase):\n    id: uuid.UUID\n    owner_id: uuid.UUID",
+        "detail": "src.app.models.item",
+        "documentation": {}
+    },
+    {
+        "label": "ItemPublic",
+        "kind": 6,
+        "importPath": "src.app.models.item",
+        "description": "src.app.models.item",
+        "peekOfCode": "class ItemPublic(ItemBase):\n    id: uuid.UUID\n    owner_id: uuid.UUID\nclass ItemsPublic(SQLModel):\n    data: list[ItemPublic]\n    count: int",
+        "detail": "src.app.models.item",
+        "documentation": {}
+    },
+    {
+        "label": "ItemsPublic",
+        "kind": 6,
+        "importPath": "src.app.models.item",
+        "description": "src.app.models.item",
+        "peekOfCode": "class ItemsPublic(SQLModel):\n    data: list[ItemPublic]\n    count: int",
+        "detail": "src.app.models.item",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "src.app.models.user",
+        "description": "src.app.models.user",
+        "peekOfCode": "class User(SQLModel, table=True):\n    # __table_args__ = {'extend_existing': True, 'autoload': True}\n    id: uuid.UUID = Field(default_factory=uuid.uuid4, primary_key=True)\n    email: EmailStr = Field(max_length=255)\n    items: list[\"Item\"] = Relationship(back_populates=\"owner\", cascade_delete=True)",
+        "detail": "src.app.models.user",
+        "documentation": {}
+    },
+    {
         "label": "Token",
         "kind": 6,
         "importPath": "src.app.schemas.auth",
         "description": "src.app.schemas.auth",
-        "peekOfCode": "class Token(BaseModel):\n    access_token: str | None = None\n    refresh_token: str | None = None\n# request\nclass UserIn(Token, User):\n    pass\n# Properties to receive via API on creation\n# in\nclass UserCreate(BaseModel):\n    pass",
+        "peekOfCode": "class Token(BaseModel):\n    access_token: str | None = None\n    refresh_token: str | None = None\n# request\nclass UserIn(Token, User):  # type: ignore\n    pass\n# Properties to receive via API on creation\n# in\nclass UserCreate(BaseModel):\n    pass",
         "detail": "src.app.schemas.auth",
         "documentation": {}
     },
@@ -1008,7 +1213,7 @@
         "kind": 6,
         "importPath": "src.app.schemas.auth",
         "description": "src.app.schemas.auth",
-        "peekOfCode": "class UserIn(Token, User):\n    pass\n# Properties to receive via API on creation\n# in\nclass UserCreate(BaseModel):\n    pass\n# Properties to receive via API on update\n# in\nclass UserUpdate(UserAttributes):\n    pass",
+        "peekOfCode": "class UserIn(Token, User):  # type: ignore\n    pass\n# Properties to receive via API on creation\n# in\nclass UserCreate(BaseModel):\n    pass\n# Properties to receive via API on update\n# in\nclass UserUpdate(UserAttributes):  # type: ignore\n    pass",
         "detail": "src.app.schemas.auth",
         "documentation": {}
     },
@@ -1017,7 +1222,7 @@
         "kind": 6,
         "importPath": "src.app.schemas.auth",
         "description": "src.app.schemas.auth",
-        "peekOfCode": "class UserCreate(BaseModel):\n    pass\n# Properties to receive via API on update\n# in\nclass UserUpdate(UserAttributes):\n    pass\n# response\nclass UserInDBBase(BaseModel):\n    pass\n# Properties to return to client via api",
+        "peekOfCode": "class UserCreate(BaseModel):\n    pass\n# Properties to receive via API on update\n# in\nclass UserUpdate(UserAttributes):  # type: ignore\n    pass\n# response\nclass UserInDBBase(BaseModel):\n    pass\n# Properties to return to client via api",
         "detail": "src.app.schemas.auth",
         "documentation": {}
     },
@@ -1026,7 +1231,7 @@
         "kind": 6,
         "importPath": "src.app.schemas.auth",
         "description": "src.app.schemas.auth",
-        "peekOfCode": "class UserUpdate(UserAttributes):\n    pass\n# response\nclass UserInDBBase(BaseModel):\n    pass\n# Properties to return to client via api\n# out\nclass UserOut(Token):\n    pass\n# Properties properties stored in DB",
+        "peekOfCode": "class UserUpdate(UserAttributes):  # type: ignore\n    pass\n# response\nclass UserInDBBase(BaseModel):\n    pass\n# Properties to return to client via api\n# out\nclass UserOut(Token):\n    pass\n# Properties properties stored in DB",
         "detail": "src.app.schemas.auth",
         "documentation": {}
     },
@@ -1035,7 +1240,7 @@
         "kind": 6,
         "importPath": "src.app.schemas.auth",
         "description": "src.app.schemas.auth",
-        "peekOfCode": "class UserInDBBase(BaseModel):\n    pass\n# Properties to return to client via api\n# out\nclass UserOut(Token):\n    pass\n# Properties properties stored in DB\nclass UserInDB(User):\n    pass",
+        "peekOfCode": "class UserInDBBase(BaseModel):\n    pass\n# Properties to return to client via api\n# out\nclass UserOut(Token):\n    pass\n# Properties properties stored in DB\nclass UserInDB(User):  # type: ignore\n    pass",
         "detail": "src.app.schemas.auth",
         "documentation": {}
     },
@@ -1044,7 +1249,7 @@
         "kind": 6,
         "importPath": "src.app.schemas.auth",
         "description": "src.app.schemas.auth",
-        "peekOfCode": "class UserOut(Token):\n    pass\n# Properties properties stored in DB\nclass UserInDB(User):\n    pass",
+        "peekOfCode": "class UserOut(Token):\n    pass\n# Properties properties stored in DB\nclass UserInDB(User):  # type: ignore\n    pass",
         "detail": "src.app.schemas.auth",
         "documentation": {}
     },
@@ -1053,7 +1258,7 @@
         "kind": 6,
         "importPath": "src.app.schemas.auth",
         "description": "src.app.schemas.auth",
-        "peekOfCode": "class UserInDB(User):\n    pass",
+        "peekOfCode": "class UserInDB(User):  # type: ignore\n    pass",
         "detail": "src.app.schemas.auth",
         "documentation": {}
     },
@@ -1139,21 +1344,21 @@
         "documentation": {}
     },
     {
-        "label": "create_app",
-        "kind": 2,
-        "importPath": "src.app.main",
-        "description": "src.app.main",
-        "peekOfCode": "def create_app() -> FastAPI:\n    # init FastAPI with lifespan\n    app = FastAPI(\n        lifespan=lifespan,\n        title=settings.PROJECT_NAME,\n        openapi_url=f\"{settings.API_V1_STR}/openapi.json\",\n        generate_unique_id_function=lambda router: f\"{router.tags[0]}-{router.name}\",\n    )\n    # set CORS\n    # Set all CORS enabled origins",
-        "detail": "src.app.main",
-        "documentation": {}
-    },
-    {
         "label": "app",
         "kind": 5,
         "importPath": "src.app.main",
         "description": "src.app.main",
-        "peekOfCode": "app = create_app()\nif __name__ == \"__main__\":\n    host = \"localhost\"\n    port = 5000\n    uvicorn.run(app, host=host, port=port)",
+        "peekOfCode": "app = FastAPI(\n    lifespan=lifespan,\n    title=settings.PROJECT_NAME,\n    openapi_url=f\"{settings.API_V1_STR}/openapi.json\",\n    generate_unique_id_function=lambda router: f\"{router.tags[0]}-{router.name}\",\n)\n# Set all CORS enabled origins\nif settings.all_cors_origins:\n    app.add_middleware(\n        CORSMiddleware,",
         "detail": "src.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "tests.pre_start.test_db",
+        "description": "tests.pre_start.test_db",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n@pytest.mark.anyio\nasync def test_init_db() -> None:\n    with Session(engine) as session:\n        await init_db(session)",
+        "detail": "tests.pre_start.test_db",
         "documentation": {}
     },
     {
@@ -1170,16 +1375,16 @@
         "kind": 2,
         "importPath": "tests.conftest",
         "description": "tests.conftest",
-        "peekOfCode": "def anyio_backend() -> str:\n    return \"asyncio\"\ndef pytest_configure(config: ConfigDict) -> None:\n    load_dotenv()\n@pytest.fixture(scope=\"module\")\ndef client() -> Generator[TestClient, None, None]:\n    with TestClient(app) as c:\n        yield c\n@pytest.fixture(scope=\"module\")\nasync def token() -> AsyncGenerator[Token, None]:",
+        "peekOfCode": "def anyio_backend() -> str:\n    return \"asyncio\"\n@pytest.fixture(scope=\"session\", autouse=True)\ndef db() -> Generator[Session, None, None]:\n    with Session(engine) as session:\n        yield session\n@pytest.fixture(scope=\"module\")\ndef client() -> Generator[TestClient, None, None]:\n    with TestClient(app) as c:\n        yield c",
         "detail": "tests.conftest",
         "documentation": {}
     },
     {
-        "label": "pytest_configure",
+        "label": "db",
         "kind": 2,
         "importPath": "tests.conftest",
         "description": "tests.conftest",
-        "peekOfCode": "def pytest_configure(config: ConfigDict) -> None:\n    load_dotenv()\n@pytest.fixture(scope=\"module\")\ndef client() -> Generator[TestClient, None, None]:\n    with TestClient(app) as c:\n        yield c\n@pytest.fixture(scope=\"module\")\nasync def token() -> AsyncGenerator[Token, None]:\n    url = os.environ.get(\"SUPABASE_TEST_URL\")\n    assert url is not None, \"Must provide SUPABASE_TEST_URL environment variable\"",
+        "peekOfCode": "def db() -> Generator[Session, None, None]:\n    with Session(engine) as session:\n        yield session\n@pytest.fixture(scope=\"module\")\ndef client() -> Generator[TestClient, None, None]:\n    with TestClient(app) as c:\n        yield c\n@pytest.fixture(scope=\"module\")\nasync def token() -> AsyncGenerator[Token, None]:\n    url = os.environ.get(\"SUPABASE_TEST_URL\")",
         "detail": "tests.conftest",
         "documentation": {}
     },
@@ -1208,24 +1413,6 @@
         "description": "tests.utils",
         "peekOfCode": "def get_auth_header(access_token: str | None) -> dict[str, str]:\n    if not access_token:\n        raise HTTPException(status_code=401, detail=\"No access token\")\n    return {\"Authorization\": f\"Bearer {access_token}\"}",
         "detail": "tests.utils",
-        "documentation": {}
-    },
-    {
-        "label": "run_cmd",
-        "kind": 2,
-        "importPath": "scripts",
-        "description": "scripts",
-        "peekOfCode": "def run_cmd(cmd: str) -> None:\n    subprocess.run(cmd, shell=True, check=True)\ndef run_tests() -> None:\n    # Install requirements by poetry\n    run_cmd(\"uv sync --all-extras --dev\")\n    # Run pre-commit tests\n    # run_cmd(\"poetry run pre-commit autoupdate\")\n    # run_cmd(\"poetry run pre-commit clean\")\n    # run_cmd(\"poetry run pre-commit install\")\n    run_cmd(\"uv run pre-commit run --all-files\")",
-        "detail": "scripts",
-        "documentation": {}
-    },
-    {
-        "label": "run_tests",
-        "kind": 2,
-        "importPath": "scripts",
-        "description": "scripts",
-        "peekOfCode": "def run_tests() -> None:\n    # Install requirements by poetry\n    run_cmd(\"uv sync --all-extras --dev\")\n    # Run pre-commit tests\n    # run_cmd(\"poetry run pre-commit autoupdate\")\n    # run_cmd(\"poetry run pre-commit clean\")\n    # run_cmd(\"poetry run pre-commit install\")\n    run_cmd(\"uv run pre-commit run --all-files\")\n    # Generate coverage report --cov=./ --cov-report=xml --cov-report=html -vv\n    run_cmd(\"uv run pytest  --cov=./ --cov-report=xml --cov-report=html -vv\")",
-        "detail": "scripts",
         "documentation": {}
     }
 ]
